@@ -6,7 +6,7 @@ import {
   BookOpen, Download, Eye
 } from 'lucide-react'
 
-type Tab = 'overview' | 'docker' | 'security' | 'email' | 'telegram' | 'files'
+type Tab = 'overview' | 'credentials' | 'docker' | 'security' | 'email' | 'telegram' | 'files'
 
 function App() {
   const [activeTab, setActiveTab] = useState<Tab>('overview')
@@ -21,6 +21,7 @@ function App() {
 
   const tabs = [
     { id: 'overview' as Tab, label: 'Resumen', icon: Eye },
+    { id: 'credentials' as Tab, label: '⚠️ Credenciales', icon: Lock },
     { id: 'docker' as Tab, label: 'Docker', icon: Server },
     { id: 'security' as Tab, label: 'Seguridad', icon: Shield },
     { id: 'email' as Tab, label: 'Email Reportes', icon: Mail },
@@ -88,6 +89,7 @@ function App() {
         {/* Main Content */}
         <main className="flex-1 p-6 overflow-auto">
           {activeTab === 'overview' && <OverviewSection />}
+          {activeTab === 'credentials' && <CredentialsSection copiedFile={copiedFile} copyToClipboard={copyToClipboard} />}
           {activeTab === 'docker' && <DockerSection copiedFile={copiedFile} copyToClipboard={copyToClipboard} />}
           {activeTab === 'security' && <SecuritySection copiedFile={copiedFile} copyToClipboard={copyToClipboard} />}
           {activeTab === 'email' && <EmailSection copiedFile={copiedFile} copyToClipboard={copyToClipboard} />}
@@ -184,6 +186,449 @@ function OverviewSection() {
           <p className="text-green-400 mt-2"># 5. Acceder</p>
           <p className="text-gray-300">http://TU_IP:8765</p>
         </div>
+      </div>
+    </div>
+  )
+}
+
+// ==================== CREDENTIALS SECTION ====================
+function CredentialsSection({ copiedFile, copyToClipboard }: { copiedFile: string | null; copyToClipboard: (t: string, id: string) => void }) {
+  
+  const comprarPatched = `"""
+comprar.py - VERSIÓN SEGURA (sin credenciales hardcodeadas)
+Las credenciales se cargan desde variables de entorno.
+"""
+import os
+import sys
+import json
+import logging
+import threading
+from datetime import datetime, timedelta
+from playwright.sync_api import sync_playwright
+import pandas as pd
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde .env
+load_dotenv()
+
+# ============================================================
+# CREDENCIALES - Ahora desde variables de entorno
+# ============================================================
+CUIT = os.environ.get("CUIT")
+PASSWORD = os.environ.get("PASSWORD")
+
+if not CUIT or not PASSWORD:
+    print("❌ ERROR: Faltan variables de entorno CUIT y/o PASSWORD")
+    print("   Configurá tu archivo .env (ver .env.example)")
+    sys.exit(1)
+
+# ============================================================
+# CONFIGURACIÓN DE LOGGING
+# ============================================================
+LOG_FILE = "logs_comprar.txt"
+
+logger = logging.getLogger("comprar")
+logger.setLevel(logging.INFO)
+
+file_handler = logging.FileHandler(LOG_FILE, encoding="utf-8")
+file_handler.setLevel(logging.INFO)
+file_fmt = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
+file_handler.setFormatter(file_fmt)
+
+console_handler = logging.StreamHandler(sys.stdout)
+console_handler.setLevel(logging.INFO)
+console_fmt = logging.Formatter('%(asctime)s - %(message)s', datefmt='%H:%M:%S')
+console_handler.setFormatter(console_fmt)
+
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
+
+# ... (el resto del código queda igual) ...
+
+# ============================================================
+# MAIN
+# ============================================================
+if __name__ == "__main__":
+    # Las credenciales YA están cargadas arriba desde os.environ
+    
+    INTERVALO_MINIMO_HORAS = int(os.environ.get("INTERVALO_HORAS", "24"))
+    TIMEOUT_INACTIVIDAD = int(os.environ.get("TIMEOUT_INACTIVIDAD", "60"))
+    
+    hoy = datetime.now()
+    hace_un_mes = hoy - timedelta(days=30)
+    fecha_desde = hace_un_mes.strftime("%d/%m/%Y")
+    fecha_hasta = hoy.strftime("%d/%m/%Y")
+    
+    log_info(f"📅 Período de búsqueda: {fecha_desde} a {fecha_hasta}")
+    log_info(f"⏱️ Timeout de inactividad: {TIMEOUT_INACTIVIDAD}s")
+    log_info(f"🔐 Credenciales cargadas desde variables de entorno ✅")
+    
+    login_comprar_y_extraer(
+        CUIT, 
+        PASSWORD, 
+        fecha_desde=fecha_desde, 
+        fecha_hasta=fecha_hasta,
+        estado_label="Publicado", 
+        intervalo_minimo_horas=INTERVALO_MINIMO_HORAS,
+        timeout_inactividad=TIMEOUT_INACTIVIDAD
+    )`
+
+  const gitignoreContent = `# ============================================
+# .gitignore - NO subir estos archivos a Git
+# ============================================
+
+# Credenciales y secretos
+.env
+.env.local
+.env.production
+
+# Contraseñas y tokens
+*password*
+*secret*
+*credentials*
+
+# Datos sensibles
+licencia.json
+codigos_renovacion.json
+
+# Logs (pueden contener info sensible)
+logs_comprar.txt
+logs_detalle.txt
+logs/
+*.log
+
+# Entornos virtuales
+env_1/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Archivos generados
+debug_*.png
+debug_*.html
+
+# SSL
+ssl/
+*.pem
+*.key
+
+# Docker volumes
+app_/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db`
+
+  const cleanupScript = `#!/bin/bash
+# ============================================
+# limpiar_credenciales.sh
+# Script para limpiar credenciales del repo
+# ============================================
+
+echo "🧹 Limpiando credenciales del repositorio..."
+echo ""
+
+# 1. Buscar archivos con credenciales hardcodeadas
+echo "🔍 Buscando posibles credenciales en el código..."
+echo ""
+
+# Buscar patrones comunes de credenciales
+grep -rn "CUIT = " --include="*.py" . | grep -v "os.environ" | grep -v ".env"
+grep -rn "PASSWORD = " --include="*.py" . | grep -v "os.environ" | grep -v ".env"
+grep -rn "password.*=.*['\\\"]" --include="*.py" . | grep -v "os.environ"
+grep -rn "webhook" --include="*.py" . -i
+
+echo ""
+echo "⚠️  Si ves líneas arriba, hay credenciales expuestas."
+echo ""
+
+# 2. Crear .env si no existe
+if [ ! -f .env ]; then
+    echo "📝 Creando archivo .env..."
+    cat > .env << 'EOF'
+# Credenciales comprar.gob.ar
+CUIT=tu_cuit_aqui
+PASSWORD=tu_password_aqui
+
+# Intervalo de ejecución
+INTERVALO_HORAS=24
+TIMEOUT_INACTIVIDAD=60
+
+# Email
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+EMAIL_FROM=
+EMAIL_TO=
+EMAIL_REPORT_HOUR=20
+
+# Telegram
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_IDS=
+
+# Seguridad
+ADMIN_USER=admin
+ADMIN_PASS=
+SECRET_KEY=cambia-esta-clave-secreta-larga
+ALLOWED_IPS=
+EOF
+    echo "✅ Archivo .env creado. Editá las variables con tus datos reales."
+else
+    echo "ℹ️  Archivo .env ya existe."
+fi
+
+# 3. Agregar al .gitignore si no está
+if ! grep -q "^\.env$" .gitignore 2>/dev/null; then
+    echo "" >> .gitignore
+    echo ".env" >> .gitignore
+    echo "✅ .env agregado a .gitignore"
+fi
+
+# 4. Limpiar historial de Git (OPCIONAL - usar con cuidado)
+echo ""
+echo "============================================"
+echo "⚠️  LIMPIAR HISTORIAL DE GIT"
+echo "============================================"
+echo ""
+echo "Si ya subiste el repo con credenciales, NADIE puede verlas"
+echo "aunque las borres ahora (quedan en el historial de Git)."
+echo ""
+echo "Opciones:"
+echo "1. Crear un repo nuevo y subir solo el código limpio"
+echo "2. Usar BFG Repo-Cleaner para limpiar el historial"
+echo "3. Cambiar la contraseña en comprar.gob.ar AHORA MISMO"
+echo ""
+echo "🔴 RECOMENDACIÓN: Cambiá la contraseña YA en comprar.gob.ar"
+echo "   y creá un repo nuevo desde cero."
+echo ""
+read -p "¿Querés ver cómo limpiar el historial? (s/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Ss]$ ]]; then
+    echo ""
+    echo "📋 Pasos para limpiar historial con BFG:"
+    echo ""
+    echo "1. Instalar BFG:"
+    echo "   brew install bfg  (macOS)"
+    echo "   O descargar de: https://rtyley.github.io/bfg-repo-cleaner/"
+    echo ""
+    echo "2. Limpiar archivos específicos:"
+    echo "   bfg --delete-files .env"
+    echo "   bfg --replace-text passwords.txt"
+    echo ""
+    echo "3. Limpiar el historial:"
+    echo "   git reflog expire --expire=now --all"
+    echo "   git gc --prune=now --aggressive"
+    echo ""
+    echo "4. Forzar push (¡cuidado!):"
+    echo "   git push --force"
+    echo ""
+    echo "⚠️  Esto reescribe la historia. Si otros tienen el repo,"
+    echo "   van a tener que clonarlo de nuevo."
+fi
+
+echo ""
+echo "✅ Limpieza completada"`
+
+  const envExample = `# ============================================
+# .env.example - Plantilla de configuración
+# Copiar a .env y completar con datos reales
+# ============================================
+
+# ============================================
+# CREDENCIALES COMPRAR.GOB.AR
+# ============================================
+CUIT=20-12345678-9
+PASSWORD=tu_password_segura_aqui
+
+# ============================================
+# CONFIGURACIÓN DE EJECUCIÓN
+# ============================================
+INTERVALO_HORAS=24
+TIMEOUT_INACTIVIDAD=60
+
+# ============================================
+# EMAIL - Reporte diario
+# ============================================
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=tu_email@gmail.com
+SMTP_PASS=tu_app_password_de_16_caracteres
+EMAIL_FROM=tu_email@gmail.com
+EMAIL_TO=email1@gmail.com,email2@gmail.com
+EMAIL_REPORT_HOUR=20
+
+# ============================================
+# TELEGRAM BOT
+# ============================================
+TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
+TELEGRAM_CHAT_IDS=123456789,987654321
+
+# ============================================
+# SEGURIDAD
+# ============================================
+ADMIN_USER=admin
+ADMIN_PASS=genera_una_password_larga_y_segura
+SECRET_KEY=genera_una_clave_aleatoria_larga_aqui
+ALLOWED_IPS=`
+
+  return (
+    <div>
+      <h2 className="text-2xl font-bold mb-2 flex items-center gap-3">
+        <Lock className="w-7 h-7 text-red-400" />
+        ⚠️ Problema de Credenciales
+      </h2>
+      
+      {/* Alerta principal */}
+      <div className="bg-red-900/40 border-2 border-red-600 rounded-xl p-6 mb-6">
+        <div className="flex items-start gap-4">
+          <AlertTriangle className="w-8 h-8 text-red-400 flex-shrink-0 mt-1" />
+          <div>
+            <h3 className="text-xl font-bold text-red-300 mb-2">
+              🔴 URGENTE: Tu contraseña está expuesta en GitHub
+            </h3>
+            <p className="text-red-200 mb-3">
+              En tu archivo <code className="bg-red-950 px-2 py-0.5 rounded">comprar.py</code> tenés las credenciales hardcodeadas:
+            </p>
+            <div className="bg-red-950 rounded-lg p-4 font-mono text-sm mb-3">
+              <p className="text-red-300">CUIT = "25418019"       <span className="text-red-500"># ← EXPUESTO</span></p>
+              <p className="text-red-300">PASSWORD = "25418019"   <span className="text-red-500"># ← EXPUESTO</span></p>
+            </div>
+            <div className="bg-yellow-900/50 border border-yellow-600 rounded-lg p-3">
+              <p className="text-yellow-200 font-semibold">🔴 ACCIONES INMEDIATAS:</p>
+              <ol className="text-yellow-100 text-sm mt-2 space-y-1 list-decimal list-inside">
+                <li><strong>Cambiá la contraseña en comprar.gob.ar AHORA MISMO</strong></li>
+                <li>Eliminá el repo de GitHub o limpiá el historial</li>
+                <li>Creá un repo nuevo solo con código limpio</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Explicación del problema */}
+      <div className="bg-gray-800 rounded-xl p-6 mb-6 border border-gray-700">
+        <h3 className="text-lg font-semibold mb-3">¿Por qué es un problema?</h3>
+        <div className="space-y-3 text-sm text-gray-300">
+          <p>
+            <strong className="text-white">1. El historial de Git es permanente:</strong> Aunque borres las credenciales ahora, 
+            quedan en todos los commits anteriores. Cualquiera puede verlas con <code className="bg-gray-700 px-1 rounded">git log -p</code>.
+          </p>
+          <p>
+            <strong className="text-white">2. Bots escanean GitHub constantemente:</strong> Hay bots automáticos que buscan 
+            credenciales expuestas en repos públicos. Pueden haber sido capturadas en minutos.
+          </p>
+          <p>
+            <strong className="text-white">3. Webhook de Discord expuesto:</strong> En <code className="bg-gray-700 px-1 rounded">run_comprar.py</code> también 
+            tenés un webhook de Discord visible.
+          </p>
+        </div>
+      </div>
+
+      {/* Solución paso a paso */}
+      <div className="bg-green-900/30 border border-green-700 rounded-xl p-6 mb-6">
+        <h3 className="text-lg font-semibold mb-4 text-green-300 flex items-center gap-2">
+          <CheckCircle className="w-5 h-5" />
+          Solución: Mover credenciales a variables de entorno
+        </h3>
+        
+        <div className="space-y-4">
+          <div className="flex gap-3">
+            <div className="flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm font-bold">1</div>
+            <div className="flex-1">
+              <p className="font-semibold text-sm mb-1">Cambiar la contraseña en comprar.gob.ar</p>
+              <p className="text-xs text-gray-400">Entrá al sitio y cambiá la contraseña inmediatamente</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-3">
+            <div className="flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm font-bold">2</div>
+            <div className="flex-1">
+              <p className="font-semibold text-sm mb-1">Reemplazar comprar.py con la versión segura</p>
+              <p className="text-xs text-gray-400">Las credenciales ahora se leen de variables de entorno</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-3">
+            <div className="flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm font-bold">3</div>
+            <div className="flex-1">
+              <p className="font-semibold text-sm mb-1">Crear archivo .env con tus credenciales</p>
+              <p className="text-xs text-gray-400">Este archivo NUNCA se sube a Git</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-3">
+            <div className="flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm font-bold">4</div>
+            <div className="flex-1">
+              <p className="font-semibold text-sm mb-1">Agregar .env al .gitignore</p>
+              <p className="text-xs text-gray-400">Para que Git nunca lo trackee</p>
+            </div>
+          </div>
+          
+          <div className="flex gap-3">
+            <div className="flex-shrink-0 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm font-bold">5</div>
+            <div className="flex-1">
+              <p className="font-semibold text-sm mb-1">Eliminar el repo público y crear uno nuevo</p>
+              <p className="text-xs text-gray-400">O hacerlo privado y limpiar el historial</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Archivos */}
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold mb-2">📄 Archivos para copiar</h3>
+        
+        <FileBlock
+          name="comprar.py (VERSIÓN SEGURA)"
+          content={comprarPatched}
+          lang="python"
+          copiedFile={copiedFile}
+          copyToClipboard={copyToClipboard}
+        />
+        
+        <FileBlock
+          name=".env.example"
+          content={envExample}
+          lang="env"
+          copiedFile={copiedFile}
+          copyToClipboard={copyToClipboard}
+        />
+        
+        <FileBlock
+          name=".gitignore"
+          content={gitignoreContent}
+          lang="gitignore"
+          copiedFile={copiedFile}
+          copyToClipboard={copyToClipboard}
+        />
+        
+        <FileBlock
+          name="limpiar_credenciales.sh"
+          content={cleanupScript}
+          lang="bash"
+          copiedFile={copiedFile}
+          copyToClipboard={copyToClipboard}
+        />
+      </div>
+
+      {/* Resumen */}
+      <div className="mt-6 bg-blue-900/30 border border-blue-700 rounded-lg p-4">
+        <h4 className="font-semibold text-blue-300 mb-2">💡 Resumen</h4>
+        <ul className="text-sm text-blue-200/80 space-y-1 list-disc list-inside">
+          <li>El código que generé está en las pestañas de este panel (podés copiar cada archivo)</li>
+          <li>Tu contraseña está expuesta en GitHub - <strong>cambiala YA</strong></li>
+          <li>Usá variables de entorno (.env) para todas las credenciales</li>
+          <li>Nunca subas .env a Git (está en .gitignore)</li>
+          <li>Si el repo es público, eliminá el historial o creá uno nuevo</li>
+        </ul>
       </div>
     </div>
   )
