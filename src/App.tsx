@@ -171,20 +171,28 @@ function OverviewSection() {
           <Zap className="w-5 h-5 text-yellow-400" />
           Inicio Rápido
         </h3>
-        <div className="bg-gray-900 rounded-lg p-4 font-mono text-sm">
+        <div className="bg-gray-900 rounded-lg p-4 font-mono text-sm mb-4">
           <p className="text-green-400"># 1. Clonar el repo original</p>
           <p className="text-gray-300">git clone https://github.com/ematevez/comprar.git</p>
           <p className="text-gray-300">cd comprar</p>
-          <p className="text-green-400 mt-2"># 2. Copiar los archivos de este panel (pestaña "Archivos")</p>
+          <p className="text-green-400 mt-2"># 2. Copiar los archivos descargables (pestaña "Archivos")</p>
+          <p className="text-gray-300"># Los archivos están en /public/archivos/ del workspace</p>
           <p className="text-gray-300">cp docker-compose.yml .</p>
           <p className="text-gray-300">cp Dockerfile .</p>
-          <p className="text-gray-300">cp .env .env</p>
+          <p className="text-gray-300">cp .env.example .env</p>
           <p className="text-green-400 mt-2"># 3. Configurar variables de entorno</p>
           <p className="text-gray-300">nano .env</p>
           <p className="text-green-400 mt-2"># 4. Levantar todo</p>
           <p className="text-gray-300">docker compose up -d</p>
           <p className="text-green-400 mt-2"># 5. Acceder</p>
           <p className="text-gray-300">http://TU_IP:8765</p>
+        </div>
+        <div className="bg-yellow-900/40 border border-yellow-600 rounded-lg p-3">
+          <p className="text-sm text-yellow-200">
+            <strong>📥 ¿Dónde están los archivos?</strong> Todos los archivos .py modificados están en la carpeta{' '}
+            <code className="bg-gray-800 px-1 rounded">/public/archivos/</code> del workspace. 
+            Andá a la pestaña <strong>"Archivos"</strong> para verlos y descargarlos.
+          </p>
         </div>
       </div>
     </div>
@@ -1932,13 +1940,35 @@ if __name__ == "__main__":
 
 // ==================== FILES SECTION ====================
 function FilesSection({ expandedFile, setExpandedFile, copiedFile, copyToClipboard }: { 
-  expandedFile: string | null; setExpandedFile: (f: string | null) => void; copiedFile: string | null; copyToClipboard: (t: string, id: string) => void 
+  expandedFile: string | null; setExpandedFile: (f: string | null) => void; copiedFile: string | null; copyToClipboard: (t: string, id: string) => void
 }) {
+  
+  const downloadableFiles = [
+    { name: 'comprar.py', desc: 'Versión segura (sin credenciales hardcodeadas)', category: 'Python' },
+    { name: 'servidor_dashboard.py', desc: 'Servidor con integraciones de seguridad, email y telegram', category: 'Python' },
+    { name: 'enviar_reporte_email.py', desc: 'Reporte diario por email con HTML y Excel adjunto', category: 'Python' },
+    { name: 'telegram_bot.py', desc: 'Bot de Telegram con comandos interactivos', category: 'Python' },
+    { name: 'middleware_seguridad.py', desc: 'Autenticación, rate limiting, bloqueo de IPs', category: 'Python' },
+    { name: 'api_emails.py', desc: 'Gestión de emails para reportes', category: 'Python' },
+    { name: 'requirements.txt', desc: 'Dependencias Python actualizadas', category: 'Config' },
+    { name: '.env.example', desc: 'Plantilla de variables de entorno', category: 'Config' },
+    { name: '.gitignore', desc: 'Ignorar archivos sensibles en Git', category: 'Config' },
+    { name: 'Dockerfile', desc: 'Imagen del contenedor con Playwright', category: 'Docker' },
+    { name: 'docker-compose.yml', desc: 'Orquestación de servicios (app + nginx)', category: 'Docker' },
+    { name: 'nginx.conf', desc: 'Reverse proxy con seguridad y rate limiting', category: 'Docker' },
+    { name: 'entrypoint.sh', desc: 'Script de inicio del contenedor', category: 'Docker' },
+    { name: 'firewall.sh', desc: 'Configuración de firewall UFW', category: 'Seguridad' },
+    { name: 'generar_ssl.sh', desc: 'Generar certificados SSL', category: 'Seguridad' },
+    { name: 'limpiar_credenciales.sh', desc: 'Limpiar credenciales del repo', category: 'Seguridad' },
+    { name: 'README.md', desc: 'Documentación completa del proyecto', category: 'Docs' },
+  ]
+  
+  const categories = ['Python', 'Config', 'Docker', 'Seguridad', 'Docs']
+
   const allFiles = [
     {
       name: 'Estructura del Proyecto',
-      content: `comprar/
-├── 📄 docker-compose.yml          # Orquestación de contenedores
+      content: `comprar/├── 📄 docker-compose.yml          # Orquestación de contenedores
 ├── 📄 Dockerfile                  # Imagen del contenedor principal
 ├── 📄 .env                        # Variables de entorno (NO subir a git)
 ├── 📄 nginx.conf                  # Configuración del reverse proxy
@@ -1987,8 +2017,43 @@ function FilesSection({ expandedFile, setExpandedFile, copiedFile, copyToClipboa
     <div>
       <h2 className="text-2xl font-bold mb-2">Archivos del Proyecto</h2>
       <p className="text-gray-400 mb-6">
-        Estructura completa del proyecto con todos los archivos necesarios.
+        Todos los archivos están listos para descargar. Copiá los archivos a tu proyecto local.
       </p>
+
+      {/* Download Section */}
+      <div className="bg-green-900/30 border border-green-700 rounded-xl p-6 mb-6">
+        <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-green-300">
+          <Download className="w-5 h-5" />
+          📥 Archivos para Descargar
+        </h3>
+        <p className="text-sm text-green-200/80 mb-4">
+          Estos archivos están en la carpeta <code className="bg-gray-800 px-1 rounded">/public/archivos/</code> del workspace.
+          Podés descargarlos directamente o copiarlos desde las pestañas anteriores.
+        </p>
+        
+        {categories.map(cat => (
+          <div key={cat} className="mb-4">
+            <h4 className="text-sm font-semibold text-gray-300 mb-2 uppercase tracking-wide">{cat}</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              {downloadableFiles.filter(f => f.category === cat).map(file => (
+                <a
+                  key={file.name}
+                  href={`/archivos/${file.name}`}
+                  download
+                  className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 rounded-lg p-3 border border-gray-700 hover:border-gray-500 transition-all group"
+                >
+                  <FileCode className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-mono text-white truncate">{file.name}</p>
+                    <p className="text-xs text-gray-400 truncate">{file.desc}</p>
+                  </div>
+                  <Download className="w-4 h-4 text-gray-500 group-hover:text-green-400 transition-colors" />
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
 
       {/* File Tree */}
       <div className="bg-gray-800 rounded-xl p-6 mb-6 border border-gray-700">
