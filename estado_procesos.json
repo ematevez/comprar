@@ -1,0 +1,805 @@
+{
+  "ultima_ejecucion": "2026-10-14T08:03:20.270194",
+  "procesos": {
+    "38/25-0510-LPU26": {
+      "Número de proceso": "38/25-0510-LPU26",
+      "Nombre de proceso": "Adquisición de un kit de estructura, tren de aterrizaje e interfaz de motor",
+      "Unidad Ejecutora": "38/25 - Base Aeronaval Comandante espora",
+      "Unidad Operativa de Contrataciones": "38/25 - Base Aeronaval Comandante espora",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "9/10/2026"
+    },
+    "38/25-0509-LPU26": {
+      "Número de proceso": "38/25-0509-LPU26",
+      "Nombre de proceso": "Adquisición de un kit de cabina, transparencias y accesos, con prestación de soporte técnico.",
+      "Unidad Ejecutora": "38/25 - Base Aeronaval Comandante espora",
+      "Unidad Operativa de Contrataciones": "38/25 - Base Aeronaval Comandante espora",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "9/10/2026"
+    },
+    "38/25-0508-LPU26": {
+      "Número de proceso": "38/25-0508-LPU26",
+      "Nombre de proceso": "Provisión de un kit de sistemas de fluido y mangueras aeronáuticas.",
+      "Unidad Ejecutora": "38/25 - Base Aeronaval Comandante espora",
+      "Unidad Operativa de Contrataciones": "38/25 - Base Aeronaval Comandante espora",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "9/10/2026"
+    },
+    "38/25-0506-LPU26": {
+      "Número de proceso": "38/25-0506-LPU26",
+      "Nombre de proceso": "Adquisición de un kit de controles de vuelo, transmisión y rotor de cola con prestación de soporte.",
+      "Unidad Ejecutora": "38/25 - Base Aeronaval Comandante espora",
+      "Unidad Operativa de Contrataciones": "38/25 - Base Aeronaval Comandante espora",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "9/10/2026"
+    },
+    "84/129-0724-LPU26": {
+      "Número de proceso": "84/129-0724-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE FRENTES Y CONJUNTOS DE TABLEROS DE INSTRUMENTOS PARA VEHÍCULOS DE COMBATE TAM 2C",
+      "Unidad Ejecutora": "84/129 - Dirección de Arsenales",
+      "Unidad Operativa de Contrataciones": "84/129 - Dirección de Arsenales",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "7/10/2026"
+    },
+    "84/13-0713-LPU26": {
+      "Número de proceso": "84/13-0713-LPU26",
+      "Nombre de proceso": "APST P LA PROV DE ALFALFA CAMPAÑA 2027/39 91has - ECN",
+      "Unidad Ejecutora": "84/13 - Dirección de Remonta y Veterinaria",
+      "Unidad Operativa de Contrataciones": "84/13 - Dirección de Remonta y Veterinaria",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "6/10/2026"
+    },
+    "84/13-0712-LPU26": {
+      "Número de proceso": "84/13-0712-LPU26",
+      "Nombre de proceso": "APST P LA PROV DE ALFALFA CAMPAÑA 2027/39 341has - ECN",
+      "Unidad Ejecutora": "84/13 - Dirección de Remonta y Veterinaria",
+      "Unidad Operativa de Contrataciones": "84/13 - Dirección de Remonta y Veterinaria",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "5/10/2026"
+    },
+    "39-0041-LPU26": {
+      "Número de proceso": "39-0041-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE REPUESTOS PARA MOTORES MARINOS GM DETROIT DIESEL PARA GC TIPO 48 Y STAND TENDER.",
+      "Unidad Ejecutora": "39 - Dirección General de Administración- PNA",
+      "Unidad Operativa de Contrataciones": "39 - Dirección General de Administración- PNA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "5/10/2026"
+    },
+    "39-0040-LPU26": {
+      "Número de proceso": "39-0040-LPU26",
+      "Nombre de proceso": "SERVICIO DE MANTENIMIENTO CORRECTIVO DE LOS SISTEMAS DE VIDEO DE LA PREFECTURA NAVAL ARGENTINA.",
+      "Unidad Ejecutora": "39 - Dirección General de Administración- PNA",
+      "Unidad Operativa de Contrataciones": "39 - Dirección General de Administración- PNA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "5/10/2026"
+    },
+    "84/31-0709-LPU26": {
+      "Número de proceso": "84/31-0709-LPU26",
+      "Nombre de proceso": "ADQUISICION DE PRODUCTOS DE PANIFICACION PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMESTRE 2027",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "5/10/2026"
+    },
+    "1": {
+      "Número de proceso": "1",
+      "Nombre de proceso": "2",
+      "Unidad Ejecutora": "3",
+      "Unidad Operativa de Contrataciones": "4",
+      "Estado de proceso": "5",
+      "Fecha creación": "6"
+    },
+    "84/31-0708-LPU26": {
+      "Número de proceso": "84/31-0708-LPU26",
+      "Nombre de proceso": "ADQUISICION DE VIVERES SECOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMESTRE 2027",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "5/10/2026"
+    },
+    "84/31-0707-LPU26": {
+      "Número de proceso": "84/31-0707-LPU26",
+      "Nombre de proceso": "ADQUISICION DE VIVERES FRESCOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMESTRE 2027",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "5/10/2026"
+    },
+    "84/31-0706-LPU26": {
+      "Número de proceso": "84/31-0706-LPU26",
+      "Nombre de proceso": "ADQUISICION DE PRODUCTOS AVICOLAS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMESTRE 2027",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "5/10/2026"
+    },
+    "84/31-0705-LPU26": {
+      "Número de proceso": "84/31-0705-LPU26",
+      "Nombre de proceso": "ADQUISICION DE FRUTAS Y VERDURAS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMESTRE 2027",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/31-0704-LPU26": {
+      "Número de proceso": "84/31-0704-LPU26",
+      "Nombre de proceso": "ADQUISICION DE PRODUCTOS CARNICOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMESTRE 2027",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/143-0703-LPU26": {
+      "Número de proceso": "84/143-0703-LPU26",
+      "Nombre de proceso": "1ra etapa 27 Adquisición de Víveres Secos - Jef Agr A Camp 601",
+      "Unidad Ejecutora": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Unidad Operativa de Contrataciones": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/143-0702-LPU26": {
+      "Número de proceso": "84/143-0702-LPU26",
+      "Nombre de proceso": "1ra etapa 27 Adquisición de Víveres Frescos - Jef Agr A Camp 601",
+      "Unidad Ejecutora": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Unidad Operativa de Contrataciones": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/143-0701-LPU26": {
+      "Número de proceso": "84/143-0701-LPU26",
+      "Nombre de proceso": "1ra etapa 27 Adquisición de Productos Avícolas - Jef Agr A Camp 601",
+      "Unidad Ejecutora": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Unidad Operativa de Contrataciones": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/143-0700-LPU26": {
+      "Número de proceso": "84/143-0700-LPU26",
+      "Nombre de proceso": "1ra etapa 27 Adquisición de Productos Panificados - Jef Agr A Camp 601",
+      "Unidad Ejecutora": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Unidad Operativa de Contrataciones": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/143-0699-LPU26": {
+      "Número de proceso": "84/143-0699-LPU26",
+      "Nombre de proceso": "1ra etapa 27 Adquisición de Frutas, Verduras y Hortalizas - Jef Agr A Camp 601",
+      "Unidad Ejecutora": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Unidad Operativa de Contrataciones": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/143-0698-LPU26": {
+      "Número de proceso": "84/143-0698-LPU26",
+      "Nombre de proceso": "1ra etapa 27 Adquisición de Víveres Cárnicos - Jef Agr A Camp 601",
+      "Unidad Ejecutora": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Unidad Operativa de Contrataciones": "84/143-JEFATURA DE AGRUPACION DE ARTILLERIA DE CAMPAÑA 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "38/12-0494-LPU26": {
+      "Número de proceso": "38/12-0494-LPU26",
+      "Nombre de proceso": "ADQ. DE EQUIPOS DE RADIOCOMUNICACIONES UHF/VHF PARA EL DESTRUCTOR A.R.A \"SARANDÍ\"",
+      "Unidad Ejecutora": "38/12 - Comando de la Flota de Mar",
+      "Unidad Operativa de Contrataciones": "38/12 - Comando de la Flota de Mar",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "2/10/2026"
+    },
+    "84/136-0696-LPU26": {
+      "Número de proceso": "84/136-0696-LPU26",
+      "Nombre de proceso": "SERVICIO DE MANTENIMIENTO, REPARACION Y REFACCION DEL ANEXO 3 DEL CASINO DE SUBOFICIALES DEL CGMBA",
+      "Unidad Ejecutora": "84/136 COMANDO GUARNICIÓN MILITAR BUENOS AIRES",
+      "Unidad Operativa de Contrataciones": "84/136 COMANDO GUARNICIÓN MILITAR BUENOS AIRES",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "1/10/2026"
+    },
+    "84/31-0695-LPU26": {
+      "Número de proceso": "84/31-0695-LPU26",
+      "Nombre de proceso": "CONTRATAR EL SERVICIO DE REMODELACION DE BAÑOS DEL CUERPO DE CADETES DEL LMGB",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "1/10/2026"
+    },
+    "68-0013-LPU26": {
+      "Número de proceso": "68-0013-LPU26",
+      "Nombre de proceso": "Adquisición de equipos de laboratorio con destino al INEIA (ALCANZADO POR PROTOCOLO MERCOSUR)",
+      "Unidad Ejecutora": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Unidad Operativa de Contrataciones": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "1/10/2026"
+    },
+    "84/13-0691-LPU26": {
+      "Número de proceso": "84/13-0691-LPU26",
+      "Nombre de proceso": "APST P/ LA PROV DE INSUM, SIEM, COND Y HENIFICADO DEL CULT DE ALFALFA 2027/29 - ECN",
+      "Unidad Ejecutora": "84/13 - Dirección de Remonta y Veterinaria",
+      "Unidad Operativa de Contrataciones": "84/13 - Dirección de Remonta y Veterinaria",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "30/9/2026"
+    },
+    "38/1-0486-LPU26": {
+      "Número de proceso": "38/1-0486-LPU26",
+      "Nombre de proceso": "Adquisición de palo santo en trozos de 300 mm",
+      "Unidad Ejecutora": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Unidad Operativa de Contrataciones": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "30/9/2026"
+    },
+    "494-0002-LPU26": {
+      "Número de proceso": "494-0002-LPU26",
+      "Nombre de proceso": "Adquisición insumos para el Laboratorio del BNDG",
+      "Unidad Ejecutora": "494 - Área de Compras y Contrataciones",
+      "Unidad Operativa de Contrataciones": "494 - Área de Compras y Contrataciones",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "29/9/2026"
+    },
+    "84/129-0690-LPU26": {
+      "Número de proceso": "84/129-0690-LPU26",
+      "Nombre de proceso": "SERVICIO DE REPARACIÓN DE TECHO Y SISTEMA DE DESAGÜE DEL EDIFICIO Nº 84 DEL B ARS 602",
+      "Unidad Ejecutora": "84/129 - Dirección de Arsenales",
+      "Unidad Operativa de Contrataciones": "84/129 - Dirección de Arsenales",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "29/9/2026"
+    },
+    "84/31-0689-LPU26": {
+      "Número de proceso": "84/31-0689-LPU26",
+      "Nombre de proceso": "CONTRATAR EL SERVICIO DE REPARACIÓN PARA EL TECHO DEL NIVEL SECUNDARIO DEL LMGB.",
+      "Unidad Ejecutora": "84/31 - Liceo Militar General Belgrano",
+      "Unidad Operativa de Contrataciones": "84/31 - Liceo Militar General Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "29/9/2026"
+    },
+    "47-0006-LPU26": {
+      "Número de proceso": "47-0006-LPU26",
+      "Nombre de proceso": "Adquisición de lubricantes para los buques de investigación pesquera del INIDEP",
+      "Unidad Ejecutora": "47 - Dpto. de Compras y Servicios- INIDEP",
+      "Unidad Operativa de Contrataciones": "47 - Dpto. de Compras y Servicios- INIDEP",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "28/9/2026"
+    },
+    "38/1-0484-LPU26": {
+      "Número de proceso": "38/1-0484-LPU26",
+      "Nombre de proceso": "Adquisición de UN (1) kit de repuestos para motores diésel Sulzer.",
+      "Unidad Ejecutora": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Unidad Operativa de Contrataciones": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "28/9/2026"
+    },
+    "84/26-0687-LPU26": {
+      "Número de proceso": "84/26-0687-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE EQUIPOS BIOMEDICOS PARA EL H GRL 601 - HMC.",
+      "Unidad Ejecutora": "84/26 - Hospital Militar Central 601",
+      "Unidad Operativa de Contrataciones": "84/26 - Hospital Militar Central 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "28/9/2026"
+    },
+    "38/12-0481-LPU26": {
+      "Número de proceso": "38/12-0481-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE REP. PARA MANTENIMIENTO DE MOTOR GENERADOR WARTSILA P/ UNIDADES DEPENDIENTES DE COFM",
+      "Unidad Ejecutora": "38/12 - Comando de la Flota de Mar",
+      "Unidad Operativa de Contrataciones": "38/12 - Comando de la Flota de Mar",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "28/9/2026"
+    },
+    "38/12-0480-LPU26": {
+      "Número de proceso": "38/12-0480-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE BOMBAS NEUMÁTICAS E HIDROLAVADORAS PARA UNIDADES DEL COMANDO DE LA FLOTA DE MAR",
+      "Unidad Ejecutora": "38/12 - Comando de la Flota de Mar",
+      "Unidad Operativa de Contrataciones": "38/12 - Comando de la Flota de Mar",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "27/9/2026"
+    },
+    "38/12-0478-LPU26": {
+      "Número de proceso": "38/12-0478-LPU26",
+      "Nombre de proceso": "ADQUISICION DE EQUIPOS INDIVIDUALES DE AIRE ACONDICIONADO PROA PARA EL DESTRUCTOR A.R.A \"SARANDI\"",
+      "Unidad Ejecutora": "38/12 - Comando de la Flota de Mar",
+      "Unidad Operativa de Contrataciones": "38/12 - Comando de la Flota de Mar",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "25/9/2026"
+    },
+    "38/15-0477-LPU26": {
+      "Número de proceso": "38/15-0477-LPU26",
+      "Nombre de proceso": "Obtención de Frutas y Verduras 1er Trimestre 2027, para los destinos con asiento en IBBA",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0476-LPU26": {
+      "Número de proceso": "38/15-0476-LPU26",
+      "Nombre de proceso": "Obtención de conservas, panificados para los destinos en la IBBA (1er Trimestre 2027)",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "84/77-0685-LPU26": {
+      "Número de proceso": "84/77-0685-LPU26",
+      "Nombre de proceso": "ADQUISICION DE DRONES MICRO- DGCICD",
+      "Unidad Ejecutora": "84/77 - Departamento Contaduría y Finanzas (EMGE)",
+      "Unidad Operativa de Contrataciones": "84/77 - Departamento Contaduría y Finanzas (EMGE)",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0475-LPU26": {
+      "Número de proceso": "38/15-0475-LPU26",
+      "Nombre de proceso": "Obtención de víveres secos y condimentos (1er TRIMESTRE 2027) para los destinos con asiento en IBMP",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/37-0474-LPU26": {
+      "Número de proceso": "38/37-0474-LPU26",
+      "Nombre de proceso": "ADQUISICION DE TOMOGRAFO DENTAL",
+      "Unidad Ejecutora": "38/37 - Hospital Naval Puerto Belgrano",
+      "Unidad Operativa de Contrataciones": "38/37 - Hospital Naval Puerto Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "84/129-0684-LPU26": {
+      "Número de proceso": "84/129-0684-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE MAQUINAS Y HERRAMIENTAS MENORES PARA VEHICULO BLINDADO M113",
+      "Unidad Ejecutora": "84/129 - Dirección de Arsenales",
+      "Unidad Operativa de Contrataciones": "84/129 - Dirección de Arsenales",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/6-0473-LPU26": {
+      "Número de proceso": "38/6-0473-LPU26",
+      "Nombre de proceso": "ADQUISICION DE MATERIALES DE CONSTRUCCION PARA LA HABILITACION DEL DEPARTAMENTO SANIDAD DEL DNRD",
+      "Unidad Ejecutora": "38/6 - INTENDENCIA NAVAL USHUAIA",
+      "Unidad Operativa de Contrataciones": "38/6 - INTENDENCIA NAVAL USHUAIA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0472-LPU26": {
+      "Número de proceso": "38/15-0472-LPU26",
+      "Nombre de proceso": "Obtención de cortes cárnicos para los destinos con asiento en la IBMP (1er Trimestre 2027)",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "279-0002-LPU26": {
+      "Número de proceso": "279-0002-LPU26",
+      "Nombre de proceso": "Contratación del servicio de limpieza, desinfección y sanitización para los edificios de la PSA",
+      "Unidad Ejecutora": "279/000 - Departamento de Compras - PSA",
+      "Unidad Operativa de Contrataciones": "279/000 - Departamento de Compras - PSA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0471-LPU26": {
+      "Número de proceso": "38/15-0471-LPU26",
+      "Nombre de proceso": "Adquisición de cortes cárnicos, cerdo, filet de merluza, pollo y huevo fresco para IBPB - 1° T 2027",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0470-LPU26": {
+      "Número de proceso": "38/15-0470-LPU26",
+      "Nombre de proceso": "Obtención de cortes cárnicos y huevos para los destinos con asiento en la IBBA (1er Trimestre 2027)",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0468-LPU26": {
+      "Número de proceso": "38/15-0468-LPU26",
+      "Nombre de proceso": "Obtención de víveres secos y condimentos (1er TRIMESTRE) para los destinos con asiento en IBBA",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0465-LPU26": {
+      "Número de proceso": "38/15-0465-LPU26",
+      "Nombre de proceso": "Adquirir víveres secos y condimentos para los destinos con asiento en la IBUS para el 1er trimestre",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0464-LPU26": {
+      "Número de proceso": "38/15-0464-LPU26",
+      "Nombre de proceso": "Obtención de lácteos y fiambre para los destinos con asiento en la IBBA (1er Trimestre 2027)",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0463-LPU26": {
+      "Número de proceso": "38/15-0463-LPU26",
+      "Nombre de proceso": "Adquisición de víveres secos y condimentos para los destinos con asiento en IBPB - 1° TRIMESTRE 2027",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0462-LPU26": {
+      "Número de proceso": "38/15-0462-LPU26",
+      "Nombre de proceso": "Adquisición de conservas y panificados para los destinos con asiento en IBPB - 1° TRIMESTRE 2027",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0461-LPU26": {
+      "Número de proceso": "38/15-0461-LPU26",
+      "Nombre de proceso": "Adquisición de conservas, panificados y queso rallado para los destinos con asiento en IBUS.",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0460-LPU26": {
+      "Número de proceso": "38/15-0460-LPU26",
+      "Nombre de proceso": "Obtención de conservas, panificados y lácteos para los destinos con asiento en la IBMP 1º TRIM 2027",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/15-0459-LPU26": {
+      "Número de proceso": "38/15-0459-LPU26",
+      "Nombre de proceso": "Adquisición de cortes cárnicos, cerdo, filet de merluza, pollo y huevo fresco para IBUS.",
+      "Unidad Ejecutora": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/15 JEFATURA DE OBTENCION DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/1-0458-LPU26": {
+      "Número de proceso": "38/1-0458-LPU26",
+      "Nombre de proceso": "Adquisición de OCHO (8) bombas inyectoras marca “L’Orange” para los motores principales .",
+      "Unidad Ejecutora": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Unidad Operativa de Contrataciones": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/3-0457-LPU26": {
+      "Número de proceso": "38/3-0457-LPU26",
+      "Nombre de proceso": "ADUISICIÓN DE LÁCTEOS Y FIAMBRES",
+      "Unidad Ejecutora": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Unidad Operativa de Contrataciones": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "38/1-0455-LPU26": {
+      "Número de proceso": "38/1-0455-LPU26",
+      "Nombre de proceso": "Adquisición de DOS (2) kits de repuestos Generadores MGO para mantenimiento de 4.000 horas motor.",
+      "Unidad Ejecutora": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Unidad Operativa de Contrataciones": "38/01 - ARSENAL NAVAL PUERTO BELGRANO",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "24/9/2026"
+    },
+    "84/77-0683-LPU26": {
+      "Número de proceso": "84/77-0683-LPU26",
+      "Nombre de proceso": "Adquisición de repuestos destinados al mantenimiento preventivo y correctivo de vehículos Ford F-350",
+      "Unidad Ejecutora": "84/77 - Departamento Contaduría y Finanzas (EMGE)",
+      "Unidad Operativa de Contrataciones": "84/77 - Departamento Contaduría y Finanzas (EMGE)",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "23/9/2026"
+    },
+    "84/129-0682-LPU26": {
+      "Número de proceso": "84/129-0682-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE INSUMOS Y REPUESTOS PARA EL MANTENIMIENTO DE VEHÍCULOS DEL B ARS 604",
+      "Unidad Ejecutora": "84/129 - Dirección de Arsenales",
+      "Unidad Operativa de Contrataciones": "84/129 - Dirección de Arsenales",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "23/9/2026"
+    },
+    "38/12-0454-LPU26": {
+      "Número de proceso": "38/12-0454-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE ESFERA GIROSCÓPICA (GYROSPHERE) PARA UNIDADES DEPENDIENTES DEL COFM",
+      "Unidad Ejecutora": "38/12 - Comando de la Flota de Mar",
+      "Unidad Operativa de Contrataciones": "38/12 - Comando de la Flota de Mar",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "23/9/2026"
+    },
+    "340/1-0056-LPU26": {
+      "Número de proceso": "340/1-0056-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE COMBUSTIBLE RADA LA PLATA - SOSTÉN LOGÍSTICO ANTÁRTICO",
+      "Unidad Ejecutora": "340/001 - Dirección General de Administración - SSSLD",
+      "Unidad Operativa de Contrataciones": "340/001 - Dirección General de Administración - SSSLD",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "23/9/2026"
+    },
+    "37/2-0092-LPU26": {
+      "Número de proceso": "37/2-0092-LPU26",
+      "Nombre de proceso": "SERVICIO DE EXTRACCIÓN, TRASPORTE, MANTENIMIENTO Y LIMPIEZA RED CLOACAL DE LA GUARNICIÓN CENTINELA",
+      "Unidad Ejecutora": "37/002 - Unidad Tecnica Administrativa Contable Digeapoyo",
+      "Unidad Operativa de Contrataciones": "37/002 - Unidad Tecnica Administrativa Contable Digeapoyo",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "23/9/2026"
+    },
+    "38/12-0453-LPU26": {
+      "Número de proceso": "38/12-0453-LPU26",
+      "Nombre de proceso": "ADQUISICION DE CONJUNTOS BOMBAS DE TIMON PARA UNIDADES DEPENDIENTES DE LA DVCB.",
+      "Unidad Ejecutora": "38/12 - Comando de la Flota de Mar",
+      "Unidad Operativa de Contrataciones": "38/12 - Comando de la Flota de Mar",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "23/9/2026"
+    },
+    "68-0012-LPU26": {
+      "Número de proceso": "68-0012-LPU26",
+      "Nombre de proceso": "INSTALACION DE ALAMBRADO Y DEFORESTACIÓN EN CAMPO ANEXO - INPB (ALCANZADO POR PROTOCOLO MERCOSUR)",
+      "Unidad Ejecutora": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Unidad Operativa de Contrataciones": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "22/9/2026"
+    },
+    "39-0039-LPU26": {
+      "Número de proceso": "39-0039-LPU26",
+      "Nombre de proceso": "REPARACIÓN INTEGRAL DEL GUARDACOSTAS PNA GC-65 “MARTÍN GARCIA”.",
+      "Unidad Ejecutora": "39 - Dirección General de Administración- PNA",
+      "Unidad Operativa de Contrataciones": "39 - Dirección General de Administración- PNA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "22/9/2026"
+    },
+    "38/31-0451-LPU26": {
+      "Número de proceso": "38/31-0451-LPU26",
+      "Nombre de proceso": "ADQUISICION DE EQUIP., COMPONENTES Y ACCESORIOS INFORMÁT. Y DE INFRAESTRUCTURA DE REDES.",
+      "Unidad Ejecutora": "38/31 - DIRECCION GENERAL DE INTELIGENCIA DE LA ARMADA",
+      "Unidad Operativa de Contrataciones": "38/31 - DIRECCION GENERAL DE INTELIGENCIA DE LA ARMADA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "22/9/2026"
+    },
+    "17-0005-LPU26": {
+      "Número de proceso": "17-0005-LPU26",
+      "Nombre de proceso": "servicio de gestión de alojamiento con y sin comidas",
+      "Unidad Ejecutora": "17 - Oficina de Compras- TNC",
+      "Unidad Operativa de Contrataciones": "17 - Oficina de Compras- TNC",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "22/9/2026"
+    },
+    "38/6-0447-LPU26": {
+      "Número de proceso": "38/6-0447-LPU26",
+      "Nombre de proceso": "RECAMBIO Y READECUACION INTEGRAL DEL SISTEMA DE CALEFACCION DEL EDIFICIO COMANDO DEL BIM4",
+      "Unidad Ejecutora": "38/6 - INTENDENCIA NAVAL USHUAIA",
+      "Unidad Operativa de Contrataciones": "38/6 - INTENDENCIA NAVAL USHUAIA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "21/9/2026"
+    },
+    "84/24-0677-LPU26": {
+      "Número de proceso": "84/24-0677-LPU26",
+      "Nombre de proceso": "ALQUILER DE EQUIPOS DE FOTOCOPIADO DIGITAL E IMPRESORAS, SU MANTENIMIENTO INTEGRAL E INSUMOS",
+      "Unidad Ejecutora": "84/24 - Colegio Militar de la Nación - Compras y Contrataciones",
+      "Unidad Operativa de Contrataciones": "84/24 - Colegio Militar de la Nación - Compras y Contrataciones",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "21/9/2026"
+    },
+    "38/19-0445-LPU26": {
+      "Número de proceso": "38/19-0445-LPU26",
+      "Nombre de proceso": "DGED ADQUISICIÓN DE DOS SIMULADORES DE TIRO",
+      "Unidad Ejecutora": "38/19 - División Contrataciones del Cuartel General del EMGA",
+      "Unidad Operativa de Contrataciones": "38/19 - División Contrataciones del Cuartel General del EMGA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "21/9/2026"
+    },
+    "38/38-0444-LPU26": {
+      "Número de proceso": "38/38-0444-LPU26",
+      "Nombre de proceso": "ADQUISICION DE BIOMEDICOS PARA BOMBAS DE INFUSION",
+      "Unidad Ejecutora": "38/38 - MINISTERIO DE DEFENSA - ARMADA ARGENTINA - HOSPITAL NAVAL BUENOS AIRES CIRUJANO MAYOR DOCTOR PEDRO MALLO",
+      "Unidad Operativa de Contrataciones": "38/38 - MINISTERIO DE DEFENSA - ARMADA ARGENTINA - HOSPITAL NAVAL BUENOS AIRES CIRUJANO MAYOR DOCTOR PEDRO MALLO",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "19/9/2026"
+    },
+    "340/1-0054-LPU26": {
+      "Número de proceso": "340/1-0054-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE REPUESTOS DE BASE - SOSTÉN LOGÍSTICO ANTÁRTICO.",
+      "Unidad Ejecutora": "340/001 - Dirección General de Administración - SSSLD",
+      "Unidad Operativa de Contrataciones": "340/001 - Dirección General de Administración - SSSLD",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "18/9/2026"
+    },
+    "38/3-0443-LPU26": {
+      "Número de proceso": "38/3-0443-LPU26",
+      "Nombre de proceso": "CONCESIÓN ONEROSA DEL SERVICIO DE BUFFET Y CANTINA DEL CLUB GOLF DE PUERTO BELGRANO (BNPB)",
+      "Unidad Ejecutora": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Unidad Operativa de Contrataciones": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "18/9/2026"
+    },
+    "40/28-0162-LPU26": {
+      "Número de proceso": "40/28-0162-LPU26",
+      "Nombre de proceso": "MANTENIMIENTO Y REPARACIÓN DE BANCO ESTÁTICO Y DE ARRASTRE",
+      "Unidad Ejecutora": "40/028 - AREA DE MATERIAL \"RIO IV\"",
+      "Unidad Operativa de Contrataciones": "40/028 - AREA DE MATERIAL \"RIO IV\"",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "18/9/2026"
+    },
+    "79/8-0006-LPU26": {
+      "Número de proceso": "79/8-0006-LPU26",
+      "Nombre de proceso": "Servicio integral llave en mano Ceremonia de los Best Tourism Villages de ONU Turismo 2026",
+      "Unidad Ejecutora": "79/8 - SAF322 - SECRETARIA DE AMBIENTE Y TURISMO",
+      "Unidad Operativa de Contrataciones": "79/8 - SAF322 - SECRETARIA DE AMBIENTE Y TURISMO",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "18/9/2026"
+    },
+    "84/129-0675-LPU26": {
+      "Número de proceso": "84/129-0675-LPU26",
+      "Nombre de proceso": "ADQUISICION DE REPUESTOS PARA PROGRAMAS DE MANTENIMIENTO DE 2do NIVEL B ARS 601, 602 Y 603",
+      "Unidad Ejecutora": "84/129 - Dirección de Arsenales",
+      "Unidad Operativa de Contrataciones": "84/129 - Dirección de Arsenales",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "18/9/2026"
+    },
+    "78-0011-LPU26": {
+      "Número de proceso": "78-0011-LPU26",
+      "Nombre de proceso": "Contratación del servicio de mantenimiento, reparación e instalación de aires acondicionados.",
+      "Unidad Ejecutora": "78/000 - División Compras",
+      "Unidad Operativa de Contrataciones": "78/000 - División Compras",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "17/9/2026"
+    },
+    "347-0028-LPU26": {
+      "Número de proceso": "347-0028-LPU26",
+      "Nombre de proceso": "CONTRATACIÓN DE MANO DE OBRA ESPECIALIZADA Y ADQUISICIÓN DE REPUESTOS PARA EL HELICOPTERO AW169",
+      "Unidad Ejecutora": "347/000 - Dirección General de Administración - MS",
+      "Unidad Operativa de Contrataciones": "347/000 - Dirección General de Administración - MS",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "17/9/2026"
+    },
+    "78-0010-LPU26": {
+      "Número de proceso": "78-0010-LPU26",
+      "Nombre de proceso": "Adquisición de sobres para ensobrado manual de pasaportes y DNI",
+      "Unidad Ejecutora": "78/000 - División Compras",
+      "Unidad Operativa de Contrataciones": "78/000 - División Compras",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "17/9/2026"
+    },
+    "68-0011-LPU26": {
+      "Número de proceso": "68-0011-LPU26",
+      "Nombre de proceso": "Contratación del Servicio de limpieza edilicia -INE (Alcanzado por el Protocolo del Mercosur)",
+      "Unidad Ejecutora": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Unidad Operativa de Contrataciones": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "17/9/2026"
+    },
+    "46-0037-LPU26": {
+      "Número de proceso": "46-0037-LPU26",
+      "Nombre de proceso": "Concesión de uso precario y exclusivo del espacio rel a la DNV P/ Viandas Desayunos y Meriendas.",
+      "Unidad Ejecutora": "46/000 - Coordinación de Licitaciones y Contrataciones - DNV",
+      "Unidad Operativa de Contrataciones": "46/000 - Coordinación de Licitaciones y Contrataciones - DNV",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "17/9/2026"
+    },
+    "38/3-0440-LPU26": {
+      "Número de proceso": "38/3-0440-LPU26",
+      "Nombre de proceso": "CONCESIÓN ONEROSA DEL SERVICIO DE BUFFET Y CANTINA DEL ESTADIO DE DEPORTES DE LA BNPB.",
+      "Unidad Ejecutora": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Unidad Operativa de Contrataciones": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "64-0019-LPU26": {
+      "Número de proceso": "64-0019-LPU26",
+      "Nombre de proceso": "Adquisición de Computadoras de Escritorio tipo AIO y Monitores para la S.R.T.",
+      "Unidad Ejecutora": "64/000 - Departamento de Compras y Contrataciones- SRT",
+      "Unidad Operativa de Contrataciones": "64/000 - Departamento de Compras y Contrataciones- SRT",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "52-0044-LPU26": {
+      "Número de proceso": "52-0044-LPU26",
+      "Nombre de proceso": "CONTRATACIÓN DE UN (1) SERVICIO PROFESIONAL PARA ACTUALIZACIÓN Y EVOLUCIÓN FUNCIONAL SISTEMA SIGCER",
+      "Unidad Ejecutora": "52 - Coordinación de Compras y Contrataciones - SENASA",
+      "Unidad Operativa de Contrataciones": "52 - Coordinación de Compras y Contrataciones - SENASA",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "47-0005-LPU26": {
+      "Número de proceso": "47-0005-LPU26",
+      "Nombre de proceso": "Contratación seguro para los buques de investigación pesquera del INIDEP",
+      "Unidad Ejecutora": "47 - Dpto. de Compras y Servicios- INIDEP",
+      "Unidad Operativa de Contrataciones": "47 - Dpto. de Compras y Servicios- INIDEP",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "84/129-0670-LPU26": {
+      "Número de proceso": "84/129-0670-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE PINTURAS Y ARTÍCULOS DE FERRETERÍA PARA EL B ARS 604",
+      "Unidad Ejecutora": "84/129 - Dirección de Arsenales",
+      "Unidad Operativa de Contrataciones": "84/129 - Dirección de Arsenales",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "21-0023-LPU26": {
+      "Número de proceso": "21-0023-LPU26",
+      "Nombre de proceso": "SERVICIO DE MANTENIMIENTO EQUIPOS DE AIRE ACONDICIONADO EN LA SEDE CENTRAL Y AMBA DE LA DNM.-",
+      "Unidad Ejecutora": "21/000 - Dirección General de Administración - DNM",
+      "Unidad Operativa de Contrataciones": "21/000 - Dirección General de Administración - DNM",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "315-0014-LPU26": {
+      "Número de proceso": "315-0014-LPU26",
+      "Nombre de proceso": "Servicio de provisión e instalación de 1100 metros cuadrados (m2) de piso de goma",
+      "Unidad Ejecutora": "315/000 - Dirección General de Administración - MP",
+      "Unidad Operativa de Contrataciones": "315/000 - Dirección General de Administración - MP",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "68-0010-LPU26": {
+      "Número de proceso": "68-0010-LPU26",
+      "Nombre de proceso": "SERVICIO DE SEGURIDAD Y VIGILANCIA EN CAMPO DE INMUNIZACIONES MARCOS PAZ - INPB",
+      "Unidad Ejecutora": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Unidad Operativa de Contrataciones": "68/00 - Departamento de Administracion de Bienes - ANLIS",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "92-0006-LPU26": {
+      "Número de proceso": "92-0006-LPU26",
+      "Nombre de proceso": "DIGITALIZACIÓN DEL ARCHIVO DE PUBLICACIONES PERIÓDICAS DE LA EDITORIAL SARMIENTO",
+      "Unidad Ejecutora": "92 - Departamento de Compras y Contrataciones- BN",
+      "Unidad Operativa de Contrataciones": "92 - Departamento de Compras y Contrataciones- BN",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "38/37-0438-LPU26": {
+      "Número de proceso": "38/37-0438-LPU26",
+      "Nombre de proceso": "ADQUISICION DE VIVERES PARA CONSUMO PESONAL INTERNADO DEL HNPB",
+      "Unidad Ejecutora": "38/37 - Hospital Naval Puerto Belgrano",
+      "Unidad Operativa de Contrataciones": "38/37 - Hospital Naval Puerto Belgrano",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "16/9/2026"
+    },
+    "84/26-0667-LPU26": {
+      "Número de proceso": "84/26-0667-LPU26",
+      "Nombre de proceso": "SERVICIO DE SINGLE TEST PARA BIOLOGIA MOLECULAR Y SEROLOGIA",
+      "Unidad Ejecutora": "84/26 - Hospital Militar Central 601",
+      "Unidad Operativa de Contrataciones": "84/26 - Hospital Militar Central 601",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "15/9/2026"
+    },
+    "101-0006-LPU26": {
+      "Número de proceso": "101-0006-LPU26",
+      "Nombre de proceso": "Serv de impermeabilización ext, pintura 4 y 5 piso e instalación, ensayo y certificación anclajes",
+      "Unidad Ejecutora": "101 - Departamento de Compras y Contrataciones",
+      "Unidad Operativa de Contrataciones": "101 - Departamento de Compras y Contrataciones",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "15/9/2026"
+    },
+    "84/30-0665-LPU26": {
+      "Número de proceso": "84/30-0665-LPU26",
+      "Nombre de proceso": "CONTRATAR UN SERVICIO DE MANTENIMIENTO Y REPARACIÓN DE EDIFICIOS - LMGP",
+      "Unidad Ejecutora": "84/30 - Liceo Militar General Paz",
+      "Unidad Operativa de Contrataciones": "84/30 - Liceo Militar General Paz",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "15/9/2026"
+    },
+    "78-0009-LPU26": {
+      "Número de proceso": "78-0009-LPU26",
+      "Nombre de proceso": "Adquisición de credenciales necesarias para la producción del DNI Electrónico de policarbonato",
+      "Unidad Ejecutora": "78/000 - División Compras",
+      "Unidad Operativa de Contrataciones": "78/000 - División Compras",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "14/9/2026"
+    },
+    "72-0022-LPU26": {
+      "Número de proceso": "72-0022-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN DE EQUIPO, MATERIAL INFORMÁTICO Y UN SISTEMA INTEGRAL DE REPRESENTACIÓN PARA EL EMCFFAA",
+      "Unidad Ejecutora": "72/00 - Dirección Administrativa Financiera- EMCFFAA- Dpto de contrataciones",
+      "Unidad Operativa de Contrataciones": "72/00 - Dirección Administrativa Financiera- EMCFFAA- Dpto de contrataciones",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "14/9/2026"
+    },
+    "487-0076-LPU26": {
+      "Número de proceso": "487-0076-LPU26",
+      "Nombre de proceso": "Adquisición de ambos y guardapolvos para el Complejo Médico CHURRUCA-VISCA",
+      "Unidad Ejecutora": "487 - División Compras y Suministros - Superintendencia de Bienestar de la Policia Federal Argentina",
+      "Unidad Operativa de Contrataciones": "487 - División Compras y Suministros - Superintendencia de Bienestar de la Policia Federal Argentina",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "14/9/2026"
+    },
+    "38/3-0429-LPU26": {
+      "Número de proceso": "38/3-0429-LPU26",
+      "Nombre de proceso": "ADQUISICIÓN BOTES NEUMÁTICOS",
+      "Unidad Ejecutora": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Unidad Operativa de Contrataciones": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
+      "Estado de proceso": "Publicado",
+      "Fecha creación": "14/9/2026"
+    }
+  }
+}
