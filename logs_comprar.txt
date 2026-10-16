@@ -1,19 +1,59 @@
 
 ============================================================
-Ejecución iniciada: 16/10/2026 17:15:32
+Ejecución iniciada: 16/10/2026 17:27:55
 Intérprete: /usr/local/bin/python
 ============================================================
-16/10/2026 17:15:33 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
-16/10/2026 17:15:33 - INFO - ⏱️ Timeout de inactividad: 60s
-17:15:33 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
-16/10/2026 17:15:33 - INFO - ============================================================
-17:15:33 - ⏱️ Timeout de inactividad: 60s
-17:15:33 - ============================================================
-16/10/2026 17:15:33 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
-17:15:33 - 🚀 INICIO DE EJECUCIÓN - comprar.py
-16/10/2026 17:15:33 - INFO - ============================================================
-17:15:33 - ============================================================
-16/10/2026 17:15:33 - ERROR - ❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
+16/10/2026 17:27:55 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 17:27:55 - INFO - ⏱️ Timeout de inactividad: 60s
+17:27:55 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 17:27:55 - INFO - ============================================================
+17:27:55 - ⏱️ Timeout de inactividad: 60s
+17:27:55 - ============================================================
+16/10/2026 17:27:55 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+17:27:55 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16/10/2026 17:27:55 - INFO - ============================================================
+17:27:55 - ============================================================
+Traceback (most recent call last):
+  File "/workspace/comprar.py", line 487, in <module>
+    login_comprar_y_extraer(
+  File "/workspace/comprar.py", line 377, in login_comprar_y_extraer
+    estado = cargar_estado(estado_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/comprar.py", line 119, in cargar_estado
+    return json.load(f)
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+Ejecución finalizada: 16/10/2026 17:27:55
+Código de salida: 1
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:45:37
+Intérprete: /usr/local/bin/python
+============================================================
+16/10/2026 17:45:38 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 17:45:38 - INFO - ⏱️ Timeout de inactividad: 60s
+17:45:38 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 17:45:38 - INFO - ============================================================
+17:45:38 - ⏱️ Timeout de inactividad: 60s
+17:45:38 - ============================================================
+16/10/2026 17:45:38 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+17:45:38 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16/10/2026 17:45:38 - INFO - ============================================================
+17:45:38 - ============================================================
+16/10/2026 17:45:38 - ERROR - ❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
 ╔════════════════════════════════════════════════════════════╗
 ║ Looks like Playwright was just installed or updated.       ║
 ║ Please run the following command to download new browsers: ║
@@ -22,7 +62,7 @@ Intérprete: /usr/local/bin/python
 ║                                                            ║
 ║ <3 Playwright Team                                         ║
 ╚════════════════════════════════════════════════════════════╝
-17:15:33 - ❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
+17:45:38 - ❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
 ╔════════════════════════════════════════════════════════════╗
 ║ Looks like Playwright was just installed or updated.       ║
 ║ Please run the following command to download new browsers: ║
@@ -60,5 +100,249 @@ playwright._impl._errors.Error: BrowserType.launch: Executable doesn't exist at 
 ║ <3 Playwright Team                                         ║
 ╚════════════════════════════════════════════════════════════╝
 
-Ejecución finalizada: 16/10/2026 17:15:33
+Ejecución finalizada: 16/10/2026 17:45:38
 Código de salida: 1
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:52:00
+Intérprete: /usr/local/bin/python
+============================================================
+16/10/2026 17:52:00 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 17:52:00 - INFO - ⏱️ Timeout de inactividad: 60s
+16/10/2026 17:52:00 - INFO - ============================================================
+17:52:00 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 17:52:00 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+17:52:00 - ⏱️ Timeout de inactividad: 60s
+17:52:00 - ============================================================
+17:52:00 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16/10/2026 17:52:00 - INFO - ============================================================
+17:52:00 - ============================================================
+16/10/2026 17:52:01 - ERROR - ❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+17:52:01 - ❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+Traceback (most recent call last):
+  File "/workspace/comprar.py", line 487, in <module>
+    login_comprar_y_extraer(
+  File "/workspace/comprar.py", line 393, in login_comprar_y_extraer
+    browser = p.chromium.launch(headless=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 13991, in launch
+    self._sync(
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_browser_type.py", line 94, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+
+Ejecución finalizada: 16/10/2026 17:52:01
+Código de salida: 1
+
+============================================================
+Ejecución iniciada: 16/10/2026 15:27:17
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+16/10/2026 15:27:18 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 15:27:18 - INFO - ⏱️ Timeout de inactividad: 60s
+16/10/2026 15:27:18 - INFO - ============================================================
+15:27:18 - ============================================================
+16/10/2026 15:27:18 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+15:27:18 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16/10/2026 15:27:18 - INFO - ============================================================
+15:27:18 - ============================================================
+16/10/2026 15:27:33 - INFO - ️ Watchdog activado: 60s de inactividad cierra el navegador
+15:27:33 - ️ Watchdog activado: 60s de inactividad cierra el navegador
+16/10/2026 15:28:04 - ERROR - ❌ ERROR FATAL: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://comprar.gob.ar/Login.aspx", waiting until "load"
+
+15:28:04 - ❌ ERROR FATAL: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://comprar.gob.ar/Login.aspx", waiting until "load"
+
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Desktop\Codigos\comprar\comprar.py", line 487, in <module>
+    login_comprar_y_extraer(
+  File "C:\Users\Usuario\Desktop\Codigos\comprar\comprar.py", line 402, in login_comprar_y_extraer
+    login_comprar(page, cuit, password)
+  File "C:\Users\Usuario\Desktop\Codigos\comprar\comprar.py", line 148, in login_comprar
+    page.goto("https://comprar.gob.ar/Login.aspx")
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\sync_api\_generated.py", line 9019, in goto
+    self._sync(
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_page.py", line 556, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "C:\Users\Usuario\AppData\Local\Programs\Python\Python310\lib\site-packages\playwright\_impl\_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://comprar.gob.ar/Login.aspx", waiting until "load"
+
+
+Ejecución finalizada: 16/10/2026 15:28:04
+Código de salida: 1
+
+============================================================
+Ejecución iniciada: 16/10/2026 15:33:00
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+16/10/2026 15:33:02 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 15:33:02 - INFO - ⏱️ Timeout de inactividad: 60s
+16/10/2026 15:33:02 - INFO - ============================================================
+16/10/2026 15:33:02 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16/10/2026 15:33:02 - INFO - ============================================================
+15:33:02 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+15:33:02 - ⏱️ Timeout de inactividad: 60s
+15:33:02 - ============================================================
+15:33:02 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+15:33:02 - ============================================================
+16/10/2026 15:33:03 - INFO - ️ Watchdog activado: 60s de inactividad cierra el navegador
+15:33:03 - ️ Watchdog activado: 60s de inactividad cierra el navegador
+16/10/2026 15:33:08 - INFO - ✅ Login completado.
+15:33:08 - ✅ Login completado.
+16/10/2026 15:33:13 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+15:33:13 - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+16/10/2026 15:33:18 - INFO - ✅ Login completado.
+16/10/2026 15:33:18 - INFO - 🕒 Esperando respuesta del buscador (puede tardar)...
+15:33:18 - 🕒 Esperando respuesta del buscador (puede tardar)...
+16/10/2026 15:33:23 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+16/10/2026 15:33:39 - INFO - 📄 Página 1: 11 registros.
+16/10/2026 15:33:39 - INFO - ➡️ Yendo a la página 2...
+15:33:39 - 📄 Página 1: 11 registros.
+15:33:39 - ➡️ Yendo a la página 2...
+16/10/2026 15:34:10 - INFO - 📄 Página 2: 11 registros.
+16/10/2026 15:34:10 - INFO - ➡️ Yendo a la página 3...
+15:34:10 - 📄 Página 2: 11 registros.
+15:34:10 - ➡️ Yendo a la página 3...
+16/10/2026 15:34:40 - INFO - 📄 Página 3: 11 registros.
+15:34:40 - 📄 Página 3: 11 registros.
+16/10/2026 15:34:40 - INFO - ➡️ Yendo a la página 4...
+15:34:40 - ➡️ Yendo a la página 4...
+16/10/2026 15:35:06 - INFO - 📄 Página 4: 11 registros.
+15:35:06 - 📄 Página 4: 11 registros.
+16/10/2026 15:35:06 - INFO - ➡️ Yendo a la página 5...
+15:35:06 - ➡️ Yendo a la página 5...
+16/10/2026 15:35:29 - INFO - 📄 Página 5: 11 registros.
+15:35:29 - 📄 Página 5: 11 registros.
+16/10/2026 15:35:29 - INFO - ➡️ Yendo a la página 6...
+15:35:29 - ➡️ Yendo a la página 6...
+16/10/2026 15:35:54 - INFO - 📄 Página 6: 11 registros.
+15:35:54 - 📄 Página 6: 11 registros.
+16/10/2026 15:35:54 - INFO - ➡️ Yendo a la página 7...
+15:35:54 - ➡️ Yendo a la página 7...
+16/10/2026 15:36:16 - INFO - 📄 Página 7: 11 registros.
+16/10/2026 15:36:16 - INFO - ➡️ Yendo a la página 8...
+15:36:16 - 📄 Página 7: 11 registros.
+15:36:16 - ➡️ Yendo a la página 8...
+16/10/2026 15:36:47 - INFO - 📄 Página 8: 11 registros.
+16/10/2026 15:36:47 - INFO - ➡️ Yendo a la página 9...
+15:36:47 - 📄 Página 8: 11 registros.
+15:36:47 - ➡️ Yendo a la página 9...
+16/10/2026 15:37:16 - INFO - 📄 Página 9: 11 registros.
+16/10/2026 15:37:16 - INFO - ➡️ Yendo a la página 10...
+15:37:16 - 📄 Página 9: 11 registros.
+15:37:16 - ➡️ Yendo a la página 10...
+16/10/2026 15:37:30 - INFO - 📄 Página 10: 5 registros.
+15:37:30 - 📄 Página 10: 5 registros.
+a la página 11...
+15:37:30 - ➡️ Yendo a la página 11...
+16/10/2026 15:37:35 - INFO - 📄 Página 11: 5 registros.
+16/10/2026 15:37:35 - INFO - ➡️ Yendo a la página 12...
+15:37:35 - 📄 Página 11: 5 registros.
+15:37:35 - ➡️ Yendo a la página 12...
+16/10/2026 15:37:41 - INFO - 🏁 La página 12 repite el contenido anterior -- fin de la paginación.
+15:37:41 - 🏁 La página 12 repite el contenido anterior -- fin de la paginación.
+16/10/2026 15:37:41 - INFO - ✅ Total registros extraídos (todas las páginas): 109
+15:37:41 - ✅ Total registros extraídos (todas las páginas): 109
+16/10/2026 15:37:41 - INFO - 🆕 Nuevos procesos (21): 1, 38/4-0469-LPU26, 84/22-0686-LPU26, 45-0004-LPU26, 84/3-0697-LPU26, 38/1-0499-LPU26, 43-0007-LPU26, 84/129-0725-LPU26, 38/37-0504-LPU26, 84/129-0728-LPU26, 84/129-0729-LPU26, 38/37-0513-LPU26, 38/37-0514-LPU26, 38/37-0517-LPU26, 38/1-0521-LPU26, 38/1-0522-LPU26, 38/1-0523-LPU26, 38/27-0524-LPU26, 38/27-0525-LPU26, 38/1-0526-LPU26, 38/27-0529-LPU26
+15:37:41 - 🆕 Nuevos procesos (21): 1, 38/4-0469-LPU26, 84/22-0686-LPU26, 45-0004-LPU26, 84/3-0697-LPU26, 38/1-0499-LPU26, 43-0007-LPU26, 84/129-0725-LPU26, 38/37-0504-LPU26, 84/129-0728-LPU26, 84/129-0729-LPU26, 38/37-0513-LPU26, 38/37-0514-LPU26, 38/37-0517-LPU26, 38/1-0521-LPU26, 38/1-0522-LPU26, 38/1-0523-LPU26, 38/27-0524-LPU26, 38/27-0525-LPU26, 38/1-0526-LPU26, 38/27-0529-LPU26
+16/10/2026 15:37:41 - INFO - 🗑️ Procesos que ya no están (29): 38/3-0429-LPU26, 487-0076-LPU26, 72-0022-LPU26, 84/30-0665-LPU26, 101-0006-LPU26, 84/26-0667-LPU26, 84/129-0670-LPU26, 46-0037-LPU26, 84/129-0675-LPU26, 40/28-0162-LPU26, 84/129-0682-LPU26, 84/77-0683-LPU26, 38/1-0458-LPU26, 38/15-0459-LPU26, 38/15-0460-LPU26, 38/15-0461-LPU26, 38/15-0465-LPU26, 279-0002-LPU26, 38/15-0472-LPU26, 38/15-0475-LPU26, 38/15-0477-LPU26, 38/3-0457-LPU26, 38/1-0455-LPU26, 38/12-0454-LPU26, 38/31-0451-LPU26, 17-0005-LPU26, 38/38-0444-LPU26, 38/37-0438-LPU26, 78-0009-LPU26
+15:37:41 - 🗑️ Procesos que ya no están (29): 38/3-0429-LPU26, 487-0076-LPU26, 72-0022-LPU26, 84/30-0665-LPU26, 101-0006-LPU26, 84/26-0667-LPU26, 84/129-0670-LPU26, 46-0037-LPU26, 84/129-0675-LPU26, 40/28-0162-LPU26, 84/129-0682-LPU26, 84/77-0683-LPU26, 38/1-0458-LPU26, 38/15-0459-LPU26, 38/15-0460-LPU26, 38/15-0461-LPU26, 38/15-0465-LPU26, 279-0002-LPU26, 38/15-0472-LPU26, 38/15-0475-LPU26, 38/15-0477-LPU26, 38/3-0457-LPU26, 38/1-0455-LPU26, 38/12-0454-LPU26, 38/31-0451-LPU26, 17-0005-LPU26, 38/38-0444-LPU26, 38/37-0438-LPU26, 78-0009-LPU26
+16/10/2026 15:37:41 - INFO - 📁 Excel actualizado en C:\Users\Usuario\Desktop\Codigos\comprar\procesos_armada.xlsx (95 registros vigentes).
+15:37:41 - 📁 Excel actualizado en C:\Users\Usuario\Desktop\Codigos\comprar\procesos_armada.xlsx (95 registros vigentes).
+16/10/2026 15:37:42 - INFO - 📸 Captura guardada en C:\Users\Usuario\Desktop\Codigos\comprar\debug_resultado_busqueda.png
+15:37:42 - 📸 Captura guardada en C:\Users\Usuario\Desktop\Codigos\comprar\debug_resultado_busqueda.png
+16/10/2026 15:37:42 - INFO - 🔒 Navegador cerrado correctamente.
+15:37:42 - 🔒 Navegador cerrado correctamente.
+16/10/2026 15:37:42 - INFO - ============================================================
+16/10/2026 15:37:42 - INFO - ✅ FIN DE EJECUCIÓN - comprar.py
+15:37:42 - ============================================================
+16/10/2026 15:37:42 - INFO - ============================================================
+15:37:42 - ✅ FIN DE EJECUCIÓN - comprar.py
+15:37:42 - ============================================================
+
+Ejecución finalizada: 16/10/2026 15:37:42
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 16:48:04
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+16/10/2026 16:48:05 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 16:48:05 - INFO - ⏱️ Timeout de inactividad: 60s
+16/10/2026 16:48:05 - INFO - ============================================================
+16:48:05 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 16:48:05 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16/10/2026 16:48:05 - INFO - ============================================================
+16:48:05 - ============================================================
+16:48:05 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16:48:05 - ============================================================
+16/10/2026 16:48:05 - INFO -  Ya corrió hace menos de 24h (última vez: 16/10/2026 15:37). Próxima corrida habilitada a partir de 17/10/2026 15:37. No se abre el navegador.
+16:48:05 -  Ya corrió hace menos de 24h (última vez: 16/10/2026 15:37). Próxima corrida habilitada a partir de 17/10/2026 15:37. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 16:48:05
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:48:22
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+16/10/2026 17:48:24 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+17:48:24 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+
+16/10/2026 17:48:24 - INFO - ============================================================
+17:48:24 - ⏱️ Timeout de inactividad: 60s
+16/10/2026 17:48:24 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+==
+17:48:24 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+16/10/2026 17:48:24 - INFO - ============================================================
+17:48:24 - ============================================================
+16/10/2026 17:48:24 - INFO -  Ya corrió hace menos de 24h (última vez: 16/10/2026 15:37). Próxima corrida habilitada a partir de 17/10/2026 15:37. No se abre el navegador.
+17:48:24 -  Ya corrió hace menos de 24h (última vez: 16/10/2026 15:37). Próxima corrida habilitada a partir de 17/10/2026 15:37. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 17:48:24
+Código de salida: 0

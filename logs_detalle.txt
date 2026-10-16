@@ -1,22 +1,369 @@
 
 ============================================================
-Ejecución iniciada: 16/10/2026 17:15:33
+Ejecución iniciada: 16/10/2026 17:27:56
 Intérprete: /usr/local/bin/python
 ============================================================
-📋 96 procesos a detallar (leídos de /workspace/procesos_armada.xlsx).
-❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
-╔════════════════════════════════════════════════════════════╗
-║ Looks like Playwright was just installed or updated.       ║
-║ Please run the following command to download new browsers: ║
-║                                                            ║
-║     playwright install                                     ║
-║                                                            ║
-║ <3 Playwright Team                                         ║
-╚════════════════════════════════════════════════════════════╝
-⚠️ No se relanza el error -- se guardan los 0 procesos que se alcanzaron a procesar antes de que esto pasara, en vez de perderlos todos.
+⏳ Ya corrió hace menos de 24h (última vez: 16/10/2026 17:15). Próxima corrida habilitada a partir de 17/10/2026 17:15. No se abre el navegador.
 
-📁 Resumen de cronogramas guardado en /workspace/cronograma_procesos.xlsx
-📁 Cláusulas descargadas en /workspace/detalle_procesos/<número de proceso>/
+Ejecución finalizada: 16/10/2026 17:27:56
+Código de salida: 0
 
-Ejecución finalizada: 16/10/2026 17:15:34
+============================================================
+Ejecución iniciada: 16/10/2026 17:45:38
+Intérprete: /usr/local/bin/python
+============================================================
+⏳ Ya corrió hace menos de 24h (última vez: 16/10/2026 17:15). Próxima corrida habilitada a partir de 17/10/2026 17:15. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 17:45:39
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:52:01
+Intérprete: /usr/local/bin/python
+============================================================
+⏳ Ya corrió hace menos de 24h (última vez: 16/10/2026 17:15). Próxima corrida habilitada a partir de 17/10/2026 17:15. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 17:52:01
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 15:28:04
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+⏳ Ya corrió hace menos de 24h (última vez: 16/10/2026 17:15). Próxima corrida habilitada a partir de 17/10/2026 17:15. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 15:28:06
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 15:33:09
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+Modo: FORZADO manualmente (ignora el límite de 24h)
+============================================================
+🔓 Ejecución FORZADA manualmente -- se ignora el límite de 24h.
+📋 96 procesos a detallar (leídos de C:\Users\Usuario\Desktop\Codigos\comprar\procesos_armada.xlsx).
+15:33:18 - ✅ Login completado.
+15:33:23 - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+
+➡️ Procesando 38/3-0429-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_3-0429-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 487-0076-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\487-0076-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 72-0022-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\72-0022-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/30-0665-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_30-0665-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 101-0006-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\101-0006-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/26-0667-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_26-0667-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 92-0006-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\92-0006-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 68-0010-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\68-0010-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 315-0014-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\315-0014-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 21-0023-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\21-0023-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (10 procesos hasta ahora).
+
+➡️ Procesando 1...
+   ⚠️ No encontré el link del proceso 1 tras la búsqueda rápida.
+
+➡️ Procesando 84/129-0670-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_129-0670-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 47-0005-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\47-0005-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 52-0044-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\52-0044-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 64-0019-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\64-0019-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/3-0440-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_3-0440-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 46-0037-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\46-0037-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 68-0011-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\68-0011-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 78-0010-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\78-0010-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 347-0028-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\347-0028-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (20 procesos hasta ahora).
+
+➡️ Procesando 78-0011-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\78-0011-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/129-0675-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_129-0675-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 79/8-0006-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\79_8-0006-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 40/28-0162-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\40_28-0162-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/3-0443-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_3-0443-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 340/1-0054-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\340_1-0054-LPU26\Clausulas Particulares.pdf), lo salteo.
+   ⚠️ No pude leer 'detalle_procesos\340_1-0054-LPU26\Clausulas Particulares.pdf': startxref not found
+
+➡️ Procesando 38/19-0445-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_19-0445-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/24-0677-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_24-0677-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/6-0447-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_6-0447-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 39-0039-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\39-0039-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (30 procesos hasta ahora).
+
+➡️ Procesando 68-0012-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\68-0012-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/12-0453-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_12-0453-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 37/2-0092-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\37_2-0092-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 340/1-0056-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\340_1-0056-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/129-0682-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_129-0682-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/77-0683-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_77-0683-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/1-0458-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_1-0458-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0459-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0459-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0460-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0460-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0461-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0461-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (40 procesos hasta ahora).
+
+➡️ Procesando 38/15-0462-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0462-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0463-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0463-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0464-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0464-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0465-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0465-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0468-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0468-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0470-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0470-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0471-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0471-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 279-0002-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\279-0002-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0472-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0472-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/6-0473-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_6-0473-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (50 procesos hasta ahora).
+
+➡️ Procesando 84/129-0684-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_129-0684-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/37-0474-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_37-0474-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0475-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0475-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/77-0685-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_77-0685-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0476-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0476-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/15-0477-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_15-0477-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/12-0478-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_12-0478-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/12-0480-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_12-0480-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/12-0481-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_12-0481-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/26-0687-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_26-0687-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (60 procesos hasta ahora).
+
+➡️ Procesando 38/1-0484-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_1-0484-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 47-0006-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\47-0006-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/31-0689-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0689-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/129-0690-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_129-0690-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 494-0002-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\494-0002-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/1-0486-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_1-0486-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/38-0488-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_38-0488-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/13-0691-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_13-0691-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/77-0694-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_77-0694-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 68-0013-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\68-0013-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (70 procesos hasta ahora).
+
+➡️ Procesando 84/31-0695-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0695-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/136-0696-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_136-0696-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/12-0494-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_12-0494-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/143-0698-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_143-0698-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/143-0699-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_143-0699-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/143-0700-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_143-0700-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/143-0701-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_143-0701-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/143-0702-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_143-0702-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/143-0703-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_143-0703-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/31-0704-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0704-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (80 procesos hasta ahora).
+
+➡️ Procesando 84/31-0705-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0705-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/31-0706-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0706-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/31-0707-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0707-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/31-0708-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0708-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/31-0709-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_31-0709-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 39-0040-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\39-0040-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 39-0041-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\39-0041-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/13-0712-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_13-0712-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/13-0713-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_13-0713-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 84/129-0724-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\84_129-0724-LPU26\Clausulas Particulares.pdf), lo salteo.
+   💾 Guardado parcial (90 procesos hasta ahora).
+
+➡️ Procesando 39-0042-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\39-0042-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/25-0506-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_25-0506-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/25-0508-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_25-0508-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/25-0509-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_25-0509-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 38/25-0510-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\38_25-0510-LPU26\Clausulas Particulares.pdf), lo salteo.
+
+➡️ Procesando 30-0015-LPU26...
+   ⏭️ 'Clausulas Particulares' ya estaba descargado (C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos\30-0015-LPU26\Clausulas Particulares.pdf), lo salteo.
+🔒 Navegador cerrado correctamente.
+
+📁 Resumen de cronogramas guardado en C:\Users\Usuario\Desktop\Codigos\comprar\cronograma_procesos.xlsx
+📁 Cláusulas descargadas en C:\Users\Usuario\Desktop\Codigos\comprar\detalle_procesos/<número de proceso>/
+
+Ejecución finalizada: 16/10/2026 15:57:08
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 16:48:06
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+⏳ Ya corrió hace menos de 24h (última vez: 16/10/2026 15:57). Próxima corrida habilitada a partir de 17/10/2026 15:57. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 16:48:07
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:48:25
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+⏳ Ya corrió hace menos de 24h (última vez: 16/10/2026 15:57). Próxima corrida habilitada a partir de 17/10/2026 15:57. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 17:48:26
 Código de salida: 0
