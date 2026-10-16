@@ -114,27 +114,180 @@ def fila_proceso(numero: str) -> dict | None:
     return out
 
 
+_carpeta_cache = {}
+
+
+def _carpeta_pdfs(numero: str) -> str | None:
+    """Carpeta de PDFs del proceso. Prueba el nombre sanitizado y variantes
+    (el scraper a veces guarda con guiones bajos o subcarpetas)."""
+    if numero in _carpeta_cache:
+        return _carpeta_cache[numero]
+    base = os.path.join(BASE_DIR, "detalle_procesos")
+    resultado = None
+    if os.path.isdir(base):
+      candidatos = [sanitizar_nombre(numero), numero.replace("/", "_")]
+      for cand in candidatos:
+          p = os.path.join(base, cand)
+          if os.path.isdir(p):
+              resultado = p
+              break
+      if resultado is None:  # búsqueda por prefijo normalizado
+          norm = re.sub(r"[^a-z0-9]", "", numero.lower())
+          for d in os.listdir(base):
+              if norm and norm in re.sub(r"[^a-z0-9]", "", d.lower()):
+                  resultado = os.path.join(base, d)
+                  break
+    _carpeta_cache[numero] = resultado
+    return resultado
+
+
+def _texto_pdfs(numero: str) -> str:
+    """Texto completo de todos los PDF del proceso (cacheado por número)."""
+    clave = "_txt_" + numero
+    if clave in _carpeta_cache:
+        return _carpeta_cache[clave]
+    carpeta = _carpeta_pdfs(numero)
+    txt = ""
+    if carpeta:
+        try:
+            from pypdf import PdfReader
+        except ImportError:
+            PdfReader = None
+        if PdfReader:
+            partes = []
+            for raiz, _, archivos in os.walk(carpeta):
+                for fn in archivos:
+                    if not fn.lower().endswith(".pdf"):
+                        continue
+                    try:
+                        reader = PdfReader(os.path.join(raiz, fn))
+                        partes.append("\n".join((p.extract_text() or "") for p in reader.pages))
+                    except Exception:
+                        continue
+            txt = "\n".join(partes)
+    _carpeta_cache[clave] = txt
+    return txt
+
+
 def _pdf_contiene(numero: str, patron: str) -> bool:
     """Busca un regex dentro de los PDF descargados del proceso (si existen)."""
-    carpeta = os.path.join(BASE_DIR, "detalle_procesos", sanitizar_nombre(numero))
-    if not os.path.isdir(carpeta):
+    txt = _texto_pdfs(numero)
+    if not txt:
         return False
-    try:
-        from pypdf import PdfReader
-    except ImportError:
-        return False
-    pat = re.compile(patron, re.IGNORECASE)
-    for fn in os.listdir(carpeta):
-        if not fn.lower().endswith(".pdf"):
+    return bool(re.search(patron, txt, re.IGNORECASE))
+
+
+def _pdf_extraer(numero: str, patron: str, default: str = "") -> str:
+    """Primer match de un regex sobre el texto de los PDFs (para datos reales)."""
+    txt = _texto_pdfs(numero)
+    if not txt:
+        return default
+    m = re.search(patron, txt, re.IGNORECASE)
+    if not m:
+        return default
+    for g in m.groups():
+        if g:
+            return g.strip()
+    return default
+
+
+# Los PDFs del pliego traen saltos de línea y espacios partidos ("individu alizada",
+# "DOS (2) días"). Normalizamos el whitespace antes de buscar cláusulas.
+def _norm_txt(txt: str) -> str:
+    return re.sub(r"\s+", " ", txt or "")
+
+
+_PALABRAS_NUM = {
+    "UNO": 1, "DOS": 2, "TRES": 3, "CUATRO": 4, "CINCO": 5, "SEIS": 6,
+    "SIETE": 7, "OCHO": 8, "NUEVE": 9, "DIEZ": 10, "ONCE": 11, "DOCE": 12,
+    "QUINCE": 15, "VEINTE": 20, "TREINTA": 30, "CUARENTA": 40, "CINCUENTA": 50,
+    "SESENTA": 60, "SETENTA": 70, "OCHENTA": 80, "NOVENTA": 90, "CIENTO": 100,
+}
+
+# % de la garantía de mantenimiento de oferta escrito como "CINCO POR CIENTO (5)"
+# o variantes sueltas "POR CIENTO (5)".
+_RE_GMO_PCT = re.compile(
+    r"(?:(UNO|DOS|TRES|CUATRO|CINCO|SEIS|SIETE|OCHO|NUEVE|DIEZ|QUINCE|VEINTE|TREINTA|CUARENTA|CINCUENTA)\s+POR\s+CIENTO\s*)?\(\s*(\d{1,3})\s*\)",
+    re.I)
+
+
+def _clausula_garantia_oferta(numero: str) -> dict:
+    """Extrae de las Cláusulas Particulares (PDF del expediente) los datos reales
+    de la garantía de mantenimiento de oferta: porcentaje, moneda, destino de la
+    garantía física y plazo de presentación."""
+    txt = _norm_txt(_texto_pdfs(numero))
+    out = {"pct": "", "moneda": "", "lugar": "", "plazo_dias": ""}
+    if not txt:
+        return out
+
+    # --- porcentaje: buscar "equivaldrá al CINCO POR CIENTO (5%)" en la zona
+    #     de la garantía de mantenimiento (hasta 1200 chars después, para no
+    #     capturar porcentajes de otras cláusulas como multas o adelantos).
+    pct_buscar = [m.start() for m in re.finditer(r"garant[íi]a de mantenimiento", txt, re.I)]
+    for ini in pct_buscar:
+        zona = txt[ini:ini + 1200]
+        mp = re.search(
+            r"(?:POR\s+CIENTO|%)?\s*\(\s*(\d{1,3}(?:[.,]\d+)?)\s*%\s*\)", zona, re.I)
+        if not mp:
+            mp = re.search(r"CINCO\s+POR\s+CIENTO|DOS\s+POR\s+CIENTO|UNO\s+POR\s+CIENTO|"
+                           r"TRES\s+POR\s+CIENTO|CUATRO\s+POR\s+CIENTO|DIEZ\s+POR\s+CIENTO",
+                           zona, re.I)
+            if mp:
+                palabra = mp.group(0).split()[0].upper()
+                num = {"UNO": "1", "DOS": "2", "TRES": "3", "CUATRO": "4",
+                       "CINCO": "5", "DIEZ": "10"}.get(palabra, "")
+                if num:
+                    out["pct"] = num + "%"
+                    break
+        elif mp:
+            val = mp.group(1).replace(".", "").replace(",", ".")
+            try:
+                f = float(val)
+                if 0 < f <= 20:  # fuera de rango => es otra cláusula, seguir buscando
+                    out["pct"] = (("%g" % f)) + "%"
+                    break
+            except ValueError:
+                pass
+
+    # --- moneda ------------------------------------------------------------
+    mm = re.search(r"(MONEDA NACIONAL|PESOS|D[UÓ]LARES(?:\s+AMERICANOS)?|USD)", txt, re.I)
+    if mm:
+        t = mm.group(1).upper()
+        out["moneda"] = ("Moneda nacional (pesos)" if t in ("MONEDA NACIONAL", "PESOS")
+                         else "Dólares (USD)")
+
+    # --- destino / lugar de presentación si no es electrónica --------------
+    ml = re.search(r"garant[íi]as no electr[oó]nicas.{0,600}?en el \u201c([^”]{4,90})\u201d", txt, re.I)
+    if not ml:
+        ml = re.search(r"entregarse el original.{0,400}?en el \u201c([^”]{4,90})\u201d", txt, re.I)
+    if not ml:
+        ml = re.search(r"en \u201c?(TESORER[IÍ]A GENERAL DE LA NACI[OÓ]N|Departamento de Compras)\u201d?", txt, re.I)
+    if ml:
+        out["lugar"] = re.sub(r"\s+", " ", ml.group(1)).strip().title()
+
+    # --- plazo para presentarla: "DOS (2) días ... apertura" / "plazo de X días"
+    for ini in pct_buscar:
+        zona = txt[ini:ini + 900]
+        md = re.search(r"\b(UNO|UN|DOS|TRES|CUATRO|CINCO|SEIS|DIEZ)\s*"
+                       r"(?:\(\s*\d+\s*\))?\s+d[ií]as\b[^.]{0,80}?(apertura|presentaci|entrega|constituci)",
+                       zona, re.I)
+        if not md:
+            # "dentro del plazo que va desde la fecha y hora de apertura ... hasta
+            #  un plazo de DOS (2) días" — solo si el tramo no habla de renovación
+            m2 = re.search(r"apertura.{0,140}?(?:plazo|t[eé]rmino)\s+(?:que va\s+)?(?:de|desde|al|del|hasta)?\s*"
+                           r"(UNO|UN|DOS|TRES|CUATRO|CINCO|SEIS|DIEZ)\s*(?:\(\s*\d+\s*\))?\s+d[ií]as",
+                           zona, re.I | re.S)
+            if m2 and "renov" not in zona[max(0, m2.start()-60):m2.start()]:
+                clave = m2.group(1).upper()
+                out["plazo_dias"] = {"UN": "1"}.get(clave) or str(_PALABRAS_NUM.get(clave, ""))
+                if out["plazo_dias"]:
+                    break
             continue
-        try:
-            reader = PdfReader(os.path.join(carpeta, fn))
-            for page in reader.pages:
-                if pat.search(page.extract_text() or ""):
-                    return True
-        except Exception:
-            continue
-    return False
+        clave = md.group(1).upper()
+        out["plazo_dias"] = {"UN": "1"}.get(clave) or str(_PALABRAS_NUM.get(clave, ""))
+        if out["plazo_dias"]:
+            break
+    return out
 
 
 # ------------------------------------------------------------- generador
@@ -152,6 +305,34 @@ def construir_checklist(fila: dict) -> list:
     tiene_anticipo = bool(fila["_pago_adelantado"]) or _pdf_contiene(num, r"anticipo")
     tiene_contrag = _pdf_contiene(num, r"contragarant[ií]a")
     es_fondef = bool(fila["_fondef_pdf"]) or fila["_687"] == "Sí"
+
+    # --- datos reales extraídos de los PDFs del expediente (si existen) ---
+    txt_pdfs = _texto_pdfs(num)
+    moneda = ""
+    for m in re.finditer(r"\b(USD|D[oó]lares(?:\s+americanos)?|PESOS|ARS)\b", txt_pdfs):
+        t = m.group(1).upper()
+        moneda = "USD" if t.startswith("D") or t == "USD" else ("ARS" if t in ("PESOS", "ARS") else "")
+        if moneda:
+            break
+    anticipo_pct = _pdf_extraer(num, r"anticipo.{0,160}?\(\s*(\d{1,3})\s*%")
+    if anticipo_pct:
+        anticipo_pct += "%"
+    plazo_entrega = _pdf_extraer(num, r"plazo de (?:entrega|suministro|ejecuci[oó]n)[^.]{0,90}?(\d+\s*(?:meses|d[ií]as h[aá]biles|d[ií]as corridos))")
+    lugar_entrega = _pdf_extraer(num, r"((?:Base Naval|Área[ A-Za-zÁÉÍÓÚ]*Alfabetizada)[A-Za-z ÁÉÍÓÚÑ]{3,40}?)(?=[,.]|\s+(?:que|Que|CP|\(|$))")
+    cantidad = _pdf_extraer(num, r"\b([A-ZÁÉÍÓÚÑ]+ \((?:\d+|[a-z]+)\))\s+(?:unidades|unidad|equipos|botes|computadoras|servicios|m[oó]dulos)")
+    requiere_muestras = _pdf_contiene(num, r"recepci[oó]n de muestras|presentaci[oó]n de muestras")
+    requiere_traduccion = _pdf_contiene(num, r"traducci[oó]n.{0,120}traductor p[uú]blico|traductor p[uú]blico.{0,120}traducci[oó]n|folleter[ií]a")
+    organismo = ""
+    m_org = re.search(r"a favor d[eé]l?\s+(?:la\s+)?((?:ESTADO MAYOR GENERAL DE LA|ESTADO MAYOR|ARMADA ARGENTINA)[A-ZÁÉÍÓÚÑ ]{0,40})", txt_pdfs)
+    if m_org:
+        organismo = re.sub(r"\s+", " ", m_org.group(1)).strip()
+        if organismo.upper().startswith("ESTADO MAYOR GENERAL DE LA"):
+            organismo += " ARMADA"
+    else:
+        for cand in re.findall(r"(ESTADO MAYOR GENERAL DE\s*\n?\s*LA\s*\n?\s*ARMADA)", txt_pdfs):
+            organismo = "ESTADO MAYOR GENERAL DE LA ARMADA"
+            break
+    organismo = organismo.title() if organismo else "organismo contratante"
 
     groups = []
 
@@ -183,40 +364,77 @@ def construir_checklist(fila: dict) -> list:
                    "items": plazos_items})
 
     # 2 · Proveedor / cotización
-    groups.append({"h": "2 · Cotización con el proveedor",
-                   "w": "Pedir ya. Verificar alcances, plazos y moneda contra lo que exige el pliego.",
-                   "items": [
-                       ["Cotización formal del producto/servicio",
-                        "Vigente hasta después de la apertura. Si es del exterior, indicar condición de entrega (ej. CIF) y moneda.", "—"],
-                       ["Folletería / ficha técnica del producto",
-                        "Debe mostrar las características pedidas en el Anexo de Especificaciones Técnicas.", "Pliego"],
-                       ["Marca, modelo y código / número de parte",
-                        "Datos del fabricante: razón social, dirección, web y número de parte (sirven también para la catalogación).", "Pliego"],
-                       ["Certificaciones exigidas por el pliego (ISO, CE, etc.)",
-                        "Si se adjuntan a la oferta, traducidas por traductor público y legalizadas.", "Pliego"],
-                       ["Garantía del fabricante",
-                        "Respaldar la garantía técnica que se declara en la oferta.", "Pliego"],
-                       ["Confirmar plazo y lugar de entrega exigidos",
-                        f"Comparar contra el cronograma del expediente antes de comprometerla.", "Cronograma"],
-                   ]})
+    grupos_prov = ["2 · Proveedor y cotización",
+                   "Pedir ya. Todo lo que mande el proveedor en inglés hay que traducirlo antes de subirlo."]
+    prov_items = [
+        ["Cotización formal" + (f" por {cantidad}" if cantidad else ""),
+         ("Vigente hasta después de la apertura. Condición de entrega y moneda acordes al pliego"
+          + (f" (mon detectada: {moneda})." if not moneda else f" en {moneda}.")), "—"],
+        ["Folletería / ficha técnica del producto",
+         "Debe mostrar las características pedidas en el Anexo de Especificaciones Técnicas.", "Pliego"],
+        ["Marca, modelo y código / número de parte",
+         "Datos del fabricante: razón social, dirección, web y número de parte (sirven también para la catalogación).", "Pliego"],
+        ["Certificaciones exigidas por el pliego (ISO, CE, etc.)",
+         "Si se adjuntan a la oferta, traducidas por traductor público y legalizadas.", "Pliego"],
+        ["Garantía del fabricante",
+         "Respaldar la garantía técnica que se declara en la oferta.", "Pliego"],
+    ]
+    detalle_entrega = "Comparar contra el cronograma del expediente antes de comprometerla."
+    extras_entrega = " · ".join(x for x in [plazo_entrega.capitalize() if plazo_entrega else "",
+                                             lugar_entrega.title() if lugar_entrega else ""] if x)
+    if extras_entrega:
+        detalle_entrega = f"Detectado en el pliego: {extras_entrega}. Confirmar margen para aduana/traslado."
+    prov_items.append(["Confirmar plazo y lugar de entrega exigidos", detalle_entrega, "Cronograma"])
+    groups.append({"h": grupos_prov[0], "w": grupos_prov[1], "items": prov_items})
+
+    # 2b · Traducciones (solo si el expediente las exige)
+    if requiere_traduccion:
+        groups.append({"h": "2b · Traducciones",
+                       "w": "Traductor público, legalizado por el Colegio de Traductores.",
+                       "items": [
+                           ["Traducir la folletería / ficha técnica", "", "Pliego"],
+                           ["Traducir certificados del fabricante (ISO / CE)",
+                            "Documentos de autoridad extranjera, además, legalizados.", "Pliego"],
+                       ]})
+
+    # --- cláusulas particulares reales sobre la garantía de oferta (del PDF) ---
+    gmo = _clausula_garantia_oferta(num)
+    pct_gmo = gmo["pct"] or "5%"
+    moneda_gmo = gmo["moneda"] or (moneda and f"en {'moneda nacional (pesos)' if moneda=='ARS' else 'dólares (USD)'}") or "en la moneda de la oferta"
+    lugar_gmo = gmo["lugar"] or "Tesorería General de la Nación / oficina que indique el pliego"
+    dias_gmo = gmo["plazo_dias"] or "2"
+    detalle_gmo = (f"Póliza electrónica de caución a favor de {organismo.lower()}, {moneda_gmo}. "
+                   f"Si NO es electrónica: entregar el original en {lugar_gmo} dentro de los "
+                   f"{dias_gmo} día(s) de la apertura.")
+    if not gmo["pct"]:
+        detalle_gmo += " ⚠️ El % no figura explícito en el PDF del expediente: confirmar en el pliego publicado (regla general: 5% del total de la oferta)."
+    if not txt_pdfs:
+        detalle_gmo += " (Sin PDF del expediente: verificar % y destino en el pliego publicado.)"
 
     # 3 · Documentación de la oferta en COMPR.AR
     doc_items = [
-        ["Garantía de mantenimiento de oferta: 5%",
-         "Póliza electrónica de caución a favor del organismo contratante, en la moneda de la oferta. Si no es electrónica, el original va a Tesorería dentro de los 2 días hábiles.", "15.1", 1],
+        [f"Garantía de mantenimiento de oferta: {pct_gmo}",
+         detalle_gmo, "Cláusulas Particulares", 1],
         ["Declaración Jurada de Intereses (Decreto 202/17)",
          "Formulario digital de la Oficina Anticorrupción.", "15.2 · Anexo I"],
         ["DDJJ de Elegibilidad", "Firmada.", "15.3 · Anexo III"],
         ["DDJJ de Habilidad para Contratar", "Firmada.", "15.3 · Anexo IV"],
         ["Certificado de garantía técnica firmado",
          "Completar CUIT, domicilio, marca y modelo.", "15.4 · Pliego", 1],
-        ["Documentación técnica traducida (si corresponde)",
-         "Traductor público, legalizada por el Colegio de Traductores.", "15"],
-        ["Precio ofertado completo",
+    ]
+    if requiere_traduccion:
+        doc_items.append(["Documentación técnica traducida",
+                          "Traductor público, legalizada por el Colegio de Traductores.", "15"])
+    doc_items += [
+        ["Precio ofertado completo" + (f" en {moneda}" if moneda else ""),
          "Incluir flete, seguro, aranceles y descarga donde exija el pliego.", "Pliego"],
         ["Confirmar la oferta con el Administrador Legitimado",
          "Una oferta editada y NO reconfirmada antes de la apertura se considera retirada.", "16", 1],
     ]
+    if mue_fin or requiere_muestras:
+        doc_items.append(["Presentar muestras si el pliego lo exige",
+                          f"Ventana: {_fmt_fechita(mue_ini)} → {_fmt_fechita(mue_fin)}" if mue_fin
+                          else "Detectada en los PDF del pliego: confirmar modalidad y lugar.", "Pliego"])
     groups.append({"h": "3 · Oferta en COMPR.AR",
                    "w": "Todo se carga ANTES de la apertura. Revisar el pliego particular: puede exigir ítems extra.",
                    "items": doc_items})
@@ -236,8 +454,9 @@ def construir_checklist(fila: dict) -> list:
     # 5 · Financiero (solo si el expediente lo menciona)
     fin_items = []
     if tiene_anticipo:
-        fin_items.append(["Contragarantía del anticipo: 3 días hábiles de perfeccionado el contrato",
-                          "Sin ella no se cobra el anticipo. Póliza electrónica a favor del mismo organismo.", "43 · 26", 1])
+        pct_txt = f"del {anticipo_pct}" if anticipo_pct and "%" in anticipo_pct else "del porcentaje indicado en el pliego"
+        fin_items.append([f"Contragarantía del anticipo ({anticipo_pct or '%'}): 3 días hábiles de perfeccionado el contrato",
+                          f"Sin ella no se cobra el anticipo ({pct_txt}). Póliza electrónica a favor del mismo organismo.", "43 · 26", 1])
         fin_items.append(["Factura del anticipo",
                           "Se paga a los 30 días corridos de presentada, junto con la contragarantía.", "43"])
     if tiene_contrag:
@@ -261,9 +480,11 @@ def construir_checklist(fila: dict) -> list:
          "Firma/aceptación dentro del plazo que indica la resolución.", "Pliego"],
         ["Datos de catalogación al organismo (si aplica)",
          "Fabricante, número de parte, marca/modelo, descripción y normas.", "38.5"],
-        ["Coordinar la entrega con el área requirente",
-         "Lugar, horario y contacto indicados en el pliego; embalaje original sellado.", "38.1–38.3"],
     ]
+    entrega_txt = "Lugar, horario y contacto indicados en el pliego; embalaje original sellado."
+    if lugar_entrega:
+        entrega_txt = f"Destino detectado en el pliego: {lugar_entrega.title()}. Coordinar día/horario; embalaje original sellado."
+    adm_items.append(["Coordinar la entrega con el área requirente", entrega_txt, "38.1–38.3"])
     groups.append({"h": "6 · Si adjudican",
                    "w": "Plazos cortos desde que se perfecciona el contrato.",
                    "items": adm_items})
