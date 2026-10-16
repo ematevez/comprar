@@ -19,7 +19,7 @@
 licencia.json
 codigos_renovacion.json
 data/emails_reporte.json
-
+detalle_procesos/
 # ============================================
 # LOGS (pueden contener info sensible)
 # ============================================
@@ -77,6 +77,6 @@ desktop.ini
 # ============================================
 # EXCEL (muy grandes, no subir)
 # ============================================
-# procesos_armada.xlsx
-# registro_gestion.xlsx
-# cronograma_procesos.xlsx
+procesos_armada.xlsx
+registro_gestion.xlsx
+cronograma_procesos.xlsx

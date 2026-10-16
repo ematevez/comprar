@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 servidor_dashboard.py - VERSIÓN COMPATIBLE
 Funciona con o sin licencia.py
@@ -937,21 +936,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-=======
-"""
-servidor_dashboard.py
-Servidor HTTP que sirve el dashboard y expone endpoints para:
-- Descartar/Reactivar procesos
-- Ejecutar scripts comprar.py y detalle_proceso.py
-- Consultar registro de gestión
-"""
-import json
-import os
-import sys
-import time
-import threading
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-import pandas as pd
 
 # Importar funciones del generador
 from generar_dashboard import (
@@ -1178,4 +1162,3 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
