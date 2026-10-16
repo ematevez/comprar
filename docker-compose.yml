@@ -1,0 +1,72 @@
+# ============================================
+# docker-compose.yml
+# Orquestación de contenedores
+# ============================================
+
+services:
+  # ============================================
+  # SERVIDOR PRINCIPAL - Dashboard + Scraping
+  # ============================================
+  app:
+    build: .
+    container_name: comprar_app
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    env_file:
+      - .env
+    environment:
+      - NOMBRE_EXCEL=procesos_armada.xlsx
+    volumes:
+      # Datos persistentes
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./detalle_procesos:/app/detalle_procesos
+      - ./procesos_armada.xlsx:/app/procesos_armada.xlsx
+      - ./registro_gestion.xlsx:/app/registro_gestion.xlsx
+      - ./cronograma_procesos.xlsx:/app/cronograma_procesos.xlsx
+      - ./estado_procesos.json:/app/estado_procesos.json
+      - ./estado_detalle.json:/app/estado_detalle.json
+      - ./codigos_renovacion.json:/app/codigos_renovacion.json
+      - ./licencia.json:/app/licencia.json
+      - ./notas_mejoras.json:/app/notas_mejoras.json
+    networks:
+      - comprar_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8765/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # ============================================
+  # NGINX - Reverse Proxy (opcional)
+  # Levanta solo si existe el archivo nginx.conf
+  # (está excluido de la imagen vía .dockerignore,
+  #  pero se monta como volumen desde el host)
+  # ============================================
+  nginx:
+    image: nginx:alpine
+    container_name: comprar_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      app:
+        condition: service_healthy
+    networks:
+      - comprar_net
+    profiles:
+      - proxy
+
+volumes:
+  data:
+  logs:
+
+networks:
+  comprar_net:
+    driver: bridge

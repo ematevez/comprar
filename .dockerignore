@@ -1,0 +1,76 @@
+# ============================================
+# .dockerignore
+# Archivos a ignorar al construir la imagen Docker
+# ============================================
+
+# Git
+.git
+.gitignore
+
+# Entornos virtuales
+env_1/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs (se generan en el contenedor)
+*.log
+logs/
+logs_*.txt
+
+# Archivos de debug
+debug_*.png
+debug_*.html
+
+# Archivos temporales
+*.tmp
+*.temp
+~*
+
+# Documentación (no necesaria en el contenedor)
+*.md
+manual_de_uso.*
+
+# Scripts auxiliares del host (no necesarios en el contenedor)
+instalar_docker.sh
+backup.sh
+iniciar_dashboard.bat
+iniciar_dashboard.sh
+
+# Entorno de producción (se monta como volumen / no va en la imagen)
+.env
+.env.example
+ssl/
+
+# Archivos de este panel web (React/Vite, no usado por el servidor Python)
+public/
+src/
+dist/
+node_modules/
+package*.json
+vite.config.*
+tsconfig.*
+
+# Docker (no incluir en sí mismo)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# El dashboard.html NO va en la imagen: el servidor lo regenera al iniciar.
+# Si quedara "congelado" dentro del contenedor, mostraría datos viejos.
+dashboard.html

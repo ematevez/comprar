@@ -1,0 +1,23 @@
+# ============================================
+# requirements.txt
+# Dependencias Python para el proyecto
+# ============================================
+
+# Scraping y automatización
+# playwright==1.40.0  # Ya viene instalado en la imagen base
+
+# Manejo de datos
+pandas==2.1.4
+openpyxl==3.1.2
+
+# HTTP requests
+requests==2.31.0
+
+# Bot de Telegram
+python-telegram-bot==20.7
+
+# Variables de entorno
+python-dotenv==1.0.0
+
+# (Opcional) Servidor de producción
+# gunicorn==21.2.0
