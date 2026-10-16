@@ -21,6 +21,7 @@ VENV_DIR = os.path.join(BASE_DIR, "env_1")
 ES_WINDOWS = platform.system() == "Windows"
 PUERTO = 8765
 
+<<<<<<< HEAD
 # Librerías necesarias (actualizado con las nuevas funcionalidades)
 LIBRERIAS_NECESARIAS = [
     "playwright",
@@ -31,6 +32,9 @@ LIBRERIAS_NECESARIAS = [
     "dotenv",        # Variables de entorno
     "requests"       # HTTP requests
 ]
+=======
+LIBRERIAS_NECESARIAS = ["playwright", "pandas", "openpyxl", "pypdf"]
+>>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 
 
 def ruta_python_venv() -> str:
@@ -53,6 +57,7 @@ def crear_venv_si_falta():
 
 def instalar_dependencias_si_faltan():
     py = ruta_python_venv()
+<<<<<<< HEAD
     
     # Verificar cada librería por separado (telegram se importa como 'telegram')
     librerias_faltantes = []
@@ -89,11 +94,27 @@ def instalar_dependencias_si_faltan():
             print("[SETUP] Instalando el navegador Chromium para Playwright...")
             subprocess.run([py, "-m", "playwright", "install", "chromium"], check=True)
             
+=======
+    chequeo = subprocess.run(
+        [py, "-c", f"import {', '.join(LIBRERIAS_NECESARIAS)}"],
+        capture_output=True
+    )
+    if chequeo.returncode == 0:
+        return
+
+    print("[SETUP] Faltan librerías -- instalando por primera vez, puede tardar unos minutos...")
+    try:
+        subprocess.run([py, "-m", "pip", "install", "--upgrade", "pip"], check=True)
+        subprocess.run([py, "-m", "pip", "install"] + LIBRERIAS_NECESARIAS, check=True)
+        print("[SETUP] Instalando el navegador Chromium para Playwright...")
+        subprocess.run([py, "-m", "playwright", "install", "chromium"], check=True)
+>>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     except subprocess.CalledProcessError:
         print("[ERROR] Falló la instalación. Revisá tu conexión a internet.")
         sys.exit(1)
 
 
+<<<<<<< HEAD
 def verificar_archivos_esenciales():
     """Verifica que existan los archivos esenciales."""
     archivos_esenciales = [
@@ -135,12 +156,21 @@ def main():
     verificar_archivos_esenciales()
     verificar_env()
     
+=======
+def main():
+    os.chdir(BASE_DIR)
+    print("=" * 60)
+    print(f"Sistema detectado: {platform.system()}")
+    print("=" * 60)
+
+>>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     crear_venv_si_falta()
     instalar_dependencias_si_faltan()
 
     py = ruta_python_venv()
     ruta_servidor = os.path.join(BASE_DIR, "servidor_dashboard.py")
 
+<<<<<<< HEAD
     print("\n[OK] Entorno listo. Arrancando el servidor...")
     print(f"[OK] Puerto: {PUERTO}")
     print(f"[OK] URL: http://localhost:{PUERTO}")
@@ -150,14 +180,25 @@ def main():
 
     time.sleep(3)
     print("\n[OK] Abriendo el navegador...")
+=======
+    print("[OK] Entorno listo. Arrancando el servidor...")
+    proceso = subprocess.Popen([py, ruta_servidor])
+
+    time.sleep(3)
+>>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     webbrowser.open(f"http://localhost:{PUERTO}")
 
     try:
         proceso.wait()
     except KeyboardInterrupt:
+<<<<<<< HEAD
         print("\n\n👋 Cerrando el servidor...")
         proceso.terminate()
         print("✅ Servidor detenido")
+=======
+        print("\n👋 Cerrando el servidor...")
+        proceso.terminate()
+>>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 
 
 if __name__ == "__main__":
