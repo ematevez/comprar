@@ -1,0 +1,374 @@
+
+============================================================
+Ejecución iniciada: 14/10/2026 18:47:07
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+❌ ERROR: Faltan variables de entorno CUIT y/o PASSWORD
+   Configurá tu archivo .env (ver .env.example)
+
+Ejecución finalizada: 14/10/2026 18:47:09
+Código de salida: 1
+
+============================================================
+Ejecución iniciada: 14/10/2026 18:47:18
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+❌ ERROR: Faltan variables de entorno CUIT y/o PASSWORD
+   Configurá tu archivo .env (ver .env.example)
+
+Ejecución finalizada: 14/10/2026 18:47:19
+Código de salida: 1
+
+============================================================
+Ejecución iniciada: 14/10/2026 18:51:15
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+❌ ERROR: Faltan variables de entorno CUIT y/o PASSWORD
+   Configurá tu archivo .env (ver .env.example)
+
+Ejecución finalizada: 14/10/2026 18:51:16
+Código de salida: 1
+
+============================================================
+Ejecución iniciada: 14/10/2026 18:54:57
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 18:54:58 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 18:54:58 - INFO - ⏱️ Timeout de inactividad: 60s
+18:54:58 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 18:54:58 - INFO - ============================================================
+14/10/2026 18:54:58 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+18:54:58 - ============================================================
+14/10/2026 18:54:58 - INFO - ============================================================
+18:54:58 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+18:54:58 - ============================================================
+14/10/2026 18:55:15 - INFO - ️ Watchdog activado: 60s de inactividad cierra el navegador
+18:55:15 - ️ Watchdog activado: 60s de inactividad cierra el navegador
+14/10/2026 18:55:21 - INFO - ✅ Login completado.
+18:55:21 - ✅ Login completado.
+14/10/2026 18:55:26 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+18:55:26 - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+14/10/2026 18:55:30 - INFO - 🕒 Esperando respuesta del buscador (puede tardar)...
+18:55:30 - 🕒 Esperando respuesta del buscador (puede tardar)...
+14/10/2026 18:55:42 - INFO - 📄 Página 1: 11 registros.
+18:55:42 - 📄 Página 1: 11 registros.
+14/10/2026 18:55:42 - INFO - ➡️ Yendo a la página 2...
+18:55:42 - ➡️ Yendo a la página 2...
+14/10/2026 18:55:56 - INFO - 📄 Página 2: 11 registros.
+18:55:56 - 📄 Página 2: 11 registros.
+14/10/2026 18:55:56 - INFO - ➡️ Yendo a la página 3...
+18:55:56 - ➡️ Yendo a la página 3...
+14/10/2026 18:56:12 - INFO - 📄 Página 3: 11 registros.
+18:56:12 - 📄 Página 3: 11 registros.
+14/10/2026 18:56:12 - INFO - ➡️ Yendo a la página 4...
+18:56:12 - ➡️ Yendo a la página 4...
+14/10/2026 18:56:32 - INFO - 📄 Página 4: 11 registros.
+18:56:32 - 📄 Página 4: 11 registros.
+14/10/2026 18:56:32 - INFO - ➡️ Yendo a la página 5...
+18:56:32 - ➡️ Yendo a la página 5...
+14/10/2026 18:56:55 - INFO - 📄 Página 5: 11 registros.
+18:56:55 - 📄 Página 5: 11 registros.
+14/10/2026 18:56:55 - INFO - ➡️ Yendo a la página 6...
+18:56:55 - ➡️ Yendo a la página 6...
+14/10/2026 18:57:15 - INFO - 📄 Página 6: 11 registros.
+18:57:15 - 📄 Página 6: 11 registros.
+14/10/2026 18:57:15 - INFO - ➡️ Yendo a la página 7...
+18:57:15 - ➡️ Yendo a la página 7...
+14/10/2026 18:57:33 - INFO - 📄 Página 7: 11 registros.
+14/10/2026 18:57:33 - INFO - ➡️ Yendo a la página 8...
+18:57:33 - ➡️ Yendo a la página 8...
+14/10/2026 18:57:52 - INFO - 📄 Página 8: 11 registros.
+14/10/2026 18:57:52 - INFO - ➡️ Yendo a la página 9...
+18:57:52 - 📄 Página 8: 11 registros.
+18:57:52 - ➡️ Yendo a la página 9...
+14/10/2026 18:58:08 - INFO - 📄 Página 9: 11 registros.
+18:58:08 - 📄 Página 9: 11 registros.
+14/10/2026 18:58:08 - INFO - ➡️ Yendo a la página 10...
+18:58:08 - ➡️ Yendo a la página 10...
+14/10/2026 18:58:22 - INFO - 📄 Página 10: 6 registros.
+18:58:22 - 📄 Página 10: 6 registros.
+14/10/2026 18:58:22 - INFO - ➡️ Yendo a la página 11...
+18:58:22 - ➡️ Yendo a la página 11...
+14/10/2026 18:58:28 - INFO - 📄 Página 11: 6 registros.
+18:58:28 - 📄 Página 11: 6 registros.
+14/10/2026 18:58:28 - INFO - ➡️ Yendo a la página 12...
+18:58:28 - ➡️ Yendo a la página 12...
+14/10/2026 18:58:34 - INFO - 🏁 La página 12 repite el contenido anterior -- fin de la paginación.
+18:58:34 - 🏁 La página 12 repite el contenido anterior -- fin de la paginación.
+14/10/2026 18:58:34 - INFO - ✅ Total registros extraídos (todas las páginas): 111
+18:58:34 - ✅ Total registros extraídos (todas las páginas): 111
+14/10/2026 18:58:34 - INFO - 🆕 Nuevos procesos (96): 38/3-0429-LPU26, 487-0076-LPU26, 72-0022-LPU26, 84/30-0665-LPU26, 101-0006-LPU26, 84/26-0667-LPU26, 92-0006-LPU26, 68-0010-LPU26, 315-0014-LPU26, 21-0023-LPU26, 1, 84/129-0670-LPU26, 47-0005-LPU26, 52-0044-LPU26, 64-0019-LPU26, 38/3-0440-LPU26, 46-0037-LPU26, 68-0011-LPU26, 78-0010-LPU26, 347-0028-LPU26, 78-0011-LPU26, 84/129-0675-LPU26, 79/8-0006-LPU26, 40/28-0162-LPU26, 38/3-0443-LPU26, 340/1-0054-LPU26, 38/19-0445-LPU26, 84/24-0677-LPU26, 38/6-0447-LPU26, 39-0039-LPU26, 68-0012-LPU26, 38/12-0453-LPU26, 37/2-0092-LPU26, 340/1-0056-LPU26, 84/129-0682-LPU26, 84/77-0683-LPU26, 38/1-0458-LPU26, 38/15-0459-LPU26, 38/15-0460-LPU26, 38/15-0461-LPU26, 38/15-0462-LPU26, 38/15-0463-LPU26, 38/15-0464-LPU26, 38/15-0465-LPU26, 38/15-0468-LPU26, 38/15-0470-LPU26, 38/15-0471-LPU26, 279-0002-LPU26, 38/15-0472-LPU26, 38/6-0473-LPU26, 84/129-0684-LPU26, 38/37-0474-LPU26, 38/15-0475-LPU26, 84/77-0685-LPU26, 38/15-0476-LPU26, 38/15-0477-LPU26, 38/12-0478-LPU26, 38/12-0480-LPU26, 38/12-0481-LPU26, 84/26-0687-LPU26, 38/1-0484-LPU26, 47-0006-LPU26, 84/31-0689-LPU26, 84/129-0690-LPU26, 494-0002-LPU26, 38/1-0486-LPU26, 38/38-0488-LPU26, 84/13-0691-LPU26, 84/77-0694-LPU26, 68-0013-LPU26, 84/31-0695-LPU26, 84/136-0696-LPU26, 38/12-0494-LPU26, 84/143-0698-LPU26, 84/143-0699-LPU26, 84/143-0700-LPU26, 84/143-0701-LPU26, 84/143-0702-LPU26, 84/143-0703-LPU26, 84/31-0704-LPU26, 84/31-0705-LPU26, 84/31-0706-LPU26, 84/31-0707-LPU26, 84/31-0708-LPU26, 84/31-0709-LPU26, 39-0040-LPU26, 39-0041-LPU26, 84/13-0712-LPU26, 84/13-0713-LPU26, 84/129-0724-LPU26, 39-0042-LPU26, 38/25-0506-LPU26, 38/25-0508-LPU26, 38/25-0509-LPU26, 38/25-0510-LPU26, 30-0015-LPU26
+14/10/2026 18:58:34 - INFO - 🗑️ Procesos que ya no están (0): -
+72-0022-LPU26, 84/30-0665-LPU26, 101-0006-LPU26, 84/26-0667-LPU26, 92-0006-LPU26, 68-0010-LPU26, 315-0014-LPU26, 21-0023-LPU26, 1, 84/129-0670-LPU26, 47-0005-LPU26, 52-0044-LPU26, 64-0019-LPU26, 38/3-0440-LPU26, 46-0037-LPU26, 68-0011-LPU26, 78-0010-LPU26, 347-0028-LPU26, 78-0011-LPU26, 84/129-0675-LPU26, 79/8-0006-LPU26, 40/28-0162-LPU26, 38/3-0443-LPU26, 340/1-0054-LPU26, 38/19-0445-LPU26, 84/24-0677-LPU26, 38/6-0447-LPU26, 39-0039-LPU26, 68-0012-LPU26, 38/12-0453-LPU26, 37/2-0092-LPU26, 340/1-0056-LPU26, 84/129-0682-LPU26, 84/77-0683-LPU26, 38/1-0458-LPU26, 38/15-0459-LPU26, 38/15-0460-LPU26, 38/15-0461-LPU26, 38/15-0462-LPU26, 38/15-0463-LPU26, 38/15-0464-LPU26, 38/15-0465-LPU26, 38/15-0468-LPU26, 38/15-0470-LPU26, 38/15-0471-LPU26, 279-0002-LPU26, 38/15-0472-LPU26, 38/6-0473-LPU26, 84/129-0684-LPU26, 38/37-0474-LPU26, 38/15-0475-LPU26, 84/77-0685-LPU26, 38/15-0476-LPU26, 38/15-0477-LPU26, 38/12-0478-LPU26, 38/12-0480-LPU26, 38/12-0481-LPU26, 84/26-0687-LPU26, 38/1-0484-LPU26, 47-0006-LPU26, 84/31-0689-LPU26, 84/129-0690-LPU26, 494-0002-LPU26, 38/1-0486-LPU26, 38/38-0488-LPU26, 84/13-0691-LPU26, 84/77-0694-LPU26, 68-0013-LPU26, 84/31-0695-LPU26, 84/136-0696-LPU26, 38/12-0494-LPU26, 84/143-0698-LPU26, 84/143-0699-LPU26, 84/143-0700-LPU26, 84/143-0701-LPU26, 84/143-0702-LPU26, 84/143-0703-LPU26, 84/31-0704-LPU26, 84/31-0705-LPU26, 84/31-0706-LPU26, 84/31-0707-LPU26, 84/31-0708-LPU26, 84/31-0709-LPU26, 39-0040-LPU26, 39-0041-LPU26, 84/13-0712-LPU26, 84/13-0713-LPU26, 84/129-0724-LPU26, 39-0042-LPU26, 38/25-0506-LPU26, 38/25-0508-LPU26, 38/25-0509-LPU26, 38/25-0510-LPU26, 30-0015-LPU26
+18:58:34 - 🗑️ Procesos que ya no están (0): -
+14/10/2026 18:58:35 - INFO - 📁 Excel actualizado en C:\Users\Usuario\Desktop\Codigos\comprar\procesos_armada.xlsx (96 registros vigentes).
+18:58:35 - 📁 Excel actualizado en C:\Users\Usuario\Desktop\Codigos\comprar\procesos_armada.xlsx (96 registros vigentes).
+14/10/2026 18:58:35 - INFO - 📸 Captura guardada en C:\Users\Usuario\Desktop\Codigos\comprar\debug_resultado_busqueda.png
+18:58:35 - 📸 Captura guardada en C:\Users\Usuario\Desktop\Codigos\comprar\debug_resultado_busqueda.png
+14/10/2026 18:58:36 - INFO - 🔒 Navegador cerrado correctamente.
+18:58:36 - 🔒 Navegador cerrado correctamente.
+14/10/2026 18:58:36 - INFO - ============================================================
+18:58:36 - ============================================================
+14/10/2026 18:58:36 - INFO - ✅ FIN DE EJECUCIÓN - comprar.py
+18:58:36 - ✅ FIN DE EJECUCIÓN - comprar.py
+14/10/2026 18:58:36 - INFO - ============================================================
+18:58:36 - ============================================================
+
+Ejecución finalizada: 14/10/2026 18:58:37
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 14/10/2026 19:24:35
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 19:24:36 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 19:24:36 - INFO - ⏱️ Timeout de inactividad: 60s
+19:24:36 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 19:24:36 - INFO - ============================================================
+19:24:36 - ⏱️ Timeout de inactividad: 60s
+14/10/2026 19:24:36 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+19:24:36 - ============================================================
+14/10/2026 19:24:36 - INFO - ============================================================
+19:24:36 - ============================================================
+14/10/2026 19:24:36 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+19:24:36 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 19:24:36
+Código de salida: 0
+14/10/2026 19:25:48 - INFO - ✅ Login completado.
+14/10/2026 19:25:53 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+
+============================================================
+Ejecución iniciada: 14/10/2026 19:28:04
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 19:28:06 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 19:28:06 - INFO - ⏱️ Timeout de inactividad: 60s
+19:28:06 - ⏱️ Timeout de inactividad: 60s
+14/10/2026 19:28:06 - INFO - ============================================================
+19:28:06 - ============================================================
+14/10/2026 19:28:06 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+19:28:06 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+14/10/2026 19:28:06 - INFO - ============================================================
+19:28:06 - ============================================================
+14/10/2026 19:28:06 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+19:28:06 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 19:28:06
+Código de salida: 0
+14/10/2026 19:29:35 - INFO - ✅ Login completado.
+14/10/2026 19:29:40 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+
+============================================================
+Ejecución iniciada: 14/10/2026 19:43:56
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 19:43:57 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 19:43:57 - INFO - ⏱️ Timeout de inactividad: 60s
+19:43:57 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 19:43:57 - INFO - ============================================================
+19:43:57 - ⏱️ Timeout de inactividad: 60s
+19:43:57 - ============================================================
+19:43:57 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+======================================
+19:43:57 - ============================================================
+14/10/2026 19:43:57 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+19:43:57 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 19:43:57
+Código de salida: 0
+14/10/2026 19:44:16 - INFO - ✅ Login completado.
+14/10/2026 19:44:21 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+
+============================================================
+Ejecución iniciada: 14/10/2026 19:53:46
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 19:53:47 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 19:53:47 - INFO - ⏱️ Timeout de inactividad: 60s
+19:53:47 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+19:53:47 - ⏱️ Timeout de inactividad: 60s
+==========================================
+14/10/2026 19:53:47 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+19:53:47 - ============================================================
+19:53:47 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+14/10/2026 19:53:47 - INFO - ============================================================
+19:53:47 - ============================================================
+14/10/2026 19:53:47 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+19:53:47 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 19:53:48
+Código de salida: 0
+14/10/2026 19:54:07 - INFO - ✅ Login completado.
+14/10/2026 19:54:12 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+
+============================================================
+Ejecución iniciada: 14/10/2026 19:59:12
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 19:59:14 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+19:59:14 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 19:59:14 - INFO - ⏱️ Timeout de inactividad: 60s
+19:59:14 - ⏱️ Timeout de inactividad: 60s
+14/10/2026 19:59:14 - INFO - ============================================================
+19:59:14 - ============================================================
+14/10/2026 19:59:14 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+19:59:14 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+14/10/2026 19:59:14 - INFO - ============================================================
+19:59:14 - ============================================================
+14/10/2026 19:59:14 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+19:59:14 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 19:59:14
+Código de salida: 0
+14/10/2026 19:59:33 - INFO - ✅ Login completado.
+14/10/2026 19:59:38 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+
+============================================================
+Ejecución iniciada: 14/10/2026 20:33:20
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 20:33:22 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 20:33:22 - INFO - ⏱️ Timeout de inactividad: 60s
+20:33:22 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 20:33:22 - INFO - ============================================================
+20:33:22 - ⏱️ Timeout de inactividad: 60s
+20:33:22 - ============================================================
+14/10/2026 20:33:22 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+20:33:22 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+14/10/2026 20:33:22 - INFO - ============================================================
+20:33:22 - ============================================================
+14/10/2026 20:33:22 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+20:33:22 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 20:33:22
+Código de salida: 0
+14/10/2026 20:34:24 - INFO - ✅ Login completado.
+14/10/2026 20:34:29 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+
+============================================================
+Ejecución iniciada: 14/10/2026 21:02:16
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 21:02:18 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 21:02:18 - INFO - ⏱️ Timeout de inactividad: 60s
+21:02:18 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+=========================
+14/10/2026 21:02:18 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+21:02:18 - ⏱️ Timeout de inactividad: 60s
+21:02:18 - ============================================================
+21:02:18 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+14/10/2026 21:02:18 - INFO - ============================================================
+21:02:18 - ============================================================
+14/10/2026 21:02:18 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+21:02:18 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 21:02:18
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 14/10/2026 21:36:46
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 21:36:48 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+21:36:48 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+
+14/10/2026 21:36:48 - INFO - ============================================================
+21:36:48 - ⏱️ Timeout de inactividad: 60s
+21:36:48 - ============================================================
+14/10/2026 21:36:48 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+14/10/2026 21:36:48 - INFO - ============================================================
+21:36:48 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+21:36:48 - ============================================================
+14/10/2026 21:36:48 - INFO -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+21:36:48 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de 15/10/2026 18:58. No se abre el navegador.
+
+Ejecución finalizada: 14/10/2026 21:36:48
+Código de salida: 0
+
+============================================================
+Ejecución iniciada: 14/10/2026 22:38:17
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+14/10/2026 22:38:20 - INFO - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+22:38:20 - 📅 Período de búsqueda: 14/09/2026 a 14/10/2026
+14/10/2026 22:38:20 - INFO - ⏱️ Timeout de inactividad: 60s
+22:38:20 - ⏱️ Timeout de inactividad: 60s
+14/10/2026 22:38:20 - INFO - ============================================================
+22:38:20 - ============================================================
+14/10/2026 22:38:20 - INFO - 🚀 INICIO DE EJECUCIÓN - comprar.py
+22:38:20 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+14/10/2026 22:38:20 - INFO - ============================================================
+22:38:20 - ============================================================
+14/10/2026 22:38:24 - INFO - ️ Watchdog activado: 60s de inactividad cierra el navegador
+22:38:24 - ️ Watchdog activado: 60s de inactividad cierra el navegador
+14/10/2026 22:38:30 - INFO - ✅ Login completado.
+22:38:30 - ✅ Login completado.
+14/10/2026 22:38:35 - WARNING - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+22:38:35 - ⚠️ No se encontró el botón 'Acceder' (puede que ya hayas entrado directo).
+14/10/2026 22:38:43 - INFO - 🕒 Esperando respuesta del buscador (puede tardar)...
+22:38:43 - 🕒 Esperando respuesta del buscador (puede tardar)...
+14/10/2026 22:39:05 - INFO - 📄 Página 1: 11 registros.
+14/10/2026 22:39:05 - INFO - ➡️ Yendo a la página 2...
+22:39:05 - ➡️ Yendo a la página 2...
+14/10/2026 22:39:31 - INFO - 📄 Página 2: 11 registros.
+22:39:31 - 📄 Página 2: 11 registros.
+14/10/2026 22:39:31 - INFO - ➡️ Yendo a la página 3...
+22:39:31 - ➡️ Yendo a la página 3...
+14/10/2026 22:39:57 - INFO - 📄 Página 3: 11 registros.
+22:39:57 - 📄 Página 3: 11 registros.
+14/10/2026 22:39:57 - INFO - ➡️ Yendo a la página 4...
+22:39:57 - ➡️ Yendo a la página 4...
+14/10/2026 22:40:18 - INFO - 📄 Página 4: 11 registros.
+22:40:18 - 📄 Página 4: 11 registros.
+14/10/2026 22:40:18 - INFO - ➡️ Yendo a la página 5...
+22:40:18 - ➡️ Yendo a la página 5...
+14/10/2026 22:40:41 - INFO - 📄 Página 5: 11 registros.
+22:40:41 - 📄 Página 5: 11 registros.
+14/10/2026 22:40:41 - INFO - ➡️ Yendo a la página 6...
+22:40:41 - ➡️ Yendo a la página 6...
+14/10/2026 22:41:03 - INFO - 📄 Página 6: 11 registros.
+14/10/2026 22:41:03 - INFO - ➡️ Yendo a la página 7...
+22:41:03 - 📄 Página 6: 11 registros.
+22:41:03 - ➡️ Yendo a la página 7...
+14/10/2026 22:41:27 - INFO - 📄 Página 7: 11 registros.
+22:41:27 - 📄 Página 7: 11 registros.
+14/10/2026 22:41:27 - INFO - ➡️ Yendo a la página 8...
+22:41:27 - ➡️ Yendo a la página 8...
+14/10/2026 22:41:52 - INFO - 📄 Página 8: 11 registros.
+22:41:52 - 📄 Página 8: 11 registros.
+a la página 9...
+22:41:52 - ➡️ Yendo a la página 9...
+14/10/2026 22:42:14 - INFO - 📄 Página 9: 11 registros.
+14/10/2026 22:42:14 - INFO - ➡️ Yendo a la página 10...
+22:42:14 - ➡️ Yendo a la página 10...
+14/10/2026 22:42:29 - INFO - 📄 Página 10: 6 registros.
+22:42:29 - 📄 Página 10: 6 registros.
+14/10/2026 22:42:29 - INFO - ➡️ Yendo a la página 11...
+22:42:29 - ➡️ Yendo a la página 11...
+14/10/2026 22:42:35 - INFO - 📄 Página 11: 6 registros.
+14/10/2026 22:42:35 - INFO - ➡️ Yendo a la página 12...
+22:42:35 - 📄 Página 11: 6 registros.
+22:42:35 - ➡️ Yendo a la página 12...
+14/10/2026 22:42:41 - INFO - 🏁 La página 12 repite el contenido anterior -- fin de la paginación.
+22:42:41 - 🏁 La página 12 repite el contenido anterior -- fin de la paginación.
+14/10/2026 22:42:41 - INFO - ✅ Total registros extraídos (todas las páginas): 111
+22:42:41 - ✅ Total registros extraídos (todas las páginas): 111
+14/10/2026 22:42:41 - INFO - 🆕 Nuevos procesos (96): 38/3-0429-LPU26, 487-0076-LPU26, 72-0022-LPU26, 84/30-0665-LPU26, 101-0006-LPU26, 84/26-0667-LPU26, 92-0006-LPU26, 68-0010-LPU26, 315-0014-LPU26, 21-0023-LPU26, 1, 84/129-0670-LPU26, 47-0005-LPU26, 52-0044-LPU26, 64-0019-LPU26, 38/3-0440-LPU26, 46-0037-LPU26, 68-0011-LPU26, 78-0010-LPU26, 347-0028-LPU26, 78-0011-LPU26, 84/129-0675-LPU26, 79/8-0006-LPU26, 40/28-0162-LPU26, 38/3-0443-LPU26, 340/1-0054-LPU26, 38/19-0445-LPU26, 84/24-0677-LPU26, 38/6-0447-LPU26, 39-0039-LPU26, 68-0012-LPU26, 38/12-0453-LPU26, 37/2-0092-LPU26, 340/1-0056-LPU26, 84/129-0682-LPU26, 84/77-0683-LPU26, 38/1-0458-LPU26, 38/15-0459-LPU26, 38/15-0460-LPU26, 38/15-0461-LPU26, 38/15-0462-LPU26, 38/15-0463-LPU26, 38/15-0464-LPU26, 38/15-0465-LPU26, 38/15-0468-LPU26, 38/15-0470-LPU26, 38/15-0471-LPU26, 279-0002-LPU26, 38/15-0472-LPU26, 38/6-0473-LPU26, 84/129-0684-LPU26, 38/37-0474-LPU26, 38/15-0475-LPU26, 84/77-0685-LPU26, 38/15-0476-LPU26, 38/15-0477-LPU26, 38/12-0478-LPU26, 38/12-0480-LPU26, 38/12-0481-LPU26, 84/26-0687-LPU26, 38/1-0484-LPU26, 47-0006-LPU26, 84/31-0689-LPU26, 84/129-0690-LPU26, 494-0002-LPU26, 38/1-0486-LPU26, 38/38-0488-LPU26, 84/13-0691-LPU26, 84/77-0694-LPU26, 68-0013-LPU26, 84/31-0695-LPU26, 84/136-0696-LPU26, 38/12-0494-LPU26, 84/143-0698-LPU26, 84/143-0699-LPU26, 84/143-0700-LPU26, 84/143-0701-LPU26, 84/143-0702-LPU26, 84/143-0703-LPU26, 84/31-0704-LPU26, 84/31-0705-LPU26, 84/31-0706-LPU26, 84/31-0707-LPU26, 84/31-0708-LPU26, 84/31-0709-LPU26, 39-0040-LPU26, 39-0041-LPU26, 84/13-0712-LPU26, 84/13-0713-LPU26, 84/129-0724-LPU26, 39-0042-LPU26, 38/25-0506-LPU26, 38/25-0508-LPU26, 38/25-0509-LPU26, 38/25-0510-LPU26, 30-0015-LPU26
+14/10/2026 22:42:41 - INFO - 🗑️ Procesos que ya no están (0): -
+22:42:41 - 🆕 Nuevos procesos (96): 38/3-0429-LPU26, 487-0076-LPU26, 72-0022-LPU26, 84/30-0665-LPU26, 101-0006-LPU26, 84/26-0667-LPU26, 92-0006-LPU26, 68-0010-LPU26, 315-0014-LPU26, 21-0023-LPU26, 1, 84/129-0670-LPU26, 47-0005-LPU26, 52-0044-LPU26, 64-0019-LPU26, 38/3-0440-LPU26, 46-0037-LPU26, 68-0011-LPU26, 78-0010-LPU26, 347-0028-LPU26, 78-0011-LPU26, 84/129-0675-LPU26, 79/8-0006-LPU26, 40/28-0162-LPU26, 38/3-0443-LPU26, 340/1-0054-LPU26, 38/19-0445-LPU26, 84/24-0677-LPU26, 38/6-0447-LPU26, 39-0039-LPU26, 68-0012-LPU26, 38/12-0453-LPU26, 37/2-0092-LPU26, 340/1-0056-LPU26, 84/129-0682-LPU26, 84/77-0683-LPU26, 38/1-0458-LPU26, 38/15-0459-LPU26, 38/15-0460-LPU26, 38/15-0461-LPU26, 38/15-0462-LPU26, 38/15-0463-LPU26, 38/15-0464-LPU26, 38/15-0465-LPU26, 38/15-0468-LPU26, 38/15-0470-LPU26, 38/15-0471-LPU26, 279-0002-LPU26, 38/15-0472-LPU26, 38/6-0473-LPU26, 84/129-0684-LPU26, 38/37-0474-LPU26, 38/15-0475-LPU26, 84/77-0685-LPU26, 38/15-0476-LPU26, 38/15-0477-LPU26, 38/12-0478-LPU26, 38/12-0480-LPU26, 38/12-0481-LPU26, 84/26-0687-LPU26, 38/1-0484-LPU26, 47-0006-LPU26, 84/31-0689-LPU26, 84/129-0690-LPU26, 494-0002-LPU26, 38/1-0486-LPU26, 38/38-0488-LPU26, 84/13-0691-LPU26, 84/77-0694-LPU26, 68-0013-LPU26, 84/31-0695-LPU26, 84/136-0696-LPU26, 38/12-0494-LPU26, 84/143-0698-LPU26, 84/143-0699-LPU26, 84/143-0700-LPU26, 84/143-0701-LPU26, 84/143-0702-LPU26, 84/143-0703-LPU26, 84/31-0704-LPU26, 84/31-0705-LPU26, 84/31-0706-LPU26, 84/31-0707-LPU26, 84/31-0708-LPU26, 84/31-0709-LPU26, 39-0040-LPU26, 39-0041-LPU26, 84/13-0712-LPU26, 84/13-0713-LPU26, 84/129-0724-LPU26, 39-0042-LPU26, 38/25-0506-LPU26, 38/25-0508-LPU26, 38/25-0509-LPU26, 38/25-0510-LPU26, 30-0015-LPU26
+22:42:41 - 🗑️ Procesos que ya no están (0): -
+14/10/2026 22:42:42 - INFO - 📁 Excel actualizado en C:\Users\Usuario\Desktop\Codigos\comprar\procesos_armada.xlsx (96 registros vigentes).
+22:42:42 - 📁 Excel actualizado en C:\Users\Usuario\Desktop\Codigos\comprar\procesos_armada.xlsx (96 registros vigentes).
+14/10/2026 22:42:47 - INFO - 📸 Captura guardada en C:\Users\Usuario\Desktop\Codigos\comprar\debug_resultado_busqueda.png
+22:42:47 - 📸 Captura guardada en C:\Users\Usuario\Desktop\Codigos\comprar\debug_resultado_busqueda.png
+14/10/2026 22:42:53 - INFO - 🔒 Navegador cerrado correctamente.
+22:42:53 - 🔒 Navegador cerrado correctamente.
+14/10/2026 22:42:53 - INFO - ============================================================
+22:42:53 - ============================================================
+14/10/2026 22:42:53 - INFO - ✅ FIN DE EJECUCIÓN - comprar.py
+14/10/2026 22:42:53 - INFO - ============================================================
+22:42:53 - ============================================================
+
+Ejecución finalizada: 14/10/2026 22:42:53
+Código de salida: 0

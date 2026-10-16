@@ -1,0 +1,76 @@
+# ============================================
+# .dockerignore
+# Archivos a ignorar al construir la imagen Docker
+# ============================================
+
+# Git
+.git
+.gitignore
+
+# Entornos virtuales
+env_1/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs (se generan en el contenedor)
+*.log
+logs/
+
+# Archivos de debug
+debug_*.png
+debug_*.html
+
+# Archivos temporales
+*.tmp
+*.temp
+~*
+
+# Documentación (no necesaria en el contenedor)
+*.md
+manual_de_uso.*
+GUIA_DOCKER.md
+
+# Archivos de este panel web
+public/
+src/
+dist/
+node_modules/
+package*.json
+vite.config.*
+tsconfig.*
+
+# Scripts de instalación (no necesarios en el contenedor)
+instalar_docker.sh
+limpiar_credenciales.sh
+test_conexion.py
+diagnostico_env.py
+email_test.py
+telegram_test.py
+
+# Archivos de backup
+backup*/
+*.bak
+
+# SSL (se monta como volumen)
+ssl/
+
+# Docker (no incluir en sí mismo)
+Dockerfile
+docker-compose.yml
+.dockerignore
