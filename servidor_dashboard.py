@@ -1113,8 +1113,15 @@ def main():
     else:
         print(f"📧 Email: No configurado (editá el .env)")
     
-    # Verificar configuración de Telegram
+    # Verificar configuración de Telegram (env o data/telegram_config.json)
     telegram_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    if not telegram_token:
+        try:
+            tg_cfg = cargar_telegram_config()
+            if tg_cfg.get('activo') and tg_cfg.get('bot_token'):
+                telegram_token = tg_cfg['bot_token']
+        except Exception:
+            pass
     if telegram_token:
         print(f"🤖 Telegram: Configurado")
     else:
@@ -1136,20 +1143,42 @@ def main():
     generar_dashboard()
     threading.Thread(target=scheduler_automatico, daemon=True).start()
     
-    # Iniciar bot de Telegram en un thread separado
+    # Iniciar bot de Telegram en un thread separado.
+    # IMPORTANTE: el polling de getUpdates solo admite UNA instancia por token.
+    # Si ya hay otro proceso usando el mismo bot (otra terminal, contenedor Docker,
+    # cron), se detecta y se omite el bot interactivo; los envíos por API REST
+    # (reportes/notificaciones) siguen funcionando igual desde cualquier instancia.
     if telegram_token:
-        print("\n🤖 Iniciando bot de Telegram...")
-        def run_telegram_bot():
+        def _otro_bot_activo():
+            """Chequea si otra instancia ya está haciendo getUpdates con este token."""
             try:
-                from telegram_bot_integrado import iniciar_bot
-                iniciar_bot()
-            except Exception as e:
-                print(f"⚠️  Error iniciando bot de Telegram: {e}")
-        
-        telegram_thread = threading.Thread(target=run_telegram_bot, daemon=True)
-        telegram_thread.start()
-        print("✅ Bot de Telegram corriendo en background")
-        print("   Enviá /start al bot desde tu teléfono")
+                import urllib.request, json as _json
+                url = f"https://api.telegram.org/bot{telegram_token}/getWebhookInfo"
+                with urllib.request.urlopen(url, timeout=10) as resp:
+                    info = _json.loads(resp.read().decode())
+                desc = (info.get('description') or '')
+                return 'another instance' in desc.lower() or 'terminated by other' in desc.lower()
+            except Exception:
+                return False
+
+        if _otro_bot_activo():
+            print("\n⚠️  Telegram: otro proceso ya usa este bot (getUpdates ocupado).")
+            print("   El bot interactivo NO se inicia para evitar el conflicto.")
+            print("   Los reportes por Telegram se envían igualmente. Cerrá la otra")
+            print("   instancia (otra terminal o 'docker compose down') y reiniciá.")
+        else:
+            print("\n🤖 Iniciando bot de Telegram...")
+            def run_telegram_bot():
+                try:
+                    from telegram_bot_integrado import iniciar_bot
+                    iniciar_bot()
+                except Exception as e:
+                    print(f"⚠️  Error iniciando bot de Telegram: {e}")
+
+            telegram_thread = threading.Thread(target=run_telegram_bot, daemon=True)
+            telegram_thread.start()
+            print("✅ Bot de Telegram corriendo en background")
+            print("   Enviá /start al bot desde tu teléfono")
     else:
         print("\n⚠️  Bot de Telegram no iniciado (falta TELEGRAM_BOT_TOKEN)")
 
