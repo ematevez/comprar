@@ -1,2 +1,35 @@
-*.tmp
+# === Secretos y credenciales (NUNCA versionar) ===
+.env
+data/telegram_config.json
+licencia.json
+
+# === Datos locales mutables (se regeneran / son de cada máquina) ===
+estado_procesos.json
+estado_detalle.json
+notas_mejoras.json
+codigos_renovacion.json
+dashboard.html
+
+# === Entornos virtuales / dependencias ===
+env_1/
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+
+# === Descargas y artefactos ===
+detalle_procesos/
+logs_*.txt
+debug_*.png
+ssl/
 *.bundle
+*.tmp
+
+# === Panel React secundario (fuera del dashboard principal) ===
+src/
+public/
+index.html
+package.json
+package-lock.json
+tsconfig.json
+vite.config.js
