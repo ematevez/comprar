@@ -1,23 +1,2 @@
-node_modules/
-
-# Python
-__pycache__/
-*.pyc
-.venv/
-env_1/
-
-# Datos locales / sensibles (no versionar)
-.env
-licencia.json
-estado_procesos.json
-estado_detalle.json
-notas_mejoras.json
-codigos_renovacion.json
-detalle_procesos/
-
-# Firma del email (imagen personal, no versionar)
-firma.png
-firma.jpg
-firma.jpeg
-firma.gif
-comprar-limpio.bundle
+*.tmp
+*.bundle
