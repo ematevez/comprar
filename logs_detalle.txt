@@ -1,0 +1,22 @@
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:15:33
+Intérprete: /usr/local/bin/python
+============================================================
+📋 96 procesos a detallar (leídos de /workspace/procesos_armada.xlsx).
+❌ ERROR FATAL: BrowserType.launch: Executable doesn't exist at /root/.cache/ms-playwright/chromium-1117/chrome-linux/chrome
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     playwright install                                     ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+⚠️ No se relanza el error -- se guardan los 0 procesos que se alcanzaron a procesar antes de que esto pasara, en vez de perderlos todos.
+
+📁 Resumen de cronogramas guardado en /workspace/cronograma_procesos.xlsx
+📁 Cláusulas descargadas en /workspace/detalle_procesos/<número de proceso>/
+
+Ejecución finalizada: 16/10/2026 17:15:34
+Código de salida: 0
