@@ -4,10 +4,13 @@ Envía reportes por email a los destinatarios configurados.
 """
 import os
 import json
+import mimetypes
 import smtplib
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.image import MIMEImage
+from email.utils import make_msgid
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -20,16 +23,17 @@ SMTP_PASS = os.environ.get("SMTP_PASS", "")
 EMAIL_FROM = os.environ.get("EMAIL_FROM", "")
 
 
-def enviar_reporte(destinatarios, asunto="Reporte de Licitaciones", html_email=None):
+def enviar_reporte(destinatarios, asunto="Reporte de Licitaciones", html_email=None, imagen_cid=None):
     """
     Envía un email de prueba o reporte a los destinatarios.
     Si html_email es proporcionado, usa ese HTML personalizado.
+    imagen_cid: (cid, ruta_de_imagen) para incrustar la firma como <img src="cid:...">.
     Retorna el número de emails enviados exitosamente.
     """
     if not SMTP_USER or not SMTP_PASS:
         print("❌ Credenciales SMTP no configuradas en .env")
         return 0
-    
+
     enviados = 0
     for email in destinatarios:
         try:
@@ -37,7 +41,7 @@ def enviar_reporte(destinatarios, asunto="Reporte de Licitaciones", html_email=N
             msg['From'] = EMAIL_FROM or SMTP_USER
             msg['To'] = email
             msg['Subject'] = f"📧 {asunto} - {datetime.now().strftime('%d/%m/%Y %H:%M')}"
-            
+
             # Usar HTML personalizado si se proporciona, sino usar el de prueba
             if html_email:
                 body = html_email
@@ -56,21 +60,34 @@ def enviar_reporte(destinatarios, asunto="Reporte de Licitaciones", html_email=N
                 </body>
                 </html>
                 """
-            
-            msg.attach(MIMEText(body, 'html'))
-            
+
+            if imagen_cid:
+                # multipart/related: HTML + imagen embebida referenciada por cid:
+                msg.attach(MIMEText(body, 'html'))
+                cid, ruta = imagen_cid
+                ext = os.path.splitext(ruta)[1].lower().lstrip('.')
+                subtype = {'jpg': 'jpeg', 'jpeg': 'jpeg', 'png': 'png',
+                           'gif': 'gif'}.get(ext, 'png')
+                with open(ruta, 'rb') as f:
+                    img = MIMEImage(f.read(), _subtype=subtype)
+                img.add_header('Content-ID', f'<{cid}>')
+                img.add_header('Content-Disposition', 'inline', filename=os.path.basename(ruta))
+                msg.attach(img)
+            else:
+                msg.attach(MIMEText(body, 'html'))
+
             server = smtplib.SMTP(SMTP_HOST, SMTP_PORT)
             server.starttls()
             server.login(SMTP_USER, SMTP_PASS)
             server.send_message(msg)
             server.quit()
-            
+
             print(f"✅ Email enviado a {email}")
             enviados += 1
-            
+
         except Exception as e:
             print(f"❌ Error enviando a {email}: {e}")
-    
+
     return enviados
 
 

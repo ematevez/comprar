@@ -176,15 +176,21 @@ def enviar_notificaciones_automaticas():
         print("⚠️ No hay procesos para enviar")
         return
     
-    # Generar HTML para email
+    # Generar HTML para email (con firma incrustada si hay imagen disponible)
+    global _FIRMA_CID
+    _FIRMA_CID = ''
+    firma_path = _buscar_firma_imagen()
+    if firma_path:
+        _FIRMA_CID = 'firma_reporte'
     html_email = generar_html_reporte(procesos)
-    
+
     # Enviar email
     try:
         from enviar_reporte_email import enviar_reporte
         emails = cargar_emails().get('emails', [])
         if emails:
-            enviados = enviar_reporte(emails, html_email=html_email)
+            imagen = (_FIRMA_CID, firma_path) if (_FIRMA_CID and firma_path) else None
+            enviados = enviar_reporte(emails, html_email=html_email, imagen_cid=imagen)
             print(f"✅ Email enviado a {enviados} destinatarios")
     except Exception as e:
         print(f"❌ Error enviando email: {e}")
@@ -261,8 +267,25 @@ _EMAIL_ESTILO_CARD = {
     'descartada':  (_EMAIL_COLORES['descartada'],  _EMAIL_COLORES['bg']),
 }
 
+# Imagen de firma incrustada en el email (cid:) si existe; vacío si no.
+_FIRMA_CID = ''
 
-def generar_html_reporte(procesos=None):
+
+def _buscar_firma_imagen():
+    """Busca una imagen de firma en lugares habituales del proyecto."""
+    candidatos = [
+        os.environ.get('FIRMA_IMAGEN', ''),
+        'firma.png', 'firma.jpg', 'firma.jpeg', 'firma.gif',
+        'data/firma.png', 'data/firma.jpg', 'data/firma.jpeg', 'data/firma.gif',
+        'assets/firma.png', 'static/firma.png',
+    ]
+    for r in candidatos:
+        if r and os.path.exists(r):
+            return r
+    return None
+
+
+def generar_html_reporte(procesos=None, incluir_vencidos=True):
     """Genera el HTML del email con el mismo maquetado y datos que el dashboard.
 
     Usa tablas HTML con estilos inline (compatible con Gmail/Outlook) replicando
@@ -270,6 +293,9 @@ def generar_html_reporte(procesos=None):
     objeto, badge de estado, chips de hallazgos (FONDEF / 6.8.7 / 6.8.2 en
     dorado), unidad ejecutora y fechas. Lee los MISMOS datos que el dashboard
     (cronograma_procesos.xlsx + registro de gestión + favoritos).
+
+    incluir_vencidos=False omite la sección "Procesos vencidos" (el email se
+    centra en lo que viene: urgentes, seguimiento y lejanos).
     """
     from datetime import datetime
     import pandas as pd
@@ -304,6 +330,13 @@ def generar_html_reporte(procesos=None):
         dias = dias_para_apertura(proc.get('Fecha acto de apertura'))
         estado = proc.get('Estado gestión', 'ACTIVA') or 'ACTIVA'
 
+        # Filtrar filas sin datos reales (ej: números "1", "2", "3" creados por
+        # búsquedas fallidas): sin fecha, sin nombre y sin publicación.
+        nombre_fila = _texto(proc.get('Nombre de proceso', ''))
+        if (dias is None and not nombre_fila
+                and not _texto(proc.get('Fecha publicación portal', ''))):
+            continue
+
         if estado == 'DESCARTADA':
             clase, etiqueta = 'descartada', 'DESCARTADA'
         elif estado == 'EN SEGUIMIENTO':
@@ -337,8 +370,8 @@ def generar_html_reporte(procesos=None):
             'objeto': (_texto(proc.get('Nombre de proceso', '')) or nombres_respaldo.get(numero, '') or 'Sin nombre')[:80],
             'dias_label': etiqueta,
             'clase': clase,
-            'fecha_apertura': _texto(proc.get('Fecha acto de apertura', '')) or '—',
-            'fecha_publicacion': _texto(proc.get('Fecha publicación portal', '')) or '—',
+            'fecha_apertura': _email_fechas(proc.get('Fecha acto de apertura')),
+            'fecha_publicacion': _email_fechas(proc.get('Fecha publicación portal')),
             'hallazgos': hallazgos,
             'palabras_clave': palabras_clave,
             'favorito': es_favorito(numero),
@@ -349,7 +382,23 @@ def generar_html_reporte(procesos=None):
     # Mismo ordenamiento por prioridad que el dashboard
     orden = {'urgente': 0, 'vencido': 1, 'en-seguimiento': 2, 'seguimiento': 2,
              'lejana': 3, 'sin-fecha': 4, 'descartada': 5}
-    tarjetas.sort(key=lambda t: (orden.get(t['clase'], 9), t['dias_label'] or '999'))
+
+    def _dias_num(t):
+        """Número de días para ordenar ('—' / texto → 9999)."""
+        lbl = str(t['dias_label'])
+        d = ''.join(c for c in lbl if c.isdigit() or c == '-')
+        try:
+            return int(d) if d not in ('', '-') else 9999
+        except ValueError:
+            return 9999
+
+    # Destacados primero (favoritos y con palabras clave), como en el dashboard;
+    # luego por prioridad de clase y días a la apertura.
+    def _es_destacado(t):
+        return t['estado'] != 'DESCARTADA' and (t['favorito'] or bool(t['palabras_clave']))
+
+    tarjetas.sort(key=lambda t: (0 if _es_destacado(t) else 1,
+                                 orden.get(t['clase'], 9), _dias_num(t)))
 
     # Como en el dashboard: los vencidos van a una sección separada al final
     tarjetas_vencidas = [t for t in tarjetas if t['clase'] == 'vencido' and t['estado'] != 'DESCARTADA']
@@ -426,8 +475,8 @@ def generar_html_reporte(procesos=None):
             partes.append('<td width="50%"></td>')
         partes.append('</tr>\n')
 
-    # Sección "Procesos vencidos" (igual que el panel separado del dashboard)
-    if tarjetas_vencidas:
+    # Sección "Procesos vencidos" (opcional; el dashboard la muestra aparte)
+    if incluir_vencidos and tarjetas_vencidas:
         partes.append(f'''    </table>
   </td></tr>
   <tr><td style="padding-top:10px;">
@@ -450,6 +499,7 @@ def generar_html_reporte(procesos=None):
   <tr><td style="padding-top:20px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:{C['surface']};border:1px solid {C['border']};border-radius:10px;">
     <tr><td style="padding:16px 24px;text-align:center;color:{C['slate']};font-size:11px;">
+      {_firma_html()}
       <strong style="color:{C['navy']};">Dashboard de Licitaciones — Armada Argentina</strong><br>
       Reporte automático generado después de la ejecución de los scripts.<br>
       ⭐ Chips dorados = palabras clave importantes (FONDEF, 6.8.7, 6.8.2) · 🔖 = favorito
@@ -463,6 +513,48 @@ def generar_html_reporte(procesos=None):
 </html>''')
 
     return ''.join(partes)
+
+
+def _firma_html():
+    """Bloque de firma con imagen incrustada (cid:) si _FIRMA_CID está definido."""
+    if not _FIRMA_CID:
+        return ''
+    C = _EMAIL_COLORES
+    return (f'<div style="margin-bottom:12px;">'
+            f'<img src="cid:{_FIRMA_CID}" alt="Firma" width="150" '
+            f'style="display:block;margin:0 auto 6px;max-width:150px;height:auto;border:0;">'
+            f'</div>')
+
+
+def _email_fechas(valor) -> str:
+    """Formatea fechas del Excel para el email (dd/mm/aaaa hh:mm).
+
+    Acepta datetime/Timestamp de pandas o strings tipo '29/10/2026 12:00 Hrs.'
+    Devuelve '' si no se puede parsear (la card muestra '—').
+    """
+    import math
+    s = _texto(valor)
+    if not s:
+        return ''
+    try:
+        if isinstance(valor, float) and math.isnan(valor):
+            return ''
+    except Exception:
+        pass
+    # datetime / Timestamp → formatear directo
+    try:
+        import pandas as pd
+        if isinstance(valor, pd.Timestamp) or hasattr(valor, 'strftime'):
+            return valor.strftime('%d/%m/%Y %H:%M')
+    except Exception:
+        pass
+    for fmt in ('%d/%m/%Y %H:%M Hrs.', '%d/%m/%Y %H:%M', '%d/%m/%Y'):
+        try:
+            from datetime import datetime as _dt
+            return _dt.strptime(s, fmt).strftime('%d/%m/%Y %H:%M')
+        except ValueError:
+            continue
+    return s  # último recurso: mostrar tal cual
 
 
 def _email_card_td(t):
@@ -499,7 +591,9 @@ def _email_card_td(t):
     unidad = (f'<div style="font-size:11px;color:{C["slate-light"]};margin-top:6px;">🏛️ {t["unidad"]}</div>'
               if t.get('unidad') else '')
     opacidad = 'opacity:0.75;' if t['clase'] == 'descartada' else ''
-    borde_card = '2px solid #FFD700;' if t.get('favorito') else f'1px solid {fondo};'
+    # Borde exterior: dorado si es favorito, gris de borde si no; el color de
+    # estado se conserva en la barra izquierda de 6px (como .card del dashboard)
+    borde_card = '2px solid #FFD700;' if t.get('favorito') else f'1px solid {C["border"]};'
 
     return f'''<td width="50%" valign="top" style="padding:8px 6px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:{fondo};border-left:6px solid {borde};border:{borde_card};border-radius:12px;{opacidad}">
@@ -518,8 +612,8 @@ def _email_card_td(t):
         {f'<div style="margin:10px 0;">{chips}</div>' if chips else ''}
         {unidad}
         <div style="font-size:10.5px;color:{C['slate-light']};margin-top:8px;border-top:1px solid {C['border']};padding-top:8px;">
-          📅 Apertura: <span style="color:{C['slate']};">{t['fecha_apertura']}</span><br>
-          📢 Publicación: <span style="color:{C['slate']};">{t['fecha_publicacion']}</span>
+          📅 Apertura: <span style="color:{C['slate']};">{t['fecha_apertura'] or '—'}</span><br>
+          📢 Publicación: <span style="color:{C['slate']};">{t['fecha_publicacion'] or '—'}</span>
         </div>
       </td></tr>
       </table>
