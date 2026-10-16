@@ -1,0 +1,2 @@
+Tomar las clausulas particulares y buscar el expediente 
+buscar los testigos y ponerlo dentro de la pagina

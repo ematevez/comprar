@@ -1,0 +1,46 @@
+# ===== SECRETOS =====
+.env
+.env.local
+*.bundle
+
+# ===== ENTORNOS / BASURA =====
+env_1/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== DATOS MUTABLES (se regeneran solos) =====
+licencia.json
+codigos_renovacion.json
+estado_procesos.json
+estado_detalle.json
+notas_mejoras.json
+data/emails_reporte.json
+
+# ===== LOGS / DEBUG =====
+logs_comprar.txt
+logs_detalle.txt
+logs/
+*.log
+debug_*.png
+debug_*.html
+
+# ===== SSL / DOCKER =====
+ssl/
+*.pem
+*.key
+*.crt
+docker_volumes/
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== DESCARGAS (se regeneran con detalle_proceso.py, ~420 MB) =====
+detalle_procesos/
