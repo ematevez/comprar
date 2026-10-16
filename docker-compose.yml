@@ -17,6 +17,10 @@ services:
       - .env
     environment:
       - NOMBRE_EXCEL=procesos_armada.xlsx
+      # .env NO va en la imagen (esta excluido via .dockerignore), asi que
+      # docker lo inyecta como variable de entorno con env_file de arriba.
+      # El codigo lee LICENCIA_TOKEN / SMTP_* / CUIT etc. de las variables,
+      # por eso funciona igual que en Windows con el .env local.
     volumes:
       # Datos persistentes
       - ./data:/app/data
