@@ -367,3 +367,12 @@ Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
 
 Ejecución finalizada: 16/10/2026 17:48:26
 Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:49:25
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+⏳ Ya corrió hace menos de 24h (última vez: 16/10/2026 15:57). Próxima corrida habilitada a partir de 17/10/2026 15:57. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 17:49:26
+Código de salida: 0

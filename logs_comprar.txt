@@ -346,3 +346,22 @@ Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
 
 Ejecución finalizada: 16/10/2026 17:48:24
 Código de salida: 0
+
+============================================================
+Ejecución iniciada: 16/10/2026 17:49:23
+Intérprete: C:\Users\Usuario\AppData\Local\Programs\Python\Python310\python.exe
+============================================================
+16/10/2026 17:49:24 - INFO - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+16/10/2026 17:49:24 - INFO - ⏱️ Timeout de inactividad: 60s
+16/10/2026 17:49:24 - INFO - ============================================================
+17:49:24 - 📅 Período de búsqueda: 16/09/2026 a 16/10/2026
+17:49:24 - ⏱️ Timeout de inactividad: 60s
+17:49:24 - ============================================================
+16/10/2026 17:49:24 - INFO - ============================================================
+17:49:24 - 🚀 INICIO DE EJECUCIÓN - comprar.py
+17:49:24 - ============================================================
+16/10/2026 17:49:24 - INFO -  Ya corrió hace menos de 24h (última vez: 16/10/2026 15:37). Próxima corrida habilitada a partir de 17/10/2026 15:37. No se abre el navegador.
+17:49:24 -  Ya corrió hace menos de 24h (última vez: 16/10/2026 15:37). Próxima corrida habilitada a partir de 17/10/2026 15:37. No se abre el navegador.
+
+Ejecución finalizada: 16/10/2026 17:49:24
+Código de salida: 0
