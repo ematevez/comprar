@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agenda de Licitaciones - Armada</title>
 <script>
-<<<<<<< HEAD
-=======
-  // Se aplica ANTES del CSS para que no haya un parpadeo claro->oscuro al cargar.
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   if (localStorage.getItem('modoNocturno') === '1') {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
@@ -83,10 +79,6 @@
   }
   .container { max-width: 1450px; margin: 0 auto; }
 
-<<<<<<< HEAD
-=======
-  /* Header */
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .header {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -102,10 +94,6 @@
   }
   .header .sub { color: var(--slate); font-size: 13px; margin-top: 4px; }
 
-<<<<<<< HEAD
-=======
-  /* Stats bar */
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
@@ -129,10 +117,6 @@
   .stat-card .value { font-size: 20px; font-weight: 800; color: var(--navy); }
   .stat-card .timestamp { font-size: 11px; color: var(--slate-light); margin-top: 4px; }
 
-<<<<<<< HEAD
-=======
-  /* Toolbar -- botones llamativos con gradiente */
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .toolbar {
     display: flex;
     gap: 12px;
@@ -188,146 +172,6 @@
     color: white;
   }
 
-<<<<<<< HEAD
-=======
-  .filtro-clausulas {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    padding-top: 10px;
-    margin-top: 4px;
-    border-top: 1px solid var(--border);
-    font-size: 12.5px;
-  }
-  .filtro-label { color: var(--slate); font-weight: 700; }
-  .filtro-clausulas label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--ink);
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .filtro-clausulas input[type=checkbox] {
-    accent-color: #5B21B6;
-    width: 14px;
-    height: 14px;
-  }
-  #filtroActivoAviso {
-    color: #5B21B6;
-    font-weight: 700;
-    background: #F5F3FF;
-    border: 1px solid #DDD6FE;
-    padding: 3px 10px;
-    border-radius: 20px;
-  }
-
-  /* Notas de mejora */
-  .notas-wrap { position: relative; }
-  .notas-badge {
-    display: inline-block;
-    background: var(--urgente);
-    color: white;
-    border-radius: 20px;
-    font-size: 10px;
-    font-weight: 800;
-    padding: 1px 7px;
-    margin-left: 6px;
-  }
-  .notas-dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    width: 340px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    box-shadow: 0 12px 28px rgba(20,33,61,0.18);
-    z-index: 100;
-    overflow: hidden;
-  }
-  .notas-dropdown.open { display: block; }
-  .notas-header {
-    padding: 12px 16px;
-    font-weight: 800;
-    font-size: 13px;
-    color: var(--navy);
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-  }
-  .notas-lista { max-height: 280px; overflow-y: auto; padding: 6px; }
-  .nota-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 8px 10px;
-    border-radius: 7px;
-  }
-  .nota-item:hover { background: var(--bg); }
-  .nota-item input[type=checkbox] {
-    margin-top: 3px;
-    width: 15px;
-    height: 15px;
-    accent-color: #667eea;
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-  .nota-item .nota-texto {
-    flex: 1;
-    font-size: 12.5px;
-    color: var(--ink);
-    line-height: 1.4;
-    cursor: pointer;
-  }
-  .nota-item.hecha .nota-texto {
-    text-decoration: line-through;
-    color: var(--slate-light);
-  }
-  .nota-item .nota-borrar {
-    background: none;
-    border: none;
-    color: var(--slate-light);
-    cursor: pointer;
-    font-size: 15px;
-    line-height: 1;
-    padding: 0 2px;
-    flex-shrink: 0;
-    box-shadow: none;
-  }
-  .nota-item .nota-borrar:hover { color: var(--urgente); transform: none; }
-  .notas-vacio { padding: 20px; text-align: center; color: var(--slate-light); font-size: 12.5px; }
-  .notas-nueva {
-    display: flex;
-    gap: 6px;
-    padding: 10px;
-    border-top: 1px solid var(--border);
-    background: var(--bg);
-  }
-  .notas-nueva input {
-    flex: 1;
-    padding: 8px 10px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 12.5px;
-    font-family: inherit;
-  }
-  .notas-nueva input:focus { outline: none; border-color: #667eea; }
-  .notas-nueva button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    width: 34px;
-    font-size: 16px;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: none;
-  }
-
-  /* Grid de tarjetas -- pasteles */
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
@@ -349,10 +193,7 @@
   .card.vencido      { border-left-color: var(--vencido);     background: #FAFAF9; }
   .card.sin-fecha    { border-left-color: var(--descartada);  background: var(--surface); }
   .card.descartada   { opacity: 0.65; border-left-color: var(--descartada); background: var(--bg); }
-<<<<<<< HEAD
   .card.en-seguimiento { border-left-color: #F59E0B; background: #FFFBEB; }
-=======
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 
   .card .num {
     font-weight: 800;
@@ -419,7 +260,6 @@
     font-size: 11px;
     font-weight: 700;
   }
-<<<<<<< HEAD
   .hallazgo.destacado {
     background: linear-gradient(135deg, #FFD700, #FFA500);
     color: #14213D;
@@ -488,8 +328,6 @@
   .filter-btn.active:hover {
     background: #5568d3;
   }
-=======
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 
   .actions {
     display: flex;
@@ -510,11 +348,8 @@
   }
   .btn-descartar { background: #FEE2E2; color: #991B1B; }
   .btn-descartar:hover { background: #FECACA; }
-<<<<<<< HEAD
   .btn-seguimiento { background: #FEF3C7; color: #92400E; }
   .btn-seguimiento:hover { background: #FDE68A; }
-=======
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .btn-reactivar { background: #D1FAE5; color: #065F46; }
   .btn-reactivar:hover { background: #A7F3D0; }
   .btn-imprimir  { background: #DBEAFE; color: #1E40AF; }
@@ -535,26 +370,15 @@
     word-break: break-word;
   }
 
-<<<<<<< HEAD
-=======
-  /* Consola de ejecución en vivo */
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .consola-ejecucion {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-<<<<<<< HEAD
     height: 400px;
     background: #0B1220;
     border-top: 3px solid #667eea;
     box-shadow: 0 -8px 24px rgba(0,0,0,0.35);
-=======
-    max-height: 260px;
-    background: #0B1220;
-    border-top: 2px solid #667eea;
-    box-shadow: 0 -8px 24px rgba(0,0,0,0.25);
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     z-index: 1500;
     display: flex;
     flex-direction: column;
@@ -563,7 +387,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
     padding: 12px 18px;
     background: #151E33;
     color: #A5B4FC;
@@ -583,34 +406,20 @@
   @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
-=======
-    padding: 8px 14px;
-    background: #151E33;
-    color: #A5B4FC;
-    font-size: 12px;
-    font-weight: 700;
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   }
   .consola-header button {
     background: transparent;
     border: 1px solid #334155;
     color: #94A3B8;
-<<<<<<< HEAD
     padding: 5px 12px;
     border-radius: 5px;
     font-size: 12px;
-=======
-    padding: 3px 10px;
-    border-radius: 5px;
-    font-size: 11px;
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     cursor: pointer;
     box-shadow: none;
   }
   .consola-header button:hover { background: #1E293B; transform: none; }
   #consolaContenido {
     margin: 0;
-<<<<<<< HEAD
     padding: 15px 18px;
     overflow-y: auto;
     color: #D1D5DB;
@@ -635,119 +444,6 @@
     background: #64748B;
   }
 
-=======
-    padding: 10px 14px;
-    overflow-y: auto;
-    color: #D1D5DB;
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 11.5px;
-    line-height: 1.5;
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
-
-  /* Gantt */
-  .gantt-wrap {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-  }
-  .gantt-scale {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    margin-bottom: 6px;
-  }
-  .gantt-scale .labels-head { }
-  .gantt-scale .dates-head {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
-    color: var(--slate-light);
-    font-weight: 700;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--border);
-  }
-  .gantt-rows { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-  .gantt-row {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    align-items: center;
-    gap: 10px;
-  }
-  .gantt-label {
-    font-size: 12px;
-    color: var(--ink);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .gantt-label .num {
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-weight: 800;
-    color: var(--navy);
-    display: block;
-    font-size: 12px;
-  }
-  .gantt-label .nombre {
-    display: block;
-    color: var(--slate);
-    font-size: 11px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .gantt-track {
-    position: relative;
-    height: 26px;
-    background: var(--bg);
-    border-radius: 6px;
-    border: 1px solid var(--border);
-  }
-  .gantt-bar {
-    position: absolute;
-    top: 3px;
-    bottom: 3px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
-    font-size: 10.5px;
-    font-weight: 700;
-    color: white;
-    white-space: nowrap;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-  }
-  .gantt-bar.urgente      { background: linear-gradient(135deg, #f87171, #dc2626); }
-  .gantt-bar.seguimiento  { background: linear-gradient(135deg, #fbbf24, #d97706); }
-  .gantt-bar.lejana       { background: linear-gradient(135deg, #34d399, #059669); }
-  .gantt-bar.vencido      { background: linear-gradient(135deg, #78716c, #44403c); }
-  .gantt-bar.descartada   { background: linear-gradient(135deg, #cbd5e1, #94a3b8); }
-  .gantt-today {
-    position: absolute;
-    top: -4px;
-    bottom: -4px;
-    width: 2px;
-    background: #667eea;
-    z-index: 5;
-  }
-  .gantt-today::after {
-    content: 'HOY';
-    position: absolute;
-    top: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 8.5px;
-    font-weight: 800;
-    color: #667eea;
-    letter-spacing: 0.5px;
-  }
-  .gantt-empty { color: var(--slate-light); font-size: 13px; padding: 30px; text-align: center; }
-
-  /* Modal */
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .modal-bg {
     display: none;
     position: fixed;
@@ -774,11 +470,7 @@
     color: var(--navy);
   }
   .modal p { color: var(--slate); font-size: 13px; margin-bottom: 14px; line-height: 1.5; }
-<<<<<<< HEAD
   .modal textarea, .modal input[type="text"], .modal input[type="email"] {
-=======
-  .modal textarea {
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     width: 100%;
     min-height: 90px;
     padding: 10px 12px;
@@ -788,11 +480,7 @@
     font-size: 13px;
     resize: vertical;
   }
-<<<<<<< HEAD
   .modal textarea:focus, .modal input:focus {
-=======
-  .modal textarea:focus {
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     outline: none;
     border-color: #667eea;
   }
@@ -814,31 +502,9 @@
   .modal .confirm:hover { background: #B91C1C; }
   .modal .cancel  { background: var(--border); color: var(--slate); }
   .modal .cancel:hover { background: #CBD5E1; }
-<<<<<<< HEAD
   .modal .success { background: #059669; color: white; }
   .modal .success:hover { background: #047857; }
 
-=======
-
-  /* Impresión */
-  @media print {
-    body { background: white; padding: 0; }
-    .toolbar, .actions, .modal-bg, .stats { display: none !important; }
-    .card { break-inside: avoid; box-shadow: none; border: 1px solid var(--border); }
-    .grid { grid-template-columns: 1fr; }
-    .header { box-shadow: none; border: 1px solid var(--border); }
-    #printFiltroInfo { display: block !important; }
-  }
-  #printFiltroInfo {
-    display: none;
-    font-size: 12px;
-    font-weight: 700;
-    color: #5B21B6;
-    margin: -10px 0 14px;
-  }
-
-  /* Toast */
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   .toast {
     position: fixed;
     bottom: 24px;
@@ -861,7 +527,6 @@
     from { transform: translateX(400px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
   }
-<<<<<<< HEAD
 
   /* Estilos para Email y Telegram */
   .config-section {
@@ -903,8 +568,6 @@
     font-size: 12px;
   }
   .btn-remove:hover { background: #FECACA; }
-=======
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 </style>
 </head>
 <body>
@@ -914,32 +577,17 @@
     <h1>Agenda de Licitaciones</h1>
     <p class="sub">Seguimiento de procesos de compra - Armada Argentina</p>
   </div>
-<<<<<<< HEAD
-=======
-
-  <div id="printFiltroInfo"></div>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   
   <div class="stats">
     <div class="stat-card">
       <h3>Última ejecución — comprar.py</h3>
-<<<<<<< HEAD
-      <div class="value" id="statComprar">Ejecución finalizada: 14/10/2026 21:36:48</div>
-      <div class="timestamp" id="resumenComprar">21:36:48 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 18:58). Próxima corrida habilitada a partir de · duró 2s</div>
+      <div class="value" id="statComprar">Ejecución finalizada: 16/10/2026 17:15:33</div>
+      <div class="timestamp" id="resumenComprar">╚════════════════════════════════════════════════════════════╝ · duró 1s</div>
     </div>
     <div class="stat-card">
       <h3>Última ejecución — detalle_proceso.py</h3>
-      <div class="value" id="statDetalle">Ejecución finalizada: 14/10/2026 21:36:50</div>
-      <div class="timestamp" id="resumenDetalle">⏳ Ya corrió hace menos de 24h (última vez: 14/10/2026 20:54). Próxima corrida habilitada a partir de 15/10/202 · duró 1s</div>
-=======
-      <div class="value" id="statComprar">Ejecución finalizada: 14/10/2026 09:06:07</div>
-      <div class="timestamp" id="resumenComprar">09:06:07 -  Ya corrió hace menos de 24h (última vez: 14/10/2026 08:03). Próxima corrida habilitada a partir de · duró 1s</div>
-    </div>
-    <div class="stat-card">
-      <h3>Última ejecución — detalle_proceso.py</h3>
-      <div class="value" id="statDetalle">Ejecución finalizada: 14/10/2026 09:06:09</div>
-      <div class="timestamp" id="resumenDetalle">⏳ Ya corrió hace menos de 24h (última vez: 14/10/2026 08:57). Próxima corrida habilitada a partir de 15/10/202 · duró 1s</div>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
+      <div class="value" id="statDetalle">Ejecución finalizada: 16/10/2026 17:15:34</div>
+      <div class="timestamp" id="resumenDetalle">📁 Cláusulas descargadas en /workspace/detalle_procesos/<número de proceso>/ · duró 1s</div>
     </div>
     <div class="stat-card">
       <h3>Total procesos</h3>
@@ -952,7 +600,6 @@
   </div>
 
   <div class="toolbar">
-<<<<<<< HEAD
     <!-- Grupo 1: Ejecución -->
     <div style="display:flex; gap:8px; align-items:center; border-right:2px solid #E4E8EF; padding-right:12px;">
       <button onclick="ejecutarScript('comprar')" class="success">▶ comprar.py</button>
@@ -991,68 +638,23 @@
       <button class="secondary" onclick="mostrarConfigEmail()">📧</button>
       <button class="secondary" onclick="mostrarConfigTelegram()">🤖</button>
       <button style="background:linear-gradient(135deg, #f87171, #dc2626);" onclick="abrirReseteo()">⚠️ Reset</button>
-=======
-    <button onclick="ejecutarScript('comprar')" class="success">Ejecutar comprar.py</button>
-    <button onclick="ejecutarScript('detalle')" class="success">Ejecutar detalle_proceso.py</button>
-    <label style="display:flex; align-items:center; gap:5px; font-size:12px; color:#5B6B82; font-weight:600; cursor:pointer;" title="Corre aunque no hayan pasado las 24h desde la última vez -- solo esta corrida, no cambia el scheduler automático">
-      <input type="checkbox" id="chkForzar" style="accent-color:#667eea; width:14px; height:14px;">
-      Forzar (ignorar límite de 24h)
-    </label>
-    <button onclick="location.reload()">Refrescar dashboard</button>
-    <button class="secondary" onclick="mostrarGestion()">Registro de gestión</button>
-    <button class="secondary" onclick="window.print()">Imprimir agenda</button>
-    <button style="background:linear-gradient(135deg, #f87171, #dc2626); box-shadow:0 2px 6px rgba(220,38,38,0.35);" onclick="abrirReseteo()">Reseteo general</button>
-    <button id="btnModoNocturno" class="secondary" onclick="toggleModoNocturno()">🌙 Modo nocturno</button>
-    <div class="notas-wrap">
-      <button class="secondary" onclick="toggleNotas()">Notas / Mejoras <span id="notasPendientesBadge" class="notas-badge" style="display:none">0</span></button>
-      <div class="notas-dropdown" id="notasDropdown">
-        <div class="notas-header">Notas de mejora</div>
-        <div class="notas-lista" id="notasLista"></div>
-        <div class="notas-nueva">
-          <input type="text" id="notaNuevaInput" placeholder="Agregar una nota..." onkeydown="if(event.key==='Enter') agregarNota()">
-          <button onclick="agregarNota()">+</button>
-        </div>
-      </div>
-    </div>
-    <div class="view-toggle">
-      <button id="btnVistaTarjetas" class="active" onclick="cambiarVista('tarjetas')">Tarjetas</button>
-      <button id="btnVistaGantt" onclick="cambiarVista('gantt')">Gantt</button>
-      <button id="btnVistaVencidos" onclick="cambiarVista('vencidos')">Vencidos <span id="vencidosBadge" class="notas-badge" style="display:none">0</span></button>
-    </div>
-    <div class="filtro-clausulas">
-      <span class="filtro-label">Filtrar por cláusula:</span>
-      <label><input type="checkbox" id="chk687" onchange="aplicarFiltroClausulas()"> 6.8.7</label>
-      <label><input type="checkbox" id="chk682" onchange="aplicarFiltroClausulas()"> 6.8.2</label>
-      <span id="filtroActivoAviso" style="display:none"></span>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     </div>
   </div>
 
   <div class="grid" id="grid"></div>
-<<<<<<< HEAD
-=======
-  <div class="gantt-wrap" id="ganttView" style="display:none"></div>
-  <div class="grid" id="gridVencidos" style="display:none"></div>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 </div>
 
 <div class="consola-ejecucion" id="consolaEjecucion" style="display:none">
   <div class="consola-header">
-<<<<<<< HEAD
     <span id="consolaTitulo"><span class="status-indicator"></span>Ejecutando...</span>
     <div>
       <button onclick="document.getElementById('consolaContenido').scrollTop = document.getElementById('consolaContenido').scrollHeight">📜 Ir al final</button>
       <button onclick="document.getElementById('consolaEjecucion').style.display='none'" style="margin-left:8px;">✕ Cerrar</button>
     </div>
-=======
-    <span id="consolaTitulo">Ejecutando...</span>
-    <button onclick="document.getElementById('consolaEjecucion').style.display='none'">Cerrar</button>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   </div>
   <pre id="consolaContenido"></pre>
 </div>
 
-<<<<<<< HEAD
 <!-- Modal Email -->
 <div class="modal-bg" id="modalEmail">
   <div class="modal">
@@ -1088,16 +690,6 @@
   <div class="modal">
     <h3>Descartar proceso</h3>
     <p>Esta acción eliminará permanentemente la carpeta con los PDFs y documentos descargados.</p>
-=======
-<!-- Modal descartar -->
-<div class="modal-bg" id="modalDescartar">
-  <div class="modal">
-    <h3>️ Descartar proceso</h3>
-    <p>
-      Esta acción eliminará permanentemente la carpeta con los PDFs y documentos descargados.
-      Los datos de gestión quedarán registrados en el histórico con estado "DESCARTADA".
-    </p>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     <textarea id="motivoDescarte" placeholder="Motivo del descarte (obligatorio)..."></textarea>
     <div class="btns">
       <button class="cancel" onclick="cerrarModal()">Cancelar</button>
@@ -1106,26 +698,11 @@
   </div>
 </div>
 
-<<<<<<< HEAD
 <!-- Modal reseteo -->
 <div class="modal-bg" id="modalReseteo">
   <div class="modal">
     <h3>Reseteo general</h3>
     <p>Esto borra todos los datos de scraping. El registro de gestión y las notas NO se tocan.</p>
-=======
-<!-- Modal reseteo general -->
-<div class="modal-bg" id="modalReseteo">
-  <div class="modal">
-    <h3>Reseteo general</h3>
-    <p>
-      Esto borra <strong>estado_procesos.json</strong>, <strong>estado_detalle.json</strong>,
-      <strong>procesos_armada.xlsx</strong>, <strong>cronograma_procesos.xlsx</strong> y la carpeta
-      <strong>detalle_procesos/</strong> (todos los PDF descargados).<br><br>
-      El registro de gestión, las notas de mejora y la licencia <strong>NO</strong> se tocan.<br><br>
-      Después de resetear, la próxima corrida de <code>comprar.py</code> va a traer todo de cero.
-      Esta acción no se puede deshacer.
-    </p>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     <div class="btns">
       <button class="cancel" onclick="document.getElementById('modalReseteo').classList.remove('open')">Cancelar</button>
       <button class="confirm" onclick="confirmarReseteo()">Sí, resetear todo</button>
@@ -1133,7 +710,6 @@
   </div>
 </div>
 
-<<<<<<< HEAD
 <!-- Modal gestión -->
 <div class="modal-bg" id="modalGestion">
   <div class="modal" style="max-width:800px;">
@@ -1141,44 +717,21 @@
     <div id="gestionContent" style="max-height:500px;overflow:auto;font-size:13px;margin:16px 0;"></div>
     <div class="btns">
       <button class="cancel" onclick="document.getElementById('modalGestion').classList.remove('open')">Cerrar</button>
-=======
-<!-- Modal registro de gestión -->
-<div class="modal-bg" id="modalGestion">
-  <div class="modal" style="max-width:800px;">
-    <h3> Registro de Gestión</h3>
-    <div id="gestionContent" style="max-height:500px;overflow:auto;font-size:13px;margin:16px 0;"></div>
-    <div class="btns">
-      <button class="cancel" onclick="document.getElementById('modalGestion').classList.remove('open')">Cerrar</button>
-      <button class="success" onclick="imprimirGestion()">Imprimir</button>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     </div>
   </div>
 </div>
 
-<<<<<<< HEAD
 <div class="toast" id="toast"></div>
 
 <script>
-const TARJETAS = [{"numero": "487-0076-LPU26", "objeto": "Adquisición de ambos y guardapolvos para el Complejo Médico CHURRUCA-VISCA", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 2.2.2"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "101-0006-LPU26", "objeto": "Serv de impermeabilización ext, pintura 4 y 5 piso e instalación, ensayo y certi", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 09:00 Hrs.", "fecha_publicacion": "06/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0670-LPU26", "objeto": "ADQUISICIÓN DE PINTURAS Y ARTÍCULOS DE FERRETERÍA PARA EL B ARS 604", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 09:00 Hrs.", "fecha_publicacion": "02/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.2.1, 2.5.1, 2.5.5, 2.5.8, 2.7.1, 2.7.5, 2.7.9, 2.9.2, 2.9.3, 2.9.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "46-0037-LPU26", "objeto": "Concesión de uso precario y exclusivo del espacio rel a la DNV P/ Viandas Desayu", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 11:00 Hrs.", "fecha_publicacion": "01/10/2026 11:00 Hrs.", "hallazgos": ["Objeto: 3.2.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0459-LPU26", "objeto": "Adquisición de cortes cárnicos, cerdo, filet de merluza, pollo y huevo fresco pa", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0460-LPU26", "objeto": "Obtención de conservas, panificados y lácteos para los destinos con asiento en l", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0465-LPU26", "objeto": "Adquirir víveres secos y condimentos para los destinos con asiento en la IBUS pa", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0477-LPU26", "objeto": "Obtención de Frutas y Verduras 1er Trimestre 2027, para los destinos con asiento", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/3-0440-LPU26", "objeto": "CONCESIÓN ONEROSA DEL SERVICIO DE BUFFET Y CANTINA DEL ESTADIO DE DEPORTES DE LA", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 3.2.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "78-0011-LPU26", "objeto": "Contratación del servicio de mantenimiento, reparación e instalación de aires ac", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 12:00 Hrs.", "fecha_publicacion": "30/09/2026 00:01 Hrs.", "hallazgos": ["Objeto: 3.3.3, 3.4.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "340/1-0054-LPU26", "objeto": "ADQUISICIÓN DE REPUESTOS DE BASE - SOSTÉN LOGÍSTICO ANTÁRTICO.", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.5, 2.4.3, 2.5.5, 2.5.6, 2.5.8, 2.5.9, 2.7.1, 2.7.2, 2.7.5, 2.7.9, 2.9.3, 2.9.6, 2.9.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0453-LPU26", "objeto": "ADQUISICION DE CONJUNTOS BOMBAS DE TIMON PARA UNIDADES DEPENDIENTES DE LA DVCB.", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 11:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.7"], "palabras_clave": ["FONDEF"], "favorito": true, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0480-LPU26", "objeto": "ADQUISICIÓN DE BOMBAS NEUMÁTICAS E HIDROLAVADORAS PARA UNIDADES DEL COMANDO DE L", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 12:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.7"], "palabras_clave": ["FONDEF"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0690-LPU26", "objeto": "SERVICIO DE REPARACIÓN DE TECHO Y SISTEMA DE DESAGÜE DEL EDIFICIO Nº 84 DEL B AR", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 12:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0707-LPU26", "objeto": "ADQUISICION DE VIVERES FRESCOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEME", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0708-LPU26", "objeto": "ADQUISICION DE VIVERES SECOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMEST", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0709-LPU26", "objeto": "ADQUISICION DE PRODUCTOS DE PANIFICACION PARA RACIONAMIENTO DE CADETES DEL LMGB ", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/13-0712-LPU26", "objeto": "APST P LA PROV DE ALFALFA CAMPAÑA 2027/39 341has - ECN", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 08:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/13-0713-LPU26", "objeto": "APST P LA PROV DE ALFALFA CAMPAÑA 2027/39 91has - ECN", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0724-LPU26", "objeto": "ADQUISICIÓN DE FRENTES Y CONJUNTOS DE TABLEROS DE INSTRUMENTOS PARA VEHÍCULOS DE", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 11:00 Hrs.", "fecha_publicacion": "09/10/2026 13:00 Hrs.", "hallazgos": ["Objeto: 4.3.8"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "39-0040-LPU26", "objeto": "SERVICIO DE MANTENIMIENTO CORRECTIVO DE LOS SISTEMAS DE VIDEO DE LA PREFECTURA N", "dias_label": "12 días", "clase": "seguimiento", "fecha_apertura": "27/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.3"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/6-0447-LPU26", "objeto": "RECAMBIO Y READECUACION INTEGRAL DEL SISTEMA DE CALEFACCION DEL EDIFICIO COMANDO", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 13:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/77-0694-LPU26", "objeto": "ADQUISICIÓN DE BATERÍAS RECARGABLES DESTINADAS A EQUIPOS ELECTRÓNICOS", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 08:00 Hrs.", "fecha_publicacion": "14/10/2026 11:00 Hrs.", "hallazgos": ["Objeto: 2.9.3"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0704-LPU26", "objeto": "ADQUISICION DE PRODUCTOS CARNICOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er S", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0705-LPU26", "objeto": "ADQUISICION DE FRUTAS Y VERDURAS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SE", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:30 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0706-LPU26", "objeto": "ADQUISICION DE PRODUCTOS AVICOLAS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er S", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:30 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "39-0041-LPU26", "objeto": "ADQUISICIÓN DE REPUESTOS PARA MOTORES MARINOS GM DETROIT DIESEL PARA GC TIPO 48 ", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.9.6"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "21-0023-LPU26", "objeto": "SERVICIO DE MANTENIMIENTO EQUIPOS DE AIRE ACONDICIONADO EN LA SEDE CENTRAL Y AMB", "dias_label": "14 días", "clase": "seguimiento", "fecha_apertura": "29/10/2026 12:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.3"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0011-LPU26", "objeto": "Contratación del Servicio de limpieza edilicia -INE (Alcanzado por el Protocolo ", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 12:00 Hrs.", "fecha_publicacion": "30/09/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.3.5"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0463-LPU26", "objeto": "Adquisición de víveres secos y condimentos para los destinos con asiento en IBPB", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 10:00 Hrs.", "fecha_publicacion": "06/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0468-LPU26", "objeto": "Obtención de víveres secos y condimentos (1er TRIMESTRE) para los destinos con a", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0470-LPU26", "objeto": "Obtención de cortes cárnicos y huevos para los destinos con asiento en la IBBA (", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 10:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0684-LPU26", "objeto": "ADQUISICIÓN DE MAQUINAS Y HERRAMIENTAS MENORES PARA VEHICULO BLINDADO M113", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.7.1, 2.7.5, 2.7.9, 2.9.6"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/77-0685-LPU26", "objeto": "ADQUISICION DE DRONES MICRO- DGCICD", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "02/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 4.3.5"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/26-0687-LPU26", "objeto": "ADQUISICIÓN DE EQUIPOS BIOMEDICOS PARA EL H GRL 601 - HMC.", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:00 Hrs.", "fecha_publicacion": "06/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 4.3.3"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/1-0484-LPU26", "objeto": "Adquisición de UN (1) kit de repuestos para motores diésel Sulzer.", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:30 Hrs.", "fecha_publicacion": "30/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.9.6"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/1-0486-LPU26", "objeto": "Adquisición de palo santo en trozos de 300 mm", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:30 Hrs.", "fecha_publicacion": "01/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.5"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/13-0691-LPU26", "objeto": "APST P/ LA PROV DE INSUM, SIEM, COND Y HENIFICADO DEL CULT DE ALFALFA 2027/29 - ", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0698-LPU26", "objeto": "1ra etapa 27 Adquisición de Víveres Cárnicos - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0699-LPU26", "objeto": "1ra etapa 27 Adquisición de Frutas, Verduras y Hortalizas - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0700-LPU26", "objeto": "1ra etapa 27 Adquisición de Productos Panificados - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0701-LPU26", "objeto": "1ra etapa 27 Adquisición de Productos Avícolas - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0702-LPU26", "objeto": "1ra etapa 27 Adquisición de Víveres Frescos - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0703-LPU26", "objeto": "1ra etapa 27 Adquisición de Víveres Secos - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0010-LPU26", "objeto": "SERVICIO DE SEGURIDAD Y VIGILANCIA EN CAMPO DE INMUNIZACIONES MARCOS PAZ - INPB", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 12:00 Hrs.", "fecha_publicacion": "01/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.9.3"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "47-0005-LPU26", "objeto": "Contratación seguro para los buques de investigación pesquera del INIDEP", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "23/09/2026 09:40 Hrs.", "hallazgos": ["Objeto: 3.5.4"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/24-0677-LPU26", "objeto": "ALQUILER DE EQUIPOS DE FOTOCOPIADO DIGITAL E IMPRESORAS, SU MANTENIMIENTO INTEGR", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 08:00 Hrs.", "fecha_publicacion": "25/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.2.4"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0012-LPU26", "objeto": "INSTALACION DE ALAMBRADO Y DEFORESTACIÓN EN CAMPO ANEXO - INPB (ALCANZADO POR PR", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 11:00 Hrs.", "fecha_publicacion": "01/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "340/1-0056-LPU26", "objeto": "ADQUISICIÓN DE COMBUSTIBLE RADA LA PLATA - SOSTÉN LOGÍSTICO ANTÁRTICO", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 08:00 Hrs.", "fecha_publicacion": "05/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.5.6"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0462-LPU26", "objeto": "Adquisición de conservas y panificados para los destinos con asiento en IBPB - 1", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "06/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0464-LPU26", "objeto": "Obtención de lácteos y fiambre para los destinos con asiento en la IBBA (1er Tri", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0471-LPU26", "objeto": "Adquisición de cortes cárnicos, cerdo, filet de merluza, pollo y huevo fresco pa", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "06/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/6-0473-LPU26", "objeto": "ADQUISICION DE MATERIALES DE CONSTRUCCION PARA LA HABILITACION DEL DEPARTAMENTO ", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 09:20 Hrs.", "hallazgos": ["Objeto: 2.1.5, 2.2.2, 2.3.4, 2.4.3, 2.5.5, 2.5.8, 2.5.9, 2.6.1, 2.6.3, 2.6.5, 2.7.1, 2.7.2, 2.7.5, 2.7.9, 2.9.3, 2.9.5, 2.9.6, 2.9.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0476-LPU26", "objeto": "Obtención de conservas, panificados para los destinos en la IBBA (1er Trimestre ", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0481-LPU26", "objeto": "ADQUISICIÓN DE REP. PARA MANTENIMIENTO DE MOTOR GENERADOR WARTSILA P/ UNIDADES D", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 09:00 Hrs.", "fecha_publicacion": "06/10/2026 10:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.2"], "palabras_clave": ["FONDEF"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "92-0006-LPU26", "objeto": "DIGITALIZACIÓN DEL ARCHIVO DE PUBLICACIONES PERIÓDICAS DE LA EDITORIAL SARMIENTO", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 11:00 Hrs.", "fecha_publicacion": "30/09/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.5.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "78-0010-LPU26", "objeto": "Adquisición de sobres para ensobrado manual de pasaportes y DNI", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 12:00 Hrs.", "fecha_publicacion": "01/10/2026 00:01 Hrs.", "hallazgos": ["Objeto: 2.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "79/8-0006-LPU26", "objeto": "Servicio integral llave en mano Ceremonia de los Best Tourism Villages de ONU Tu", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 11:00 Hrs.", "fecha_publicacion": "09/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "39-0039-LPU26", "objeto": "REPARACIÓN INTEGRAL DEL GUARDACOSTAS PNA GC-65 “MARTÍN GARCIA”.", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 09:00 Hrs.", "fecha_publicacion": "25/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.2"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "72-0022-LPU26", "objeto": "ADQUISICIÓN DE EQUIPO, MATERIAL INFORMÁTICO Y UN SISTEMA INTEGRAL DE REPRESENTAC", "dias_label": "7 días", "clase": "seguimiento", "fecha_apertura": "22/10/2026 10:00 Hrs.", "fecha_publicacion": "24/09/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 4.3.5, 4.3.6"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/3-0429-LPU26", "objeto": "ADQUISICIÓN BOTES NEUMÁTICOS", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 09:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["6.8.7", "Objeto: 6.8.7"], "palabras_clave": ["6.8.7"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/26-0667-LPU26", "objeto": "SERVICIO DE SINGLE TEST PARA BIOLOGIA MOLECULAR Y SEROLOGIA", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 09:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.4.2"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "315-0014-LPU26", "objeto": "Servicio de provisión e instalación de 1100 metros cuadrados (m2) de piso de gom", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 11:00 Hrs.", "fecha_publicacion": "02/10/2026 16:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "64-0019-LPU26", "objeto": "Adquisición de Computadoras de Escritorio tipo AIO y Monitores para la S.R.T.", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 11:00 Hrs.", "fecha_publicacion": "09/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 4.3.6"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "347-0028-LPU26", "objeto": "CONTRATACIÓN DE MANO DE OBRA ESPECIALIZADA Y ADQUISICIÓN DE REPUESTOS PARA EL HE", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 12:00 Hrs.", "fecha_publicacion": "06/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 2.9.6, 3.3.2"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/3-0443-LPU26", "objeto": "CONCESIÓN ONEROSA DEL SERVICIO DE BUFFET Y CANTINA DEL CLUB GOLF DE PUERTO BELGR", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 09:00 Hrs.", "fecha_publicacion": "08/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 3.2.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/37-0474-LPU26", "objeto": "ADQUISICION DE TOMOGRAFO DENTAL", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 10:00 Hrs.", "fecha_publicacion": "13/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 4.3.3"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0689-LPU26", "objeto": "CONTRATAR EL SERVICIO DE REPARACIÓN PARA EL TECHO DEL NIVEL SECUNDARIO DEL LMGB.", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 07:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "494-0002-LPU26", "objeto": "Adquisición insumos para el Laboratorio del BNDG", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 10:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.5.1, 2.9.5"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/38-0488-LPU26", "objeto": "SERVICIO DE RECONSTITUCIÓN DE CITOSTÁTICOS, FÓRMULAS MAGISTRALES Y DISPENSACIÓN ", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 10:00 Hrs.", "fecha_publicacion": "14/10/2026 10:00 Hrs.", "hallazgos": ["6.8.2", "Objeto: 3.5.9"], "palabras_clave": ["6.8.2"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0013-LPU26", "objeto": "Adquisición de equipos de laboratorio con destino al INEIA (ALCANZADO POR PROTOC", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 11:00 Hrs.", "fecha_publicacion": "07/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 4.3.3, 4.3.7"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0695-LPU26", "objeto": "CONTRATAR EL SERVICIO DE REMODELACION DE BAÑOS DEL CUERPO DE CADETES DEL LMGB", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 07:00 Hrs.", "fecha_publicacion": "08/10/2026 08:30 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "84/136-0696-LPU26", "objeto": "SERVICIO DE MANTENIMIENTO, REPARACION Y REFACCION DEL ANEXO 3 DEL CASINO DE SUBO", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0478-LPU26", "objeto": "ADQUISICION DE EQUIPOS INDIVIDUALES DE AIRE ACONDICIONADO PROA PARA EL DESTRUCTO", "dias_label": "EN SEGUIMIENTO", "clase": "seguimiento", "fecha_apertura": "28/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 12:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.2"], "palabras_clave": ["FONDEF"], "favorito": false, "estado": "EN SEGUIMIENTO", "unidad": ""}, {"numero": "84/30-0665-LPU26", "objeto": "CONTRATAR UN SERVICIO DE MANTENIMIENTO Y REPARACIÓN DE EDIFICIOS - LMGP", "dias_label": "15 días", "clase": "lejana", "fecha_apertura": "30/10/2026 10:00 Hrs.", "fecha_publicacion": "07/10/2026 13:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "47-0006-LPU26", "objeto": "Adquisición de lubricantes para los buques de investigación pesquera del INIDEP", "dias_label": "15 días", "clase": "lejana", "fecha_apertura": "30/10/2026 11:00 Hrs.", "fecha_publicacion": "13/10/2026 10:30 Hrs.", "hallazgos": ["Objeto: 2.5.6"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "37/2-0092-LPU26", "objeto": "SERVICIO DE EXTRACCIÓN, TRASPORTE, MANTENIMIENTO Y LIMPIEZA RED CLOACAL DE LA GU", "dias_label": "18 días", "clase": "lejana", "fecha_apertura": "02/11/2026 10:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.5"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0494-LPU26", "objeto": "ADQ. DE EQUIPOS DE RADIOCOMUNICACIONES UHF/VHF PARA EL DESTRUCTOR A.R.A \"SARANDÍ", "dias_label": "18 días", "clase": "lejana", "fecha_apertura": "02/11/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 09:30 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.2"], "palabras_clave": ["FONDEF"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0506-LPU26", "objeto": "Adquisición de un kit de controles de vuelo, transmisión y rotor de cola con pre", "dias_label": "18 días", "clase": "lejana", "fecha_apertura": "02/11/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["6.8.2", "Objeto: 6.8.2"], "palabras_clave": ["6.8.2"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0508-LPU26", "objeto": "Provisión de un kit de sistemas de fluido y mangueras aeronáuticas.", "dias_label": "18 días", "clase": "lejana", "fecha_apertura": "02/11/2026 10:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["6.8.2", "Objeto: 6.8.2"], "palabras_clave": ["6.8.2"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0509-LPU26", "objeto": "Adquisición de un kit de cabina, transparencias y accesos, con prestación de sop", "dias_label": "19 días", "clase": "lejana", "fecha_apertura": "03/11/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["6.8.2", "Objeto: 6.8.2"], "palabras_clave": ["6.8.2"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0510-LPU26", "objeto": "Adquisición de un kit de estructura, tren de aterrizaje e interfaz de motor", "dias_label": "19 días", "clase": "lejana", "fecha_apertura": "03/11/2026 10:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["6.8.2", "Objeto: 6.8.2"], "palabras_clave": ["6.8.2"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "38/19-0445-LPU26", "objeto": "DGED ADQUISICIÓN DE DOS SIMULADORES DE TIRO", "dias_label": "21 días", "clase": "lejana", "fecha_apertura": "05/11/2026 07:00 Hrs.", "fecha_publicacion": "06/10/2026 10:40 Hrs.", "hallazgos": ["FONDEF", "6.8.2", "Objeto: 6.8.2"], "palabras_clave": ["FONDEF", "6.8.2"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "52-0044-LPU26", "objeto": "CONTRATACIÓN DE UN (1) SERVICIO PROFESIONAL PARA ACTUALIZACIÓN Y EVOLUCIÓN FUNCI", "dias_label": "22 días", "clase": "lejana", "fecha_apertura": "06/11/2026 17:00 Hrs.", "fecha_publicacion": "09/10/2026 09:00 Hrs.", "hallazgos": ["Objeto: 3.4.1"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "30-0015-LPU26", "objeto": "Adquisición de aerosoles orgánicos OC, Granadas CS, Granadas de humo blanco y so", "dias_label": "29 días", "clase": "lejana", "fecha_apertura": "13/11/2026 14:00 Hrs.", "fecha_publicacion": "14/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.5.9"], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "39-0042-LPU26", "objeto": "RECONVERSIÓN MODULAR DE UNA (1) AERONAVE AIRBUS HELICOPTERS AS365 DAUPHIN, N2 AL", "dias_label": "42 días", "clase": "lejana", "fecha_apertura": "26/11/2026 09:00 Hrs.", "fecha_publicacion": "14/10/2026 08:00 Hrs.", "hallazgos": ["6.8.7", "Objeto: 6.8.7"], "palabras_clave": ["6.8.7"], "favorito": false, "estado": "ACTIVA", "unidad": ""}, {"numero": "1", "objeto": "2", "dias_label": "—", "clase": "sin-fecha", "fecha_apertura": "", "fecha_publicacion": "", "hallazgos": [], "palabras_clave": [], "favorito": false, "estado": "ACTIVA", "unidad": ""}];
+const TARJETAS = [];
 let procesoADescartar = null;
 
-=======
-<!-- Toast -->
-<div class="toast" id="toast"></div>
-
-<script>
-const TARJETAS = [{"numero": "38/15-0475-LPU26", "objeto": "Obtención de víveres secos y condimentos (1er TRIMESTRE 2027) para los destinos ", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "15/10/2026 10:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0472-LPU26", "objeto": "Obtención de cortes cárnicos para los destinos con asiento en la IBMP (1er Trime", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "15/10/2026 10:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "279-0002-LPU26", "objeto": "Contratación del servicio de limpieza, desinfección y sanitización para los edif", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "15/10/2026 10:00 Hrs.", "fecha_publicacion": "25/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.5"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0461-LPU26", "objeto": "Adquisición de conservas, panificados y queso rallado para los destinos con asie", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "15/10/2026 10:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/1-0458-LPU26", "objeto": "Adquisición de OCHO (8) bombas inyectoras marca “L’Orange” para los motores prin", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "15/10/2026 09:30 Hrs.", "fecha_publicacion": "25/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0682-LPU26", "objeto": "ADQUISICIÓN DE INSUMOS Y REPUESTOS PARA EL MANTENIMIENTO DE VEHÍCULOS DEL B ARS ", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "15/10/2026 11:00 Hrs.", "fecha_publicacion": "30/09/2026 10:00 Hrs.", "hallazgos": ["Objeto: 2.2.2, 2.4.4, 2.5.9, 2.6.2, 2.6.9, 2.7.2, 2.7.5, 2.9.6, 2.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "40/28-0162-LPU26", "objeto": "MANTENIMIENTO Y REPARACIÓN DE BANCO ESTÁTICO Y DE ARRASTRE", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "15/10/2026 11:00 Hrs.", "fecha_publicacion": "01/10/2026 08:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 3.3.3"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0670-LPU26", "objeto": "ADQUISICIÓN DE PINTURAS Y ARTÍCULOS DE FERRETERÍA PARA EL B ARS 604", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 09:00 Hrs.", "fecha_publicacion": "02/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.2.1, 2.5.1, 2.5.5, 2.5.8, 2.7.1, 2.7.5, 2.7.9, 2.9.2, 2.9.3, 2.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "101-0006-LPU26", "objeto": "Serv de impermeabilización ext, pintura 4 y 5 piso e instalación, ensayo y certi", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 09:00 Hrs.", "fecha_publicacion": "06/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/3-0429-LPU26", "objeto": "ADQUISICIÓN BOTES NEUMÁTICOS", "dias_label": "1 días", "clase": "urgente", "fecha_apertura": "16/10/2026 09:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Cláusula 6.8.7", "Objeto: 6.8.7"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0477-LPU26", "objeto": "Obtención de Frutas y Verduras 1er Trimestre 2027, para los destinos con asiento", "dias_label": "2 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0465-LPU26", "objeto": "Adquirir víveres secos y condimentos para los destinos con asiento en la IBUS pa", "dias_label": "2 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0460-LPU26", "objeto": "Obtención de conservas, panificados y lácteos para los destinos con asiento en l", "dias_label": "2 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0459-LPU26", "objeto": "Adquisición de cortes cárnicos, cerdo, filet de merluza, pollo y huevo fresco pa", "dias_label": "2 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "46-0037-LPU26", "objeto": "Concesión de uso precario y exclusivo del espacio rel a la DNV P/ Viandas Desayu", "dias_label": "2 días", "clase": "urgente", "fecha_apertura": "16/10/2026 11:00 Hrs.", "fecha_publicacion": "01/10/2026 11:00 Hrs.", "hallazgos": ["Objeto: 3.2.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "487-0076-LPU26", "objeto": "Adquisición de ambos y guardapolvos para el Complejo Médico CHURRUCA-VISCA", "dias_label": "2 días", "clase": "urgente", "fecha_apertura": "16/10/2026 10:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 2.2.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/13-0713-LPU26", "objeto": "APST P LA PROV DE ALFALFA CAMPAÑA 2027/39 91has - ECN", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/13-0712-LPU26", "objeto": "APST P LA PROV DE ALFALFA CAMPAÑA 2027/39 341has - ECN", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 08:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0709-LPU26", "objeto": "ADQUISICION DE PRODUCTOS DE PANIFICACION PARA RACIONAMIENTO DE CADETES DEL LMGB ", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0708-LPU26", "objeto": "ADQUISICION DE VIVERES SECOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEMEST", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0707-LPU26", "objeto": "ADQUISICION DE VIVERES FRESCOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SEME", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0690-LPU26", "objeto": "SERVICIO DE REPARACIÓN DE TECHO Y SISTEMA DE DESAGÜE DEL EDIFICIO Nº 84 DEL B AR", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 12:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0480-LPU26", "objeto": "ADQUISICIÓN DE BOMBAS NEUMÁTICAS E HIDROLAVADORAS PARA UNIDADES DEL COMANDO DE L", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 12:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.7"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0453-LPU26", "objeto": "ADQUISICION DE CONJUNTOS BOMBAS DE TIMON PARA UNIDADES DEPENDIENTES DE LA DVCB.", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 11:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.7"], "estado": "ACTIVA", "unidad": ""}, {"numero": "340/1-0054-LPU26", "objeto": "ADQUISICIÓN DE REPUESTOS DE BASE - SOSTÉN LOGÍSTICO ANTÁRTICO.", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.5, 2.4.3, 2.5.5, 2.5.6, 2.5.8, 2.5.9, 2.7.1, 2.7.2, 2.7.5, 2.7.9, 2.9.3, 2.9.6, 2.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/3-0440-LPU26", "objeto": "CONCESIÓN ONEROSA DEL SERVICIO DE BUFFET Y CANTINA DEL ESTADIO DE DEPORTES DE LA", "dias_label": "11 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 3.2.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0724-LPU26", "objeto": "ADQUISICIÓN DE FRENTES Y CONJUNTOS DE TABLEROS DE INSTRUMENTOS PARA VEHÍCULOS DE", "dias_label": "12 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 11:00 Hrs.", "fecha_publicacion": "09/10/2026 13:00 Hrs.", "hallazgos": ["Objeto: 4.3.8"], "estado": "ACTIVA", "unidad": ""}, {"numero": "39-0040-LPU26", "objeto": "SERVICIO DE MANTENIMIENTO CORRECTIVO DE LOS SISTEMAS DE VIDEO DE LA PREFECTURA N", "dias_label": "12 días", "clase": "seguimiento", "fecha_apertura": "27/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.3"], "estado": "ACTIVA", "unidad": ""}, {"numero": "78-0011-LPU26", "objeto": "Contratación del servicio de mantenimiento, reparación e instalación de aires ac", "dias_label": "12 días", "clase": "seguimiento", "fecha_apertura": "26/10/2026 12:00 Hrs.", "fecha_publicacion": "30/09/2026 00:01 Hrs.", "hallazgos": ["Objeto: 3.3.3, 3.4.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "39-0041-LPU26", "objeto": "ADQUISICIÓN DE REPUESTOS PARA MOTORES MARINOS GM DETROIT DIESEL PARA GC TIPO 48 ", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.9.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0706-LPU26", "objeto": "ADQUISICION DE PRODUCTOS AVICOLAS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er S", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:30 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0705-LPU26", "objeto": "ADQUISICION DE FRUTAS Y VERDURAS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er SE", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:30 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0704-LPU26", "objeto": "ADQUISICION DE PRODUCTOS CARNICOS PARA RACIONAMIENTO DE CADETES DEL LMGB - 1er S", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 07:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0478-LPU26", "objeto": "ADQUISICION DE EQUIPOS INDIVIDUALES DE AIRE ACONDICIONADO PROA PARA EL DESTRUCTO", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 12:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/6-0447-LPU26", "objeto": "RECAMBIO Y READECUACION INTEGRAL DEL SISTEMA DE CALEFACCION DEL EDIFICIO COMANDO", "dias_label": "13 días", "clase": "seguimiento", "fecha_apertura": "28/10/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 13:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0703-LPU26", "objeto": "1ra etapa 27 Adquisición de Víveres Secos - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0702-LPU26", "objeto": "1ra etapa 27 Adquisición de Víveres Frescos - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0701-LPU26", "objeto": "1ra etapa 27 Adquisición de Productos Avícolas - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0700-LPU26", "objeto": "1ra etapa 27 Adquisición de Productos Panificados - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0699-LPU26", "objeto": "1ra etapa 27 Adquisición de Frutas, Verduras y Hortalizas - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/143-0698-LPU26", "objeto": "1ra etapa 27 Adquisición de Víveres Cárnicos - Jef Agr A Camp 601", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/13-0691-LPU26", "objeto": "APST P/ LA PROV DE INSUM, SIEM, COND Y HENIFICADO DEL CULT DE ALFALFA 2027/29 - ", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/26-0687-LPU26", "objeto": "ADQUISICIÓN DE EQUIPOS BIOMEDICOS PARA EL H GRL 601 - HMC.", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:00 Hrs.", "fecha_publicacion": "06/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 4.3.3"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/77-0685-LPU26", "objeto": "ADQUISICION DE DRONES MICRO- DGCICD", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 08:00 Hrs.", "fecha_publicacion": "02/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 4.3.5"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/129-0684-LPU26", "objeto": "ADQUISICIÓN DE MAQUINAS Y HERRAMIENTAS MENORES PARA VEHICULO BLINDADO M113", "dias_label": "4 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.7.1, 2.7.5, 2.7.9, 2.9.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/1-0486-LPU26", "objeto": "Adquisición de palo santo en trozos de 300 mm", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:30 Hrs.", "fecha_publicacion": "01/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.1.5"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/1-0484-LPU26", "objeto": "Adquisición de UN (1) kit de repuestos para motores diésel Sulzer.", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 09:30 Hrs.", "fecha_publicacion": "30/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.9.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0481-LPU26", "objeto": "ADQUISICIÓN DE REP. PARA MANTENIMIENTO DE MOTOR GENERADOR WARTSILA P/ UNIDADES D", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 09:00 Hrs.", "fecha_publicacion": "06/10/2026 10:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/6-0473-LPU26", "objeto": "ADQUISICION DE MATERIALES DE CONSTRUCCION PARA LA HABILITACION DEL DEPARTAMENTO ", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 09:00 Hrs.", "fecha_publicacion": "05/10/2026 09:20 Hrs.", "hallazgos": ["Objeto: 2.1.5, 2.2.2, 2.3.4, 2.4.3, 2.5.5, 2.5.8, 2.5.9, 2.6.1, 2.6.3, 2.6.5, 2.7.1, 2.7.2, 2.7.5, 2.7.9, 2.9.3, 2.9.5, 2.9.6, 2.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0470-LPU26", "objeto": "Obtención de cortes cárnicos y huevos para los destinos con asiento en la IBBA (", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 10:00 Hrs.", "fecha_publicacion": "02/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0468-LPU26", "objeto": "Obtención de víveres secos y condimentos (1er TRIMESTRE) para los destinos con a", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0463-LPU26", "objeto": "Adquisición de víveres secos y condimentos para los destinos con asiento en IBPB", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 10:00 Hrs.", "fecha_publicacion": "06/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "340/1-0056-LPU26", "objeto": "ADQUISICIÓN DE COMBUSTIBLE RADA LA PLATA - SOSTÉN LOGÍSTICO ANTÁRTICO", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 08:00 Hrs.", "fecha_publicacion": "05/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.5.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/24-0677-LPU26", "objeto": "ALQUILER DE EQUIPOS DE FOTOCOPIADO DIGITAL E IMPRESORAS, SU MANTENIMIENTO INTEGR", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 08:00 Hrs.", "fecha_publicacion": "25/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.2.4"], "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0011-LPU26", "objeto": "Contratación del Servicio de limpieza edilicia -INE (Alcanzado por el Protocolo ", "dias_label": "5 días", "clase": "seguimiento", "fecha_apertura": "19/10/2026 12:00 Hrs.", "fecha_publicacion": "30/09/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.3.5"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0476-LPU26", "objeto": "Obtención de conservas, panificados para los destinos en la IBBA (1er Trimestre ", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0471-LPU26", "objeto": "Adquisición de cortes cárnicos, cerdo, filet de merluza, pollo y huevo fresco pa", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "06/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0464-LPU26", "objeto": "Obtención de lácteos y fiambre para los destinos con asiento en la IBBA (1er Tri", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "05/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/15-0462-LPU26", "objeto": "Adquisición de conservas y panificados para los destinos con asiento en IBPB - 1", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "06/10/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0012-LPU26", "objeto": "INSTALACION DE ALAMBRADO Y DEFORESTACIÓN EN CAMPO ANEXO - INPB (ALCANZADO POR PR", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 11:00 Hrs.", "fecha_publicacion": "01/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "39-0039-LPU26", "objeto": "REPARACIÓN INTEGRAL DEL GUARDACOSTAS PNA GC-65 “MARTÍN GARCIA”.", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 09:00 Hrs.", "fecha_publicacion": "25/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "47-0005-LPU26", "objeto": "Contratación seguro para los buques de investigación pesquera del INIDEP", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 10:00 Hrs.", "fecha_publicacion": "23/09/2026 09:40 Hrs.", "hallazgos": ["Objeto: 3.5.4"], "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0010-LPU26", "objeto": "SERVICIO DE SEGURIDAD Y VIGILANCIA EN CAMPO DE INMUNIZACIONES MARCOS PAZ - INPB", "dias_label": "6 días", "clase": "seguimiento", "fecha_apertura": "20/10/2026 12:00 Hrs.", "fecha_publicacion": "01/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.9.3"], "estado": "ACTIVA", "unidad": ""}, {"numero": "79/8-0006-LPU26", "objeto": "Servicio integral llave en mano Ceremonia de los Best Tourism Villages de ONU Tu", "dias_label": "7 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 11:00 Hrs.", "fecha_publicacion": "09/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "78-0010-LPU26", "objeto": "Adquisición de sobres para ensobrado manual de pasaportes y DNI", "dias_label": "7 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 12:00 Hrs.", "fecha_publicacion": "01/10/2026 00:01 Hrs.", "hallazgos": ["Objeto: 2.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "92-0006-LPU26", "objeto": "DIGITALIZACIÓN DEL ARCHIVO DE PUBLICACIONES PERIÓDICAS DE LA EDITORIAL SARMIENTO", "dias_label": "7 días", "clase": "seguimiento", "fecha_apertura": "21/10/2026 11:00 Hrs.", "fecha_publicacion": "30/09/2026 07:00 Hrs.", "hallazgos": ["Objeto: 3.5.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/136-0696-LPU26", "objeto": "SERVICIO DE MANTENIMIENTO, REPARACION Y REFACCION DEL ANEXO 3 DEL CASINO DE SUBO", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0695-LPU26", "objeto": "CONTRATAR EL SERVICIO DE REMODELACION DE BAÑOS DEL CUERPO DE CADETES DEL LMGB", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 07:00 Hrs.", "fecha_publicacion": "08/10/2026 08:30 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/31-0689-LPU26", "objeto": "CONTRATAR EL SERVICIO DE REPARACIÓN PARA EL TECHO DEL NIVEL SECUNDARIO DEL LMGB.", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 07:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/3-0443-LPU26", "objeto": "CONCESIÓN ONEROSA DEL SERVICIO DE BUFFET Y CANTINA DEL CLUB GOLF DE PUERTO BELGR", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 09:00 Hrs.", "fecha_publicacion": "08/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 3.2.9"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/26-0667-LPU26", "objeto": "SERVICIO DE SINGLE TEST PARA BIOLOGIA MOLECULAR Y SEROLOGIA", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 09:00 Hrs.", "fecha_publicacion": "08/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.4.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "72-0022-LPU26", "objeto": "ADQUISICIÓN DE EQUIPO, MATERIAL INFORMÁTICO Y UN SISTEMA INTEGRAL DE REPRESENTAC", "dias_label": "8 días", "clase": "seguimiento", "fecha_apertura": "22/10/2026 10:00 Hrs.", "fecha_publicacion": "24/09/2026 00:00 Hrs.", "hallazgos": ["Pago adelantado", "Objeto: 4.3.5, 4.3.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "68-0013-LPU26", "objeto": "Adquisición de equipos de laboratorio con destino al INEIA (ALCANZADO POR PROTOC", "dias_label": "9 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 11:00 Hrs.", "fecha_publicacion": "07/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 4.3.3, 4.3.7"], "estado": "ACTIVA", "unidad": ""}, {"numero": "494-0002-LPU26", "objeto": "Adquisición insumos para el Laboratorio del BNDG", "dias_label": "9 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 10:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.5.1, 2.9.5"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/37-0474-LPU26", "objeto": "ADQUISICION DE TOMOGRAFO DENTAL", "dias_label": "9 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 10:00 Hrs.", "fecha_publicacion": "13/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 4.3.3"], "estado": "ACTIVA", "unidad": ""}, {"numero": "347-0028-LPU26", "objeto": "CONTRATACIÓN DE MANO DE OBRA ESPECIALIZADA Y ADQUISICIÓN DE REPUESTOS PARA EL HE", "dias_label": "9 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 12:00 Hrs.", "fecha_publicacion": "06/10/2026 07:00 Hrs.", "hallazgos": ["Objeto: 2.9.6, 3.3.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "64-0019-LPU26", "objeto": "Adquisición de Computadoras de Escritorio tipo AIO y Monitores para la S.R.T.", "dias_label": "9 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 11:00 Hrs.", "fecha_publicacion": "09/10/2026 00:00 Hrs.", "hallazgos": ["Objeto: 4.3.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "315-0014-LPU26", "objeto": "Servicio de provisión e instalación de 1100 metros cuadrados (m2) de piso de gom", "dias_label": "9 días", "clase": "seguimiento", "fecha_apertura": "23/10/2026 11:00 Hrs.", "fecha_publicacion": "02/10/2026 16:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "21-0023-LPU26", "objeto": "SERVICIO DE MANTENIMIENTO EQUIPOS DE AIRE ACONDICIONADO EN LA SEDE CENTRAL Y AMB", "dias_label": "15 días", "clase": "lejana", "fecha_apertura": "29/10/2026 12:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.3"], "estado": "ACTIVA", "unidad": ""}, {"numero": "47-0006-LPU26", "objeto": "Adquisición de lubricantes para los buques de investigación pesquera del INIDEP", "dias_label": "16 días", "clase": "lejana", "fecha_apertura": "30/10/2026 11:00 Hrs.", "fecha_publicacion": "13/10/2026 10:30 Hrs.", "hallazgos": ["Objeto: 2.5.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/30-0665-LPU26", "objeto": "CONTRATAR UN SERVICIO DE MANTENIMIENTO Y REPARACIÓN DE EDIFICIOS - LMGP", "dias_label": "16 días", "clase": "lejana", "fecha_apertura": "30/10/2026 10:00 Hrs.", "fecha_publicacion": "07/10/2026 13:00 Hrs.", "hallazgos": ["Objeto: 3.3.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0506-LPU26", "objeto": "Adquisición de un kit de controles de vuelo, transmisión y rotor de cola con pre", "dias_label": "18 días", "clase": "lejana", "fecha_apertura": "02/11/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Cláusula 6.8.2", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0494-LPU26", "objeto": "ADQ. DE EQUIPOS DE RADIOCOMUNICACIONES UHF/VHF PARA EL DESTRUCTOR A.R.A \"SARANDÍ", "dias_label": "18 días", "clase": "lejana", "fecha_apertura": "02/11/2026 09:00 Hrs.", "fecha_publicacion": "09/10/2026 09:30 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0509-LPU26", "objeto": "Adquisición de un kit de cabina, transparencias y accesos, con prestación de sop", "dias_label": "19 días", "clase": "lejana", "fecha_apertura": "03/11/2026 09:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Cláusula 6.8.2", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0508-LPU26", "objeto": "Provisión de un kit de sistemas de fluido y mangueras aeronáuticas.", "dias_label": "19 días", "clase": "lejana", "fecha_apertura": "02/11/2026 10:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Cláusula 6.8.2", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "37/2-0092-LPU26", "objeto": "SERVICIO DE EXTRACCIÓN, TRASPORTE, MANTENIMIENTO Y LIMPIEZA RED CLOACAL DE LA GU", "dias_label": "19 días", "clase": "lejana", "fecha_apertura": "02/11/2026 10:00 Hrs.", "fecha_publicacion": "07/10/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.3.5"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/25-0510-LPU26", "objeto": "Adquisición de un kit de estructura, tren de aterrizaje e interfaz de motor", "dias_label": "20 días", "clase": "lejana", "fecha_apertura": "03/11/2026 10:00 Hrs.", "fecha_publicacion": "13/10/2026 08:00 Hrs.", "hallazgos": ["Cláusula 6.8.2", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/19-0445-LPU26", "objeto": "DGED ADQUISICIÓN DE DOS SIMULADORES DE TIRO", "dias_label": "21 días", "clase": "lejana", "fecha_apertura": "05/11/2026 07:00 Hrs.", "fecha_publicacion": "06/10/2026 10:40 Hrs.", "hallazgos": ["FONDEF", "Cláusula 6.8.2", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "52-0044-LPU26", "objeto": "CONTRATACIÓN DE UN (1) SERVICIO PROFESIONAL PARA ACTUALIZACIÓN Y EVOLUCIÓN FUNCI", "dias_label": "23 días", "clase": "lejana", "fecha_apertura": "06/11/2026 17:00 Hrs.", "fecha_publicacion": "09/10/2026 09:00 Hrs.", "hallazgos": ["Objeto: 3.4.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "1", "objeto": "2", "dias_label": "—", "clase": "sin-fecha", "fecha_apertura": "", "fecha_publicacion": "", "hallazgos": [], "estado": "ACTIVA", "unidad": ""}];
-const TARJETAS_VENCIDAS = [{"numero": "84/129-0675-LPU26", "objeto": "ADQUISICION DE REPUESTOS PARA PROGRAMAS DE MANTENIMIENTO DE 2do NIVEL B ARS 601,", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "15/10/2026 09:00 Hrs.", "fecha_publicacion": "30/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.4.4, 2.9.3, 2.9.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "84/77-0683-LPU26", "objeto": "Adquisición de repuestos destinados al mantenimiento preventivo y correctivo de ", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "15/10/2026 08:00 Hrs.", "fecha_publicacion": "30/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 2.4.4, 2.5.6, 2.9.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "78-0009-LPU26", "objeto": "Adquisición de credenciales necesarias para la producción del DNI Electrónico de", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 12:00 Hrs.", "fecha_publicacion": "21/09/2026 00:02 Hrs.", "hallazgos": ["Objeto: 2.3.3"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/38-0444-LPU26", "objeto": "ADQUISICION DE BIOMEDICOS PARA BOMBAS DE INFUSION", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 10:00 Hrs.", "fecha_publicacion": "01/10/2026 09:00 Hrs.", "hallazgos": ["Cláusula 6.8.2", "Objeto: 2.9.5"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/37-0438-LPU26", "objeto": "ADQUISICION DE VIVERES PARA CONSUMO PESONAL INTERNADO DEL HNPB", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 10:00 Hrs.", "fecha_publicacion": "30/09/2026 00:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/1-0455-LPU26", "objeto": "Adquisición de DOS (2) kits de repuestos Generadores MGO para mantenimiento de 4", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 09:30 Hrs.", "fecha_publicacion": "25/09/2026 08:00 Hrs.", "hallazgos": ["Cláusula 6.8.2", "Objeto: 6.8.2"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/3-0457-LPU26", "objeto": "ADUISICIÓN DE LÁCTEOS Y FIAMBRES", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 09:00 Hrs.", "fecha_publicacion": "25/09/2026 12:00 Hrs.", "hallazgos": ["Objeto: 2.1.1"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/12-0454-LPU26", "objeto": "ADQUISICIÓN DE ESFERA GIROSCÓPICA (GYROSPHERE) PARA UNIDADES DEPENDIENTES DEL CO", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 09:00 Hrs.", "fecha_publicacion": "01/10/2026 11:00 Hrs.", "hallazgos": ["FONDEF", "Objeto: 6.8.7"], "estado": "ACTIVA", "unidad": ""}, {"numero": "38/31-0451-LPU26", "objeto": "ADQUISICION DE EQUIP., COMPONENTES Y ACCESORIOS INFORMÁT. Y DE INFRAESTRUCTURA D", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 09:00 Hrs.", "fecha_publicacion": "28/09/2026 00:00 Hrs.", "hallazgos": ["Objeto: 4.3.4, 4.3.5, 4.3.6"], "estado": "ACTIVA", "unidad": ""}, {"numero": "17-0005-LPU26", "objeto": "servicio de gestión de alojamiento con y sin comidas", "dias_label": "VENCIDO", "clase": "vencido", "fecha_apertura": "14/10/2026 09:00 Hrs.", "fecha_publicacion": "30/09/2026 08:00 Hrs.", "hallazgos": ["Objeto: 3.9.9"], "estado": "ACTIVA", "unidad": ""}];
-let procesoADescartar = null;
-
-// Calcular estadísticas
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 const total = TARJETAS.length;
 const urgentes = TARJETAS.filter(t => t.clase === 'urgente').length;
 document.getElementById('statTotal').textContent = total;
 document.getElementById('statUrgentes').textContent = urgentes;
 
-<<<<<<< HEAD
 // Función para filtrar tarjetas
 function filtrarTarjetas(criterio) {
   // Actualizar botones activos
@@ -1237,49 +790,10 @@ function filtrarTarjetas(criterio) {
       </div>
     </div>
   `).join('');
-=======
-function tarjetasFiltradas() {
-  const elChk687 = document.getElementById('chk687');
-  const elChk682 = document.getElementById('chk682');
-  const aviso = document.getElementById('filtroActivoAviso');
-  const printInfo = document.getElementById('printFiltroInfo');
-
-  // Si por algún motivo faltan los elementos del filtro, no rompemos todo
-  // el render -- simplemente mostramos todas las tarjetas sin filtrar.
-  if (!elChk687 || !elChk682) {
-    return TARJETAS;
-  }
-
-  const filtro687 = elChk687.checked;
-  const filtro682 = elChk682.checked;
-
-  if (!filtro687 && !filtro682) {
-    if (aviso) aviso.style.display = 'none';
-    if (printInfo) printInfo.textContent = 'Listado completo (sin filtro por cláusula).';
-    return TARJETAS;
-  }
-
-  const etiquetas = [];
-  if (filtro687) etiquetas.push('Cláusula 6.8.7');
-  if (filtro682) etiquetas.push('Cláusula 6.8.2');
-
-  if (aviso) {
-    aviso.style.display = 'inline-block';
-    aviso.textContent = `Filtro activo: ${etiquetas.join(' / ')}`;
-  }
-  if (printInfo) printInfo.textContent = `Listado filtrado por: ${etiquetas.join(' / ')}`;
-
-  return TARJETAS.filter(t => etiquetas.some(e => t.hallazgos.includes(e)));
-}
-
-function aplicarFiltroClausulas() {
-  render();
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 }
 
 function render() {
   const grid = document.getElementById('grid');
-<<<<<<< HEAD
   if (TARJETAS.length === 0) {
     grid.innerHTML = '<div style="padding:40px;text-align:center;color:var(--slate);">No hay procesos cargados</div>';
     return;
@@ -1305,36 +819,6 @@ function render() {
             : `<button class="btn-seguimiento" onclick="marcarSeguimiento('${t.numero}')">📌 Seguimiento</button>
                <button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`}
         <button class="btn-imprimir" onclick="imprimirUno('${t.numero}')">Ficha</button>
-=======
-  const filtradas = tarjetasFiltradas();
-
-  if (filtradas.length === 0) {
-    grid.innerHTML = '<div class="gantt-empty">Ningún proceso activo coincide con el filtro seleccionado.</div>';
-    return;
-  }
-
-  grid.innerHTML = filtradas.map(t => `
-    <div class="card ${t.clase}" data-num="${t.numero}">
-      <div class="meta">
-        <div class="num">${t.numero}</div>
-        <div class="dias">${/^\d+\s/.test(t.dias_label) ? '<span class="clock">⏱️</span>' : ''}${t.dias_label}<small>para apertura</small></div>
-      </div>
-      <div class="obj">${t.objeto || 'Sin descripción'}</div>
-      ${t.hallazgos.length ? `<div class="hallazgos">${t.hallazgos.map(h=>`<span class="hallazgo">${h}</span>`).join('')}</div>` : ''}
-      <div style="font-size:11px;color:var(--slate);margin:8px 0;">
-        <div>Apertura: ${t.fecha_apertura || '—'}</div>
-        <div>Publicación: ${t.fecha_publicacion || '—'}</div>
-        ${t.unidad ? `<div>${t.unidad}</div>` : ''}
-      </div>
-      <div class="expediente-resultado" id="expediente-${t.numero.replace(/[^a-zA-Z0-9]/g,'_')}" style="display:none"></div>
-      <div class="actions">
-        <button class="btn-ver" onclick="verDetalle('${t.numero}')">Ver</button>
-        ${t.estado === 'DESCARTADA'
-          ? `<button class="btn-reactivar" onclick="reactivar('${t.numero}')">Reactivar</button>`
-          : `<button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`}
-        <button class="btn-imprimir" onclick="imprimirUno('${t.numero}')">Ficha</button>
-        <button class="btn-expediente" onclick="buscarExpediente('${t.numero}', this)">Expediente</button>
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
       </div>
     </div>
   `).join('');
@@ -1366,51 +850,28 @@ async function confirmarReseteo() {
   const resp = await fetch('/api/resetear', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: '{}' });
   const data = await resp.json();
   document.getElementById('modalReseteo').classList.remove('open');
-<<<<<<< HEAD
   if (data.ok) {
     showToast(`Reseteo completado`);
     setTimeout(() => location.reload(), 2000);
   } else {
     showToast('Error: ' + data.error, 'error');
-=======
-
-  if (data.ok) {
-    const detalle = data.borrados.length ? data.borrados.join(', ') : '(no había nada para borrar)';
-    showToast(`Reseteo listo -- se borró: ${detalle}`);
-    setTimeout(() => location.reload(), 2000);
-  } else {
-    showToast('Error al resetear: ' + (data.error || 'desconocido'), 'error');
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   }
 }
 
 async function confirmarDescarte() {
   const motivo = document.getElementById('motivoDescarte').value.trim();
   if (!motivo) {
-<<<<<<< HEAD
     alert('Ingresá el motivo del descarte');
     return;
   }
-=======
-    alert('Por favor ingresá el motivo del descarte');
-    return;
-  }
-  
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   const resp = await fetch('/api/descartar', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({numero: procesoADescartar, motivo})
   });
   const data = await resp.json();
-<<<<<<< HEAD
   if (data.ok) {
     showToast(`Proceso descartado`);
-=======
-  
-  if (data.ok) {
-    showToast(`Proceso ${procesoADescartar} descartado correctamente`);
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     setTimeout(() => location.reload(), 1500);
   } else {
     showToast('Error: ' + data.error, 'error');
@@ -1426,18 +887,13 @@ async function reactivar(num) {
   });
   const data = await resp.json();
   if (data.ok) {
-<<<<<<< HEAD
     showToast(`Proceso reactivado`);
-=======
-    showToast(`Proceso ${num} reactivado`);
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
     setTimeout(() => location.reload(), 1000);
   } else {
     showToast('Error: ' + data.error, 'error');
   }
 }
 
-<<<<<<< HEAD
 async function marcarSeguimiento(num) {
   if (!confirm(`¿Marcar proceso ${num} como EN SEGUIMIENTO?`)) return;
   
@@ -1489,19 +945,12 @@ async function ejecutarScript(script) {
   
   showToast(`🚀 Iniciando ${btnText}...`, 'success');
   
-=======
-async function ejecutarScript(script) {
-  const nombres = {comprar: 'comprar.py', detalle: 'detalle_proceso.py'};
-  const forzar = document.getElementById('chkForzar').checked;
-
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   const resp = await fetch('/api/ejecutar', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({script, forzar})
   });
   const data = await resp.json();
-<<<<<<< HEAD
   
   if (!data.ok) {
     showToast('❌ ' + data.error, 'error');
@@ -1600,56 +1049,6 @@ async function ejecutarScript(script) {
   }, 1000); // Polling cada 1 segundo
   
   showToast(`✅ ${btnText} iniciado correctamente`, 'success');
-=======
-
-  if (!data.ok) {
-    showToast(data.error, 'error');
-    return;
-  }
-
-  document.getElementById('consolaTitulo').textContent = `Corriendo ${nombres[script]}... (00:00)`;
-  document.getElementById('consolaContenido').textContent = 'Arrancando...';
-  document.getElementById('consolaEjecucion').style.display = 'flex';
-
-  monitorearEjecucion(script, nombres[script]);
-}
-
-function formatoCronometro(segundos) {
-  const m = Math.floor(segundos / 60).toString().padStart(2, '0');
-  const s = Math.floor(segundos % 60).toString().padStart(2, '0');
-  return `${m}:${s}`;
-}
-
-async function monitorearEjecucion(script, nombreLegible) {
-  const contenido = document.getElementById('consolaContenido');
-  const titulo = document.getElementById('consolaTitulo');
-  const inicio = Date.now();
-
-  // Cronómetro visual, tickea cada segundo aunque el poll de logs sea cada 2s.
-  const cronometro = setInterval(() => {
-    const segundos = (Date.now() - inicio) / 1000;
-    titulo.textContent = `Corriendo ${nombreLegible}... (${formatoCronometro(segundos)})`;
-  }, 1000);
-
-  const poll = setInterval(async () => {
-    const resp = await fetch(`/api/estado?script=${script}`);
-    const data = await resp.json();
-
-    if (data.ultimas_lineas && data.ultimas_lineas.length) {
-      contenido.textContent = data.ultimas_lineas.join('\n');
-      contenido.scrollTop = contenido.scrollHeight;
-    }
-
-    if (!data.corriendo) {
-      clearInterval(poll);
-      clearInterval(cronometro);
-      const total = formatoCronometro((Date.now() - inicio) / 1000);
-      titulo.textContent = `${nombreLegible} terminó (tardó ${total})`;
-      showToast(`${nombreLegible} terminó en ${total}`);
-      setTimeout(() => location.reload(), 1800);
-    }
-  }, 2000);
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 }
 
 function verDetalle(num) {
@@ -1657,7 +1056,6 @@ function verDetalle(num) {
   window.open(carpeta, '_blank');
 }
 
-<<<<<<< HEAD
 function actualizarStats(script) {
   // Actualizar la fecha/hora de última ejecución en las stats cards
   const ahora = new Date();
@@ -1696,56 +1094,6 @@ function imprimirUno(num) {
   if (!t) return;
   const w = window.open('', '_blank');
   w.document.write(`<html><body><h1>${t.numero}</h1><p>${t.objeto}</p></body></html>`);
-=======
-function imprimirUno(num) {
-  const t = TARJETAS.find(x => x.numero === num) || TARJETAS_VENCIDAS.find(x => x.numero === num);
-  if (!t) return;
-
-  fetch('/api/registrar_impresion', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({numero: num})
-  }).catch(() => {});
-
-  const w = window.open('', '_blank', 'width=800,height=700');
-  w.document.write(`
-    <html><head><title>Ficha ${num}</title>
-    <style>
-      body{font-family:'Segoe UI',sans-serif;padding:32px;max-width:700px;margin:0 auto;}
-      h1{color:#14213D;border-bottom:2px solid #E4E8EF;padding-bottom:12px;}
-      .row{margin:10px 0;padding:8px 10px;background:#F4F6F9;border-radius:5px;border:1px solid #E4E8EF;}
-      .label{font-weight:700;color:#5B6B82;display:inline-block;width:180px;font-size:12px;text-transform:uppercase;letter-spacing:0.3px;}
-      .hallazgo{display:inline-block;background:#F4F6F9;border:1px solid #E4E8EF;color:#5B6B82;padding:3px 10px;border-radius:4px;margin:3px;font-size:11px;font-weight:600;}
-      .badge{display:inline-block;padding:4px 12px;border-radius:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;}
-      .badge.urgente{background:#FBEDEC;color:#B0413E;}
-      .badge.seguimiento{background:#FBF3E6;color:#A9762B;}
-      .badge.lejana{background:#EBF5F0;color:#2F7A5C;}
-      .badge.descartada{background:#EFF1F4;color:#5B6B82;}
-      @media print{body{padding:0;}}
-    </style></head><body>
-    <h1>📋 Ficha de Proceso</h1>
-    <h2 style="color:#333;margin:16px 0;">${t.numero}</h2>
-    <p style="font-size:16px;color:#666;line-height:1.6;">${t.objeto || 'Sin descripción'}</p>
-    
-    <div class="row"><span class="label">Estado:</span> 
-      <span class="badge ${t.clase}">${t.estado}</span>
-    </div>
-    <div class="row"><span class="label">Días para apertura:</span> ${t.dias_label}</div>
-    <div class="row"><span class="label">Fecha de apertura:</span> ${t.fecha_apertura || '—'}</div>
-    <div class="row"><span class="label">Fecha publicación:</span> ${t.fecha_publicacion || '—'}</div>
-    <div class="row"><span class="label">Unidad ejecutora:</span> ${t.unidad || '—'}</div>
-    
-    <div class="row">
-      <span class="label">Hallazgos:</span><br>
-      ${t.hallazgos.length ? t.hallazgos.map(h=>`<span class="hallazgo">${h}</span>`).join(' ') : '<span style="color:#999;">Sin hallazgos destacados</span>'}
-    </div>
-    
-    <div style="margin-top:32px;padding-top:16px;border-top:2px solid #e2e8f0;font-size:11px;color:#999;">
-      Generado el ${new Date().toLocaleString('es-AR')}
-    </div>
-    </body></html>
-  `);
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
   w.document.close();
   setTimeout(() => w.print(), 250);
 }
@@ -1753,320 +1101,9 @@ function imprimirUno(num) {
 async function mostrarGestion() {
   const resp = await fetch('/api/gestion');
   const data = await resp.json();
-<<<<<<< HEAD
   document.getElementById('modalGestion').classList.add('open');
 }
 
-=======
-  const div = document.getElementById('gestionContent');
-  
-  if (!data.rows || !data.rows.length) {
-    div.innerHTML = '<p style="text-align:center;color:#999;padding:40px;">Sin registros de gestión aún</p>';
-  } else {
-    div.innerHTML = '<table style="width:100%;border-collapse:collapse;font-size:12px;">' +
-      '<thead style="background:#14213D;color:white;"><tr>' +
-      '<th style="padding:12px;text-align:left;">Fecha</th>' +
-      '<th style="padding:12px;text-align:left;">Proceso</th>' +
-      '<th style="padding:12px;text-align:left;">Decisión</th>' +
-      '<th style="padding:12px;text-align:left;">Motivo</th>' +
-      '<th style="padding:12px;text-align:left;">Carpeta</th>' +
-      '</tr></thead><tbody>' +
-      data.rows.map(r => `<tr style="border-bottom:1px solid #e2e8f0;">
-        <td style="padding:10px;">${r['Fecha decisión']||''}</td>
-        <td style="padding:10px;"><strong>${r['Número de proceso']||''}</strong></td>
-        <td style="padding:10px;">${r['Decisión']||''}</td>
-        <td style="padding:10px;color:#666;">${r['Motivo']||''}</td>
-        <td style="padding:10px;">${r['Carpeta borrada']||''}</td>
-      </tr>`).join('') +
-      '</tbody></table>';
-  }
-  document.getElementById('modalGestion').classList.add('open');
-}
-
-function imprimirGestion() {
-  const contenido = document.getElementById('gestionContent').innerHTML;
-  const w = window.open('', '_blank', 'width=900,height=700');
-  w.document.write(`
-    <html><head><title>Registro de Gestión</title>
-    <style>
-      body{font-family:'Segoe UI',sans-serif;padding:32px;}
-      h1{color:#14213D;}
-      table{width:100%;border-collapse:collapse;}
-      th,td{border:1px solid #ddd;padding:10px;text-align:left;font-size:11px;}
-      th{background:#14213D;color:white;}
-      tr:nth-child(even){background:#f8f9fa;}
-    </style></head>
-    <body>
-    <h1>📋 Registro de Gestión</h1>
-    <p style="color:#666;font-size:12px;">Generado el ${new Date().toLocaleString('es-AR')}</p>
-    ${contenido}
-    </body></html>
-  `);
-  w.document.close();
-  setTimeout(() => w.print(), 250);
-}
-
-function parseFechaAR(str) {
-  // Formato esperado: "dd/mm/yyyy HH:MM Hrs." (tolera variantes con menos partes)
-  if (!str || typeof str !== 'string') return null;
-  const m = str.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})(?:\s+(\d{1,2}):(\d{2}))?/);
-  if (!m) return null;
-  const [, d, mo, y, h, mi] = m;
-  const fecha = new Date(+y, +mo - 1, +d, h ? +h : 0, mi ? +mi : 0);
-  return isNaN(fecha.getTime()) ? null : fecha;
-}
-
-function cambiarVista(vista) {
-  const grid = document.getElementById('grid');
-  const gantt = document.getElementById('ganttView');
-  const gridVencidos = document.getElementById('gridVencidos');
-  const btnT = document.getElementById('btnVistaTarjetas');
-  const btnG = document.getElementById('btnVistaGantt');
-  const btnV = document.getElementById('btnVistaVencidos');
-
-  grid.style.display = 'none';
-  gantt.style.display = 'none';
-  gridVencidos.style.display = 'none';
-  btnT.classList.remove('active');
-  btnG.classList.remove('active');
-  btnV.classList.remove('active');
-
-  if (vista === 'gantt') {
-    gantt.style.display = 'block';
-    btnG.classList.add('active');
-    renderGantt();
-  } else if (vista === 'vencidos') {
-    gridVencidos.style.display = 'grid';
-    btnV.classList.add('active');
-    renderVencidos();
-  } else {
-    grid.style.display = 'grid';
-    btnT.classList.add('active');
-  }
-}
-
-function renderVencidos() {
-  const cont = document.getElementById('gridVencidos');
-  if (TARJETAS_VENCIDAS.length === 0) {
-    cont.innerHTML = '<div class="gantt-empty">No hay procesos vencidos por ahora.</div>';
-    return;
-  }
-  cont.innerHTML = TARJETAS_VENCIDAS.map(t => `
-    <div class="card vencido">
-      <div class="meta">
-        <div class="num">${t.numero}</div>
-        <div class="dias">${t.dias_label}<small>para apertura</small></div>
-      </div>
-      <div class="obj">${t.objeto || 'Sin descripción'}</div>
-      ${t.hallazgos.length ? `<div class="hallazgos">${t.hallazgos.map(h=>`<span class="hallazgo">${h}</span>`).join('')}</div>` : ''}
-      <div style="font-size:11px;color:var(--slate);margin:8px 0;">
-        <div>Apertura: ${t.fecha_apertura || '—'}</div>
-        <div>Publicación: ${t.fecha_publicacion || '—'}</div>
-        ${t.unidad ? `<div>${t.unidad}</div>` : ''}
-      </div>
-      <div class="expediente-resultado" id="expediente-${t.numero.replace(/[^a-zA-Z0-9]/g,'_')}" style="display:none"></div>
-      <div class="actions">
-        <button class="btn-ver" onclick="verDetalle('${t.numero}')">Ver</button>
-        <button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>
-        <button class="btn-imprimir" onclick="imprimirUno('${t.numero}')">Ficha</button>
-        <button class="btn-expediente" onclick="buscarExpediente('${t.numero}', this)">Expediente</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-function actualizarBadgeVencidos() {
-  const badge = document.getElementById('vencidosBadge');
-  if (TARJETAS_VENCIDAS.length > 0) {
-    badge.style.display = 'inline-block';
-    badge.textContent = TARJETAS_VENCIDAS.length;
-  }
-}
-
-function renderGantt() {
-  const cont = document.getElementById('ganttView');
-
-  const filas = TARJETAS
-    .map(t => ({ t, pub: parseFechaAR(t.fecha_publicacion), ape: parseFechaAR(t.fecha_apertura) }))
-    .filter(f => f.pub && f.ape && f.ape >= f.pub);
-
-  if (filas.length === 0) {
-    cont.innerHTML = '<div class="gantt-empty">No hay procesos con fechas de publicación y apertura completas para graficar.</div>';
-    return;
-  }
-
-  const hoy = new Date();
-  let minFecha = new Date(Math.min(...filas.map(f => f.pub.getTime())));
-  let maxFecha = new Date(Math.max(...filas.map(f => f.ape.getTime())));
-  // Un poco de margen a los costados (10% del rango total)
-  const margen = Math.max((maxFecha - minFecha) * 0.08, 1000 * 60 * 60 * 24);
-  minFecha = new Date(minFecha.getTime() - margen);
-  maxFecha = new Date(maxFecha.getTime() + margen);
-  const rangoTotal = maxFecha - minFecha;
-
-  const pct = (fecha) => Math.min(100, Math.max(0, ((fecha - minFecha) / rangoTotal) * 100));
-  const hoyPct = pct(hoy);
-  const mostrarHoy = hoy >= minFecha && hoy <= maxFecha;
-
-  const fmt = (f) => f.toLocaleDateString('es-AR', { day: '2-digit', month: 'short' });
-
-  let html = `
-    <div class="gantt-scale">
-      <div class="labels-head"></div>
-      <div class="dates-head"><span>${fmt(minFecha)}</span><span>${fmt(maxFecha)}</span></div>
-    </div>
-    <div class="gantt-rows">
-  `;
-
-  filas.forEach(({ t, pub, ape }) => {
-    const left = pct(pub);
-    const width = Math.max(pct(ape) - left, 1.5); // ancho mínimo para que se vea aunque sea 1 día
-    html += `
-      <div class="gantt-row">
-        <div class="gantt-label">
-          <span class="num">${t.numero}</span>
-          <span class="nombre">${t.objeto}</span>
-        </div>
-        <div class="gantt-track">
-          <div class="gantt-bar ${t.clase}" style="left:${left}%;width:${width}%" title="${t.numero} — Publicación: ${t.fecha_publicacion} / Apertura: ${t.fecha_apertura}">${t.dias_label}</div>
-          ${mostrarHoy ? `<div class="gantt-today" style="left:${hoyPct}%"></div>` : ''}
-        </div>
-      </div>
-    `;
-  });
-
-  html += '</div>';
-  cont.innerHTML = html;
-}
-
-let NOTAS_CACHE = [];
-
-async function cargarNotas() {
-  try {
-    const resp = await fetch('/api/notas');
-    const data = await resp.json();
-    NOTAS_CACHE = data.notas || [];
-    renderNotas();
-  } catch (e) {
-    NOTAS_CACHE = [];
-  }
-}
-
-function renderNotas() {
-  const lista = document.getElementById('notasLista');
-  const badge = document.getElementById('notasPendientesBadge');
-
-  if (NOTAS_CACHE.length === 0) {
-    lista.innerHTML = '<div class="notas-vacio">Todavía no hay notas cargadas.</div>';
-  } else {
-    lista.innerHTML = NOTAS_CACHE.map(n => `
-      <div class="nota-item ${n.hecha ? 'hecha' : ''}">
-        <input type="checkbox" ${n.hecha ? 'checked' : ''} onchange="marcarNota(${n.id}, this.checked)">
-        <span class="nota-texto" onclick="const cb=this.previousElementSibling; cb.checked=!cb.checked; marcarNota(${n.id}, cb.checked);">${n.texto}</span>
-        <button class="nota-borrar" onclick="borrarNota(${n.id})" title="Eliminar">×</button>
-      </div>
-    `).join('');
-  }
-
-  const pendientes = NOTAS_CACHE.filter(n => !n.hecha).length;
-  if (pendientes > 0) {
-    badge.style.display = 'inline-block';
-    badge.textContent = pendientes;
-  } else {
-    badge.style.display = 'none';
-  }
-}
-
-function toggleNotas() {
-  const dd = document.getElementById('notasDropdown');
-  dd.classList.toggle('open');
-  if (dd.classList.contains('open')) cargarNotas();
-}
-
-document.addEventListener('click', (e) => {
-  const wrap = document.querySelector('.notas-wrap');
-  if (wrap && !wrap.contains(e.target)) {
-    document.getElementById('notasDropdown').classList.remove('open');
-  }
-});
-
-async function agregarNota() {
-  const input = document.getElementById('notaNuevaInput');
-  const texto = input.value.trim();
-  if (!texto) return;
-  const resp = await fetch('/api/notas/agregar', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({texto})
-  });
-  const data = await resp.json();
-  if (data.ok) {
-    NOTAS_CACHE = data.notas;
-    renderNotas();
-    input.value = '';
-  }
-}
-
-async function marcarNota(id, hecha) {
-  const resp = await fetch('/api/notas/marcar', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({id, hecha})
-  });
-  const data = await resp.json();
-  if (data.ok) {
-    NOTAS_CACHE = data.notas;
-    renderNotas();
-  }
-}
-
-async function borrarNota(id) {
-  const resp = await fetch('/api/notas/eliminar', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({id})
-  });
-  const data = await resp.json();
-  if (data.ok) {
-    NOTAS_CACHE = data.notas;
-    renderNotas();
-  }
-}
-
-cargarNotas();
-async function buscarExpediente(num, btn) {
-  const idSeguro = num.replace(/[^a-zA-Z0-9]/g, '_');
-  const div = document.getElementById('expediente-' + idSeguro);
-  const textoOriginal = btn.textContent;
-  btn.textContent = 'Buscando...';
-  btn.disabled = true;
-
-  try {
-    const resp = await fetch('/api/expediente', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({numero: num})
-    });
-    const data = await resp.json();
-
-    if (data.ok) {
-      div.style.display = 'block';
-      div.innerHTML = `<strong>Expediente:</strong> ${data.expediente}<br><span style="opacity:0.7">(${data.archivo})</span>`;
-      showToast('Expediente encontrado');
-    } else {
-      div.style.display = 'block';
-      div.innerHTML = data.error;
-      showToast(data.error, 'error');
-    }
-  } catch (e) {
-    showToast('Error consultando el expediente', 'error');
-  } finally {
-    btn.textContent = textoOriginal;
-    btn.disabled = false;
-  }
-}
-
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 function toggleModoNocturno() {
   const activo = document.documentElement.getAttribute('data-theme') === 'dark';
   if (activo) {
@@ -2076,7 +1113,6 @@ function toggleModoNocturno() {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('modoNocturno', '1');
   }
-<<<<<<< HEAD
   document.getElementById('btnModoNocturno').textContent = activo ? '🌙 Modo nocturno' : '☀️ Modo claro';
 }
 
@@ -2212,19 +1248,6 @@ async function probarEmail() {
 }
 
 render();
-=======
-  actualizarBotonModoNocturno();
-}
-
-function actualizarBotonModoNocturno() {
-  const activo = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.getElementById('btnModoNocturno').textContent = activo ? '☀️ Modo claro' : '🌙 Modo nocturno';
-}
-
-render();
-actualizarBadgeVencidos();
-actualizarBotonModoNocturno();
->>>>>>> 4ba397a7e8115f1ed48d8188face0b9b4f32d19d
 </script>
 </body>
 </html>

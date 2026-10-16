@@ -30,7 +30,7 @@ RUN mkdir -p /app/data /app/logs /app/detalle_procesos
 # Exponer puerto del dashboard
 EXPOSE 8765
 
-# Script de entrada
+# Script de entrada (se copia al final para no invalidar la caché de COPY . .)
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
