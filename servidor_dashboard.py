@@ -10,7 +10,7 @@ import time
 import threading
 import requests
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, unquote
 import pandas as pd
 from dotenv import load_dotenv
 from datetime import datetime
@@ -813,6 +813,18 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             return super().do_GET()
         
         parsed = urlparse(self.path)
+
+        # Checklist de participación: /checklist/<numero-proceso>
+        if parsed.path.startswith('/checklist/'):
+            from checklist import generar_checklist_page
+            numero = unquote(parsed.path.split('/checklist/', 1)[1]).strip('/')
+            code, ctype, html_out = generar_checklist_page(numero)
+            self.send_response(code)
+            self.send_header('Content-Type', ctype)
+            self.end_headers()
+            self.wfile.write(html_out.encode('utf-8'))
+            return
+
         
         if parsed.path == '/api/estado':
             qs = parse_qs(parsed.query)

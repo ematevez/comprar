@@ -1100,6 +1100,8 @@ TEMPLATE_DASHBOARD = r"""<!DOCTYPE html>
   .btn-ver:hover { background: #E5E7EB; }
   .btn-expediente { background: #EDE9FE; color: #5B21B6; }
   .btn-expediente:hover { background: #DDD6FE; }
+  .btn-participar { background: #D1FAE5; color: #065F46; font-weight: 700; }
+  .btn-participar:hover { background: #A7F3D0; transform: scale(1.04); }
   .expediente-resultado {
     background: #F5F3FF;
     border: 1px solid #DDD6FE;
@@ -1528,6 +1530,7 @@ function filtrarTarjetas(criterio) {
             ? `<button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`
             : `<button class="btn-seguimiento" onclick="marcarSeguimiento('${t.numero}')">📌 Seguimiento</button>
                <button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`}
+        <button class="btn-participar" onclick="abrirChecklist('${t.numero}')">🎯 Participar</button>
         <button class="btn-imprimir" onclick="imprimirUno('${t.numero}')">Ficha</button>
       </div>
     </div>
@@ -1560,6 +1563,7 @@ function render() {
             ? `<button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`
             : `<button class="btn-seguimiento" onclick="marcarSeguimiento('${t.numero}')">📌 Seguimiento</button>
                <button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`}
+        <button class="btn-participar" onclick="abrirChecklist('${t.numero}')">🎯 Participar</button>
         <button class="btn-imprimir" onclick="imprimirUno('${t.numero}')">Ficha</button>
       </div>
     </div>
@@ -1791,6 +1795,10 @@ async function ejecutarScript(script) {
   }, 1000); // Polling cada 1 segundo
   
   showToast(`✅ ${btnText} iniciado correctamente`, 'success');
+}
+
+function abrirChecklist(num) {
+  window.open('/checklist/' + encodeURIComponent(num), '_blank');
 }
 
 function verDetalle(num) {
