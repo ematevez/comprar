@@ -32,6 +32,7 @@ from generar_dashboard import (
     reactivar_proceso,
     cargar_cronograma,
     ejecutar_script,
+    descargar_expediente_proceso,
     estado_ejecucion,
     cargar_notas,
     agregar_nota,
@@ -998,6 +999,9 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             resultado = reactivar_proceso(body.get('numero', ''))
         elif self.path == '/api/ejecutar':
             resultado = ejecutar_script(body.get('script', ''), forzar=bool(body.get('forzar', False)))
+        elif self.path == '/api/detalle-proceso':
+            # Descarga las Cláusulas Particulares de UN proceso (botón Participar)
+            resultado = descargar_expediente_proceso(body.get('numero', ''))
         elif self.path == '/api/notas/agregar':
             resultado = agregar_nota(body.get('texto', ''))
         elif self.path == '/api/notas/marcar':

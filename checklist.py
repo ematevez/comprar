@@ -221,26 +221,32 @@ def _clausula_garantia_oferta(numero: str) -> dict:
         return out
 
     # --- porcentaje: buscar "equivaldrá al CINCO POR CIENTO (5%)" en la zona
-    #     de la garantía de mantenimiento (hasta 1200 chars después, para no
-    #     capturar porcentajes de otras cláusulas como multas o adelantos).
-    pct_buscar = [m.start() for m in re.finditer(r"garant[íi]a de mantenimiento", txt, re.I)]
+    #     de la garantía de mantenimiento. Los PDFs traen espacios partidos
+    #     ("mantenimient o de oferta"), así que toleramos hasta 3 chars sueltos
+    #     entre palabras clave. Ventana corta (700) para no capturar % ajenos.
+    zona_gmo = r"(?:.{0,3})?"
+    ancla_pat = (r"garant" + zona_gmo + r"[íi]?a de " + zona_gmo +
+                 r"(?:mantenimiento|oferta)|mantenimiento " + zona_gmo +
+                 r"(?:de )?" + zona_gmo + r"(?:la )?" + zona_gmo + r"oferta")
+    pct_buscar = [m.start() for m in re.finditer(ancla_pat, txt, re.I)]
     for ini in pct_buscar:
-        zona = txt[ini:ini + 1200]
-        mp = re.search(
-            r"(?:POR\s+CIENTO|%)?\s*\(\s*(\d{1,3}(?:[.,]\d+)?)\s*%\s*\)", zona, re.I)
+        zona = txt[ini:ini + 900]
+        # el % SIEMPRE está ligado a "por ciento": "CINCO POR CIENTO (5%)" o
+        # "(5) por ciento". Buscar primero la palabra y su paréntesis más
+        # cercano evita capturar plazos de otras cláusulas ("DOS (2) días").
+        mp = re.search(r"\(\s*(\d{1,3}(?:[.,]\d+)?)\s*%?\s*\)\s*por\s+ciento|"
+                       r"por\s+ciento\s*\(\s*(\d{1,3}(?:[.,]\d+)?)\s*%?\s*\)",
+                       zona, re.I)
         if not mp:
-            mp = re.search(r"CINCO\s+POR\s+CIENTO|DOS\s+POR\s+CIENTO|UNO\s+POR\s+CIENTO|"
-                           r"TRES\s+POR\s+CIENTO|CUATRO\s+POR\s+CIENTO|DIEZ\s+POR\s+CIENTO",
-                           zona, re.I)
-            if mp:
-                palabra = mp.group(0).split()[0].upper()
-                num = {"UNO": "1", "DOS": "2", "TRES": "3", "CUATRO": "4",
-                       "CINCO": "5", "DIEZ": "10"}.get(palabra, "")
-                if num:
-                    out["pct"] = num + "%"
-                    break
-        elif mp:
-            val = mp.group(1).replace(".", "").replace(",", ".")
+            mp = re.search(r"(UNO|DOS|TRES|CUATRO|CINCO|SEIS|SIETE|OCHO|NUEVE|DIEZ|QUINCE|VEINTE)"
+                           r"\s+POR\s+CIENTO", zona, re.I)
+            val = {"UNO": "1", "DOS": "2", "TRES": "3", "CUATRO": "4",
+                   "CINCO": "5", "SEIS": "6", "SIETE": "7", "OCHO": "8",
+                   "NUEVE": "9", "DIEZ": "10", "QUINCE": "15",
+                   "VEINTE": "20"}.get(mp.group(1).upper(), "") if mp else ""
+        else:
+            val = (mp.group(1) or mp.group(2)).replace(".", "").replace(",", ".")
+        if val:
             try:
                 f = float(val)
                 if 0 < f <= 20:  # fuera de rango => es otra cláusula, seguir buscando
@@ -248,6 +254,12 @@ def _clausula_garantia_oferta(numero: str) -> dict:
                     break
             except ValueError:
                 pass
+
+    # --- exención por monto (Art. 80 inc. c, Dto 1030/16): útil para el checklist
+    mex = re.search(r"exime.{0,200}?(?:represente)?\s*([A-ZÁÉÍÓÚ ]+?)\s*\(\s*\$([\d.]+)\s*\)",
+                    txt, re.I)
+    if mex:
+        out["exencion"] = f"{mex.group(1).strip().title()} (${mex.group(2)})"
 
     # --- moneda ------------------------------------------------------------
     mm = re.search(r"(MONEDA NACIONAL|PESOS|D[UÓ]LARES(?:\s+AMERICANOS)?|USD)", txt, re.I)
@@ -408,6 +420,8 @@ def construir_checklist(fila: dict) -> list:
                    f"{dias_gmo} día(s) de la apertura.")
     if not gmo["pct"]:
         detalle_gmo += " ⚠️ El % no figura explícito en el PDF del expediente: confirmar en el pliego publicado (regla general: 5% del total de la oferta)."
+    if gmo.get("exencion"):
+        detalle_gmo += f" ℹ️ Exenta si la oferta no supera {gmo['exencion']} (Art. 80 inc. c, Dto 1030/16)."
     if not txt_pdfs:
         detalle_gmo += " (Sin PDF del expediente: verificar % y destino en el pliego publicado.)"
 
@@ -655,13 +669,60 @@ def render_checklist_html(numero: str, fila: dict, grupos: list) -> str:
 </body></html>"""
 
 
+def _html_error_checklist(numero: str, motivo: str = "") -> str:
+    """Página de error con estilo del dashboard y botón de reintentar.
+
+    Si no hay PDFs del expediente, ofrece disparar la descarga de las
+    Cláusulas Particulares (/api/detalle-proceso) y recargar sola.
+    """
+    sin_pdfs = bool(motivo)
+    js_retry = ""
+    if sin_pdfs:
+        js_retry = """
+async function descargarYRecargar(){
+  const b=document.getElementById('dl'); b.disabled=true; b.textContent='Descargando pliego...';
+  try{
+    await fetch('/api/detalle-proceso',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({numero: PROC_NUM})});
+  }catch(e){}
+  b.textContent='Listo, recargando en 60s...';
+  setTimeout(()=>location.reload(), 60000);
+}
+document.getElementById('dl').addEventListener('click', descargarYRecargar);
+"""
+    accion = (
+        '<button id="dl" type="button">📥 Descargar cláusulas del expediente</button>'
+        if sin_pdfs else ""
+    )
+    return f"""<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checklist {_esc(numero)}</title>
+<style>{CSS_CHECKLIST}</style></head><body><div class="wrap">
+<div class="ref"><a class="back" href="/">← Volver al dashboard</a> &nbsp;·&nbsp; LPU {_esc(numero)}</div>
+<section style="padding:22px;text-align:center">
+<h1 style="font-size:20px">No se pudo generar el checklist</h1>
+<p style="color:var(--muted);font-size:14px;margin:10px 0 18px">{_esc(motivo or f"El proceso {_esc(numero)} no figura en cronograma_procesos.xlsx.")}</p>
+{accion} <button type="button" onclick="location.reload()">↻ Reintentar</button>
+</section></div>
+<script>const PROC_NUM = {json.dumps(numero)};</script>
+<script>{js_retry}</script>
+</body></html>"""
+
+
 def generar_checklist_page(numero: str) -> tuple[int, str, str]:
     """(status_code, content_type, html) para el servidor."""
     fila = fila_proceso(numero)
     if fila is None:
-        return 404, "text/html; charset=utf-8", (
-            f"<h2>Proceso {htmllib.escape(numero)} no encontrado en cronograma_procesos.xlsx</h2>"
-            f'<a href="/">Volver al dashboard</a>')
+        return 404, "text/html; charset=utf-8", _html_error_checklist(numero)
+    # Sin PDFs del expediente todavía => las cláusulas particulares salen todas
+    # genéricas ("Ref. —"). Mejor avisar y ofrecer descargarlas desde acá mismo.
+    if not _texto_pdfs(numero):
+        return 200, "text/html; charset=utf-8", _html_error_checklist(
+            numero,
+            "Todavía no bajamos las Cláusulas Particulares de este proceso "
+            "(falta la carpeta detalle_procesos/). Descargalas y el checklist "
+            "se llenará con los datos reales del pliego.")
     grupos = construir_checklist(fila)
     return 200, "text/html; charset=utf-8", render_checklist_html(numero, fila, grupos)
 
