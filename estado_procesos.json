@@ -1,70 +1,6 @@
 {
-  "ultima_ejecucion": "2026-10-16T15:37:41.732217",
+  "ultima_ejecucion": "2026-10-17T08:45:43.404703",
   "procesos": {
-    "92-0006-LPU26": {
-      "Número de proceso": "92-0006-LPU26",
-      "Nombre de proceso": "DIGITALIZACIÓN DEL ARCHIVO DE PUBLICACIONES PERIÓDICAS DE LA EDITORIAL SARMIENTO",
-      "Unidad Ejecutora": "92 - Departamento de Compras y Contrataciones- BN",
-      "Unidad Operativa de Contrataciones": "92 - Departamento de Compras y Contrataciones- BN",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
-    "68-0010-LPU26": {
-      "Número de proceso": "68-0010-LPU26",
-      "Nombre de proceso": "SERVICIO DE SEGURIDAD Y VIGILANCIA EN CAMPO DE INMUNIZACIONES MARCOS PAZ - INPB",
-      "Unidad Ejecutora": "68/00 - Departamento de Administracion de Bienes - ANLIS",
-      "Unidad Operativa de Contrataciones": "68/00 - Departamento de Administracion de Bienes - ANLIS",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
-    "315-0014-LPU26": {
-      "Número de proceso": "315-0014-LPU26",
-      "Nombre de proceso": "Servicio de provisión e instalación de 1100 metros cuadrados (m2) de piso de goma",
-      "Unidad Ejecutora": "315/000 - Dirección General de Administración - MP",
-      "Unidad Operativa de Contrataciones": "315/000 - Dirección General de Administración - MP",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
-    "21-0023-LPU26": {
-      "Número de proceso": "21-0023-LPU26",
-      "Nombre de proceso": "SERVICIO DE MANTENIMIENTO EQUIPOS DE AIRE ACONDICIONADO EN LA SEDE CENTRAL Y AMBA DE LA DNM.-",
-      "Unidad Ejecutora": "21/000 - Dirección General de Administración - DNM",
-      "Unidad Operativa de Contrataciones": "21/000 - Dirección General de Administración - DNM",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
-    "47-0005-LPU26": {
-      "Número de proceso": "47-0005-LPU26",
-      "Nombre de proceso": "Contratación seguro para los buques de investigación pesquera del INIDEP",
-      "Unidad Ejecutora": "47 - Dpto. de Compras y Servicios- INIDEP",
-      "Unidad Operativa de Contrataciones": "47 - Dpto. de Compras y Servicios- INIDEP",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
-    "52-0044-LPU26": {
-      "Número de proceso": "52-0044-LPU26",
-      "Nombre de proceso": "CONTRATACIÓN DE UN (1) SERVICIO PROFESIONAL PARA ACTUALIZACIÓN Y EVOLUCIÓN FUNCIONAL SISTEMA SIGCER",
-      "Unidad Ejecutora": "52 - Coordinación de Compras y Contrataciones - SENASA",
-      "Unidad Operativa de Contrataciones": "52 - Coordinación de Compras y Contrataciones - SENASA",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
-    "64-0019-LPU26": {
-      "Número de proceso": "64-0019-LPU26",
-      "Nombre de proceso": "Adquisición de Computadoras de Escritorio tipo AIO y Monitores para la S.R.T.",
-      "Unidad Ejecutora": "64/000 - Departamento de Compras y Contrataciones- SRT",
-      "Unidad Operativa de Contrataciones": "64/000 - Departamento de Compras y Contrataciones- SRT",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
-    "38/3-0440-LPU26": {
-      "Número de proceso": "38/3-0440-LPU26",
-      "Nombre de proceso": "CONCESIÓN ONEROSA DEL SERVICIO DE BUFFET Y CANTINA DEL ESTADIO DE DEPORTES DE LA BNPB.",
-      "Unidad Ejecutora": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
-      "Unidad Operativa de Contrataciones": "38/03 - UOC de la Intendencia Naval Puerto Belgrano - Armada Argentina",
-      "Estado de proceso": "Publicado",
-      "Fecha creación": "16/9/2026"
-    },
     "68-0011-LPU26": {
       "Número de proceso": "68-0011-LPU26",
       "Nombre de proceso": "Contratación del Servicio de limpieza edilicia -INE (Alcanzado por el Protocolo del Mercosur)",
@@ -80,14 +16,6 @@
       "Unidad Operativa de Contrataciones": "78/000 - División Compras",
       "Estado de proceso": "Publicado",
       "Fecha creación": "17/9/2026"
-    },
-    "1": {
-      "Número de proceso": "1",
-      "Nombre de proceso": "2",
-      "Unidad Ejecutora": "3",
-      "Unidad Operativa de Contrataciones": "4",
-      "Estado de proceso": "5",
-      "Fecha creación": "6"
     },
     "347-0028-LPU26": {
       "Número de proceso": "347-0028-LPU26",
@@ -152,6 +80,14 @@
       "Unidad Operativa de Contrataciones": "38/6 - INTENDENCIA NAVAL USHUAIA",
       "Estado de proceso": "Publicado",
       "Fecha creación": "21/9/2026"
+    },
+    "1": {
+      "Número de proceso": "1",
+      "Nombre de proceso": "2",
+      "Unidad Ejecutora": "3",
+      "Unidad Operativa de Contrataciones": "4",
+      "Estado de proceso": "5",
+      "Fecha creación": "6"
     },
     "39-0039-LPU26": {
       "Número de proceso": "39-0039-LPU26",

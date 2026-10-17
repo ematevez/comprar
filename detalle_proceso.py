@@ -433,14 +433,42 @@ if __name__ == "__main__":
 
     df_entrada = pd.read_excel(EXCEL_ENTRADA)
     numeros = df_entrada['Número de proceso'].dropna().unique().tolist()
-    print(f"📋 {len(numeros)} procesos a detallar (leídos de {os.path.abspath(EXCEL_ENTRADA)}).")
+    # Filtro por proceso único: lo usa el botón 🎯 Participar del dashboard
+    # (descargar_expediente_proceso) para bajar solo las cláusulas de ese LPU.
+    filtro = os.environ.get("PROCESO_ESPECIFICO", "").strip()
+    if filtro:
+        numeros = [n for n in numeros if str(n).strip() == filtro]
+        print(f"🎯 PROCESO_ESPECIFICO={filtro} -> {len(numeros)} proceso(s) a detallar.")
+    else:
+        print(f"📋 {len(numeros)} procesos a detallar (leídos de {os.path.abspath(EXCEL_ENTRADA)}).")
 
     resumen = procesar_detalle(numeros)
 
-    df_resumen = pd.DataFrame(resumen)
-    nombre_salida = "cronograma_procesos.xlsx"
-    df_resumen.to_excel(nombre_salida, index=False)
-    print(f"\n📁 Resumen de cronogramas guardado en {os.path.abspath(nombre_salida)}")
+    # En modo proceso único (botón 🎯 Participar) NO se sobreescribe el Excel:
+    # se actualiza solo la fila de ese proceso, para no perder las demás.
+    if filtro and resumen:
+        try:
+            df_actual = pd.read_excel(EXCEL_ENTRADA)
+            col_num = 'Número de proceso'
+            fila_nueva = pd.DataFrame(resumen)
+            mask = df_actual[col_num].astype(str).str.strip() == str(
+                fila_nueva.iloc[0][col_num]).strip()
+            for col in fila_nueva.columns:
+                if col not in df_actual.columns:
+                    df_actual[col] = None
+            df_actual.loc[mask, fila_nueva.columns] = fila_nueva.values
+            df_actual.to_excel(EXCEL_ENTRADA, index=False)
+            print(f"\n📁 Fila de {filtro} actualizada en {os.path.abspath(EXCEL_ENTRADA)} "
+                  f"(resto del cronograma intacto)")
+        except Exception as e:
+            print(f"⚠️ No se pudo actualizar la fila individual: {e}")
+            pd.DataFrame(resumen).to_excel("cronograma_parcial.xlsx", index=False)
+            print("   Se guardó en cronograma_parcial.xlsx en su lugar.")
+    else:
+        df_resumen = pd.DataFrame(resumen)
+        nombre_salida = "cronograma_procesos.xlsx"
+        df_resumen.to_excel(nombre_salida, index=False)
+        print(f"\n📁 Resumen de cronogramas guardado en {os.path.abspath(nombre_salida)}")
     print(f"📁 Cláusulas descargadas en {os.path.abspath(CARPETA_SALIDA)}/<número de proceso>/")
 
     estado["ultima_ejecucion"] = datetime.now().isoformat()

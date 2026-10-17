@@ -540,6 +540,62 @@ def estado_ejecucion(script_name: str) -> dict:
     }
 
 
+def descargar_expediente_proceso(numero: str) -> dict:
+    """Descarga las Cláusulas Particulares de UN proceso específico.
+
+    Corre detalle_proceso.py en un subprocess con PROCESO_ESPECIFICO=<numero>
+    (env que el script respeta para saltearse el límite de 24h y filtrar).
+    Lo usa el botón 🎯 Participar del dashboard cuando el checklist todavía
+    no tiene PDFs del expediente.
+    """
+    import threading as _th
+    if not numero or not re.match(r"^[\w/\- ]{3,40}$", numero):
+        return {"ok": False, "error": "Número de proceso inválido"}
+    ruta_script = os.path.join(_BASE_DIR, "detalle_proceso.py")
+    if not os.path.exists(ruta_script):
+        return {"ok": False, "error": "detalle_proceso.py no encontrado"}
+
+    with _lock_ejecuciones:
+        clave = f"expediente:{numero}"
+        if _en_ejecucion.get(clave):
+            return {"ok": False, "error": f"La descarga de {numero} ya está corriendo"}
+        _en_ejecucion[clave] = True
+
+    def run():
+        try:
+            env = os.environ.copy()
+            env["PYTHONIOENCODING"] = "utf-8"
+            env["PYTHONUTF8"] = "1"
+            env["FORZAR_EJECUCION"] = "1"
+            env["PROCESO_ESPECIFICO"] = numero
+            log = os.path.join(_BASE_DIR, "logs_descarga_expediente.txt")
+            with open(log, "a", encoding="utf-8") as fh:
+                fh.write(f"\n{'='*60}\nDescarga de expediente {numero}: "
+                         f"{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}\n{'='*60}\n")
+                fh.flush()
+                proc = subprocess.Popen(
+                    [sys.executable, "-u", ruta_script],
+                    cwd=_BASE_DIR, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                    text=True, encoding="utf-8", errors="replace", bufsize=1, env=env)
+                inicio = time.time()
+                for linea in proc.stdout:
+                    fh.write(linea); fh.flush()
+                    if time.time() - inicio > 900:
+                        proc.kill()
+                        fh.write("\n⚠️ TIMEOUT (15 min)\n")
+                        break
+                proc.wait(timeout=30)
+        except Exception as e:
+            print(f"⚠️ Error descargando expediente {numero}: {e}")
+        finally:
+            with _lock_ejecuciones:
+                _en_ejecucion.pop(clave, None)
+
+    _th.Thread(target=run, daemon=True).start()
+    return {"ok": True, "mensaje": f"Descargando cláusulas de {numero}... "
+                                   "el checklist se completa solo cuando terminen los PDFs"}
+
+
 def ejecutar_script(script_name: str, forzar: bool = False) -> dict:
     script_map = {
         'comprar': ('comprar.py', LOG_COMPRAR),
@@ -1100,6 +1156,8 @@ TEMPLATE_DASHBOARD = r"""<!DOCTYPE html>
   .btn-ver:hover { background: #E5E7EB; }
   .btn-expediente { background: #EDE9FE; color: #5B21B6; }
   .btn-expediente:hover { background: #DDD6FE; }
+  .btn-participar { background: #D1FAE5; color: #065F46; font-weight: 700; }
+  .btn-participar:hover { background: #A7F3D0; transform: scale(1.04); }
   .expediente-resultado {
     background: #F5F3FF;
     border: 1px solid #DDD6FE;
@@ -1528,6 +1586,7 @@ function filtrarTarjetas(criterio) {
             ? `<button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`
             : `<button class="btn-seguimiento" onclick="marcarSeguimiento('${t.numero}')">📌 Seguimiento</button>
                <button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`}
+        <button class="btn-participar" onclick="abrirChecklist('${t.numero}')">🎯 Participar</button>
         <button class="btn-imprimir" onclick="imprimirUno('${t.numero}')">Ficha</button>
       </div>
     </div>
@@ -1560,6 +1619,7 @@ function render() {
             ? `<button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`
             : `<button class="btn-seguimiento" onclick="marcarSeguimiento('${t.numero}')">📌 Seguimiento</button>
                <button class="btn-descartar" onclick="abrirDescarte('${t.numero}')">Descartar</button>`}
+        <button class="btn-participar" onclick="abrirChecklist('${t.numero}')">🎯 Participar</button>
         <button class="btn-imprimir" onclick="imprimirUno('${t.numero}')">Ficha</button>
       </div>
     </div>
@@ -1791,6 +1851,19 @@ async function ejecutarScript(script) {
   }, 1000); // Polling cada 1 segundo
   
   showToast(`✅ ${btnText} iniciado correctamente`, 'success');
+}
+
+function abrirChecklist(num) {
+  // Asegura que el expediente tenga PDFs antes de abrir: si faltan, dispara la
+  // descarga de las Cláusulas Particulares (la página del checklist también lo
+  // ofrece con un botón). Abre la pestaña igual: muestra datos del cronograma.
+  fetch('/api/detalle-proceso', {
+    method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({numero: num})
+  }).then(r => r.json()).then(d => {
+    if (d && d.ok && d.mensaje) showToast('📥 ' + d.mensaje, 'info');
+  }).catch(() => {});
+  window.open('/checklist/' + encodeURIComponent(num), '_blank');
 }
 
 function verDetalle(num) {
